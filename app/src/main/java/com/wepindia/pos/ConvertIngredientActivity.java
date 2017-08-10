@@ -54,7 +54,7 @@ public class ConvertIngredientActivity extends Activity {
     TextView tv_convert_ingredient_uom;
 
     Button btn_convert_add , btn_convert_Submit,btn_convert_convertIngredient ,btn_convert_close;
-    TableLayout tbl_convert_ingredients; //TODO: Changed here for listview
+//    TableLayout tbl_convert_ingredients; //TODO: Changed here for listview
 
     Context myContext;
     DatabaseHandler dbIngredientManagement;

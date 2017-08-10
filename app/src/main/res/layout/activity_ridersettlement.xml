@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/lnrRiderSettlement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/boxBn"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/wef"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/view11">
+
+                    <ScrollView
+                        android:id="@+id/scrlRiderSettlementTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#DDDDDD">
+
+                        <TableLayout
+                            android:id="@+id/tblRiderSettlement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:collapseColumns="5,6">
+
+                            <TableRow
+                                android:id="@+id/rowCaption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryLight" >
+
+                                <TextView
+                                    android:id="@+id/tvCaptionRiderSettlementRiderCode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Rider Code"
+                                    android:textColor="@color/txtColorAccent"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionRiderSettlementBillNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Bill Number"
+                                    android:textColor="@color/txtColorAccent"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionRiderSettlementTotalItems"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Total Items"
+                                    android:textColor="@color/txtColorAccent"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionRiderSettlementBillAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Bill Amount"
+                                    android:textColor="@color/txtColorAccent"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionRiderSettlementPettyCash"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Petty Cash"
+                                    android:textColor="@color/txtColorAccent"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionRiderSettlementSettledAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Settled Amount"
+                                    android:textColor="@color/txtColorAccent"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionRiderSettlementDeliveryCharge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delivery Charge"
+                                    android:textColor="@color/txtColorAccent"
+                                    android:textSize="16sp" />
+
+                            </TableRow>
+                        </TableLayout>
+                    </ScrollView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="#000000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/rowRiderSettlementBillNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliveryBillNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Bill Number:"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliveryBillNumberValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowRiderSettlementBillAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowRiderSettlementBillNumber"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliveryBillAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Bill Amount"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliveryBillAmountValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowRiderSettlementDeliveryCharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowRiderSettlementBillAmount"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliveryDeliveryCharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Other Charges"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliveryDeliveryChargeValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowRiderSettlementPettyCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowRiderSettlementDeliveryCharge"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliveryPettyCash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Petty Cash"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliveryPettyCashValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowRiderSettlementDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowRiderSettlementPettyCash"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliveryDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Discount Amt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliveryDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowRiderSettlementCoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowRiderSettlementDiscount"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliveryCoupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Coupon Amt"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliveryCoupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowRiderSettlementAmountDue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowRiderSettlementCoupon"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliveryAmountDue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Amount Due"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliveryAmountDue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <TableRow
+                    android:id="@+id/rowRiderSettlementSettledAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowRiderSettlementAmountDue"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tvDeliverySettledAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Settled Amount"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etDeliverySettledAmountValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="numberDecimal"
+                        android:maxLength="7"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/boxBn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/tvHorizontalLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="#000000" />
+
+            <TableRow
+                android:id="@+id/rowButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHorizontalLine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp">
+
+                <Button
+                    android:id="@+id/btn_DeliverySettlementCancel"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/background_btn"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:onClick="Close"
+                    android:text="Close" />
+
+                <Button
+                    android:id="@+id/btn_DeliverySettlementClear"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/background_btn"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:onClick="Clear"
+                    android:text="Clear" />
+
+                <Button
+                    android:id="@+id/btn_DeliverySettlementUpdate"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/background_btn"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:onClick="Update"
+                    android:text="Update" />
+            </TableRow>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

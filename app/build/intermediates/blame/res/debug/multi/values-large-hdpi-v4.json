@@ -1,0 +1,74 @@
+[
+    {
+        "outputFile": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-hdpi-v4\\values-large-hdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\values-large-hdpi\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\values-large-hdpi\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 39,
+                    "endOffset": 204
+                },
+                "from": {
+                    "file": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\values-large-hdpi\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 209,
+                    "endColumn": 49,
+                    "endOffset": 254
+                },
+                "from": {
+                    "file": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\values-large-hdpi\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 259,
+                    "endColumn": 47,
+                    "endOffset": 302
+                },
+                "from": {
+                    "file": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\values-large-hdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 181,
+                        "endColumn": 47,
+                        "endOffset": 224
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvSNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sno"
+        android:layout_weight="1.05" />
+
+    <TextView
+        android:id="@+id/tvinvno_ori"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+
+        android:layout_height="wrap_content"
+        android:text="Ori.Inv No"/>
+    <TextView
+        android:id="@+id/tvinvdate_ori"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+
+        android:layout_height="wrap_content"
+        android:text="Ori. Inv Date"/>
+
+    <TextView
+        android:id="@+id/tvinvno_rev"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+
+        android:layout_height="wrap_content"
+        android:text="Rev.Inv No"/>
+    <TextView
+        android:id="@+id/tvinvdate_rev"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+
+        android:layout_height="wrap_content"
+        android:text="Rev. Inv Date"/>
+    <TextView
+        android:id="@+id/tvhsn"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="HSN"/>
+    <TextView
+        android:id="@+id/tvg_s"
+        android:layout_width="match_parent"
+        android:layout_weight="1.05"
+
+        android:layout_height="wrap_content"
+        android:text="G/S"/>
+
+
+    <TextView
+        android:id="@+id/tvtaxableValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight=".97"
+        android:text="Taxable Value "/>
+    <TextView
+        android:id="@+id/tvIGSTAmount"
+        android:layout_width="match_parent"
+
+        android:layout_weight="0.97"
+        android:layout_height="wrap_content"
+        android:text="IGST Amount"/>
+
+    <TextView
+        android:id="@+id/tvcessAmount"
+        android:layout_width="match_parent"
+        android:layout_weight="0.97"
+        android:layout_height="wrap_content"
+        android:text="IGST Amount"/>
+
+    <ImageButton
+        android:id="@+id/btnItemDelete"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_weight="1.05"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

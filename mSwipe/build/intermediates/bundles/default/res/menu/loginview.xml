@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/loginview_Help"
+		  android:title="Help"/>
+	<!--<item android:id="@+id/loginview_Setting"
+		  android:title="Settings" />-->
+	<item android:id="@+id/loginview_exit"
+		  android:title="Exit" />
+
+</menu>

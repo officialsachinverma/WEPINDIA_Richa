@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/rowCategName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp">
+
+            <TextView
+                android:id="@+id/tvCategName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Category Name:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etCategName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:hint="Category Name"
+                android:inputType="text"
+                android:maxLength="16" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowDeptId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp">
+
+            <TextView
+                android:id="@+id/tvDeptId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:gravity="left"
+                android:text="Department Name:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/spnrDeptName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <ScrollView
+            android:id="@+id/scrlCategoryTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvHorizontalLine"
+            android:layout_below="@+id/rowDeptId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:background="#DDDDDD">
+
+            <TableLayout
+                android:id="@+id/tblCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:collapseColumns="1">
+
+                <TableRow
+                    android:id="@+id/rowCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight"
+                    android:textColor="@color/txtColorAccent">
+
+                    <TextView
+                        android:id="@+id/tvCaptionCategSno"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="S.No"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionCategCode"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Code	"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionCategName"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionDeptCode"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Dept Name"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvHorizontalLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/rowButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:background="#000000" />
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/btnAddCateg"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:onClick="AddCateg"
+                android:text="Add"
+                android:background="@drawable/background_btn"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/btnEditCateg"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@android:color/white"
+                android:onClick="EditCateg"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/btnClearCateg"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@android:color/white"
+                android:onClick="ClearCateg"
+                android:text="Clear" />
+
+            <Button
+                android:id="@+id/btnCloseCateg"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@android:color/white"
+                android:onClick="CloseCateg"
+                android:text="Close" />
+        </TableRow>
+    </RelativeLayout>
+</RelativeLayout>

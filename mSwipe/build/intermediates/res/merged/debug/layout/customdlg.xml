@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+  	<LinearLayout
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    	<RelativeLayout
+        android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <!-- This is for the info image -->
+        <ImageView
+            android:id="@+id/imageView1" 
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@android:drawable/ic_menu_info_details" />
+        <!-- Title -->
+        
+        <TextView android:id="@+id/tvmessagedialogtitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+	        android:textSize="24dip" android:text="Message" android:textColor="#343434"
+            android:textStyle="bold" android:typeface="sans" />
+    	</RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_vertical">
+ 
+    <!-- Underline with this bluish color -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#0000ff" />
+    <!-- The message -->
+    <EditText android:id="@+id/tvmessagedialogtext"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="8dp"
+        android:editable="false"
+        android:text="Message" android:textColor="#343434"
+        android:textSize="22dip" android:textStyle="normal" android:typeface="sans"
+        android:minLines="2" android:scrollbars="vertical" android:background="#00000000"/>
+	</LinearLayout>
+
+
+   	<LinearLayout 
+  		     android:layout_width="fill_parent" android:layout_height="wrap_content"
+  		     android:layout_marginTop="10dp" android:layout_marginBottom="5dp" 
+  		     android:gravity="center_horizontal">
+
+
+        <Button android:id="@+id/bmessageDialogYes"
+	    android:layout_width="100dp" android:layout_height="44dp"
+	    android:textColor="#ffffff"
+		android:background="@drawable/roundrectblue" android:text="Ok"  android:gravity="center"
+		android:typeface="sans" android:layout_marginRight="5dp"
+		android:textSize="25dp"/>
+ 		    						
+	<Button android:id="@+id/bmessageDialogNo"
+	    android:layout_width="100dp" android:layout_height="44dp"
+	    android:textColor="#ffffff"
+		android:background="@drawable/roundrectblue" android:text="Cancel"  android:gravity="center"
+		android:typeface="sans"
+		android:textSize="25dp"/>
+     </LinearLayout>
+</LinearLayout>

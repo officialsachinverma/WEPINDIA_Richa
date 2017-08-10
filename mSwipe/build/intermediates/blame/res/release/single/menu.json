@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\lasttxstatusmenu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\src\\main\\res\\menu\\lasttxstatusmenu.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\set_gate_way.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\src\\main\\res\\menu\\set_gate_way.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\batchhistorymenu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\src\\main\\res\\menu\\batchhistorymenu.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\menuview.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\src\\main\\res\\menu\\menuview.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\loginview.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\src\\main\\res\\menu\\loginview.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\menu_main.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\option_menu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\bundles\\default\\res\\menu\\option_menu.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\wisepad.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\src\\main\\res\\menu\\wisepad.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\main.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\bundles\\default\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\historymenu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\src\\main\\res\\menu\\historymenu.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\res\\merged\\release\\menu\\menu_wep_base.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\menu\\menu_wep_base.xml"
+    }
+]

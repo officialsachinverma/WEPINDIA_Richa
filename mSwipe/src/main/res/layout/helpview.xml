@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- This is for the info image -->
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@android:drawable/ic_menu_info_details" />
+            <!-- Title -->
+
+            <TextView
+                android:id="@+id/tvmessagedialogtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Help Line"
+                android:textColor="#343434"
+                android:textSize="24dip"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <!-- Underline with this bluish color -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#4d7df5" />
+        <!-- The message -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/helpview_LBL_text1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:singleLine="false"
+                android:text="To reach Mswipe technical support please call toll free no"
+                android:textColor="#343434"
+                android:textSize="22dp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/helpview_LBL_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/helpview_LBL_text1"
+                android:layout_centerInParent="true"
+                android:text="1800 1022699"
+                android:textColor="#343434"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <Button
+                android:id="@+id/helpview_BTN_ok"
+                android:layout_width="100dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/helpview_LBL_text2"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundrectblue"
+                android:gravity="center"
+                android:text="Ok"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:typeface="sans" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/helpview_LBL_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W300 SDK V5.0.1(2.5.4)"
+            android:textColor="#343434"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </LinearLayout>
+
+</LinearLayout>

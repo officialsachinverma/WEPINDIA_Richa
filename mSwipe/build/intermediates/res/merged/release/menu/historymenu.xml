@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/history_menu"
+		  android:title="Main Menu" />
+	<item android:id="@+id/history_back"
+		  android:title="Back" />
+	
+	<item android:id="@+id/history_resentreceipt"
+		  android:title="Resend Receipt" />
+	
+</menu>

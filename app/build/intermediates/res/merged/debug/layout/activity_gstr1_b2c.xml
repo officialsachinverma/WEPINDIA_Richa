@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_period"
+            >
+            <TextView
+                android:id="@+id/text_Period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="4. Period. "
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/calendar_button"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_toRightOf="@+id/text_Period"
+                android:background="@drawable/calendar_img"
+                android:onClick="dateDialog" />
+
+            <TextView
+                android:id="@+id/text_Month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/calendar_button"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/calendar_button"
+                android:text="Month "
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_MonthValue_b2c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_Month"
+                android:text="..."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_MonthValue_b2c"
+                android:text="Year "
+                android:textStyle="bold"
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+                android:id="@+id/text_YearValue_b2c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_Year"
+                android:text="..."
+                android:textSize="16sp"
+
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_b2cl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_period"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="6. Taxable outwardsupplies to a consumer where Place of Supply(State Code) is other than the State where supplier is located (Inter-state supplier) and invoice value is more than Rs. 2.5 lakhs. (figures in Rs)"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_b2cl"
+            android:id="@+id/linear_b2cl"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linear_table_b2cl"
+                android:layout_width="1226dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="Recipient's State Code"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Recipient Name"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:text="Inv No."
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Inv Date"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="G/S"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:id="@+id/b2cl_hsn"
+                    android:text="HSN/SAC"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Taxable Value"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Amt"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="POS"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Prov Asess"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below = "@+id/linear_table_b2cl">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp"
+                    android:layout_marginLeft="30sp"
+                    android:id="@+id/tbl_b2cl">
+                    >
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_b2cla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_b2cl"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="6A. Amendment to taxable outwardsupplies to a consumer of earlier tax period where Place of Supply(State Code) is other than the State where supplier is located (Inter-state supplier) and invoice value is more than Rs. 2.5 lakhs. (figures in Rs)"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_b2cla"
+            android:id="@+id/linear_b2cla"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linear_table_b2cl"
+                android:layout_width="1226dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="Ori Inv No."
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:text="Ori Inv Date"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="Recipient's State Code"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Recipient Name"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Inv No."
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Inv Date"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="25sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+
+                    android:text="G/S"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="HSN/SAC"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Taxable Value"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Amt"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="POS"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Prov Asess"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below = "@+id/linear_table_b2cl"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tbl_b2cla">
+
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+// richa
+
+        <TextView
+            android:id="@+id/text_b2cs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_b2cla"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="7. Taxable outwardsupplies to a consumer Other than 6 above. (figures in Rs)"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_b2cs"
+            android:id="@+id/linear_b2cs"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linear_table_b2cs"
+                android:layout_width="1226dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="25sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="G/S"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="HSN/SAC"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="95sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="State Code (Place of Supply)"
+                    android:textStyle="bold"/>
+
+
+
+                <TextView
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40sp"
+                    android:text="Aggregate Taxable Value"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:text="IGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40sp"
+                    android:text="IGST Amt"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:text="CGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:text="CGST Amt"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="SGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="SGST Amt"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="Prov Asess"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below = "@+id/tbl_b2cla"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50sp"
+                    android:id="@+id/tbl_b2cs">
+                </TableLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_b2csa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_b2cs"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="7A. Amendment to taxable outwards upplies to a consumer of earlier tax period (Original supplies covered under 7 above in earlier tax period(s). (figures in Rs)"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_b2csa"
+            android:id="@+id/linear_b2csa"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linear_table_b2csa"
+                android:layout_width="1226dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="Ori. Tax Period"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="25sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Ori. G/S"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Ori. HSN/SAC"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Ori. State Code (Place of Supply"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="25sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="G/S"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="HSN/SAC"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="State Code (Place of Supply"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Aggregate Taxable Value"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Amt"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="CGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="CGST Amt"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="SGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="SGST Amt"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Prov Asess"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tbl_b2csa"
+                    android:layout_below = "@+id/linear_table_b2csa">
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

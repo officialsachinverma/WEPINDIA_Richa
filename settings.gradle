@@ -1,0 +1,1 @@
+include ':app', ':gstAPI', ':printers', ':mSwipe', ':wepbase', 'upgradeModule'

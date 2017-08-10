@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\EasyBill_New\wepfnb_gst\gstAPI\src\main\assets"><file name="gstr1.json" path="D:\EasyBill_New\wepfnb_gst\gstAPI\src\main\assets\gstr1.json"/></source><source path="D:\EasyBill_New\wepfnb_gst\gstAPI\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="D:\EasyBill_New\wepfnb_gst\gstAPI\src\release\assets"/></dataSet></merger>

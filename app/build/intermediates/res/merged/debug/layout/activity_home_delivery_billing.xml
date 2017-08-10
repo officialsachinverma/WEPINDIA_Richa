@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/lnrBillingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/home_back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <LinearLayout
+            android:id="@+id/boxTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:minHeight="40dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            >
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text="Customer GSTIN :" />
+            <EditText
+                android:id="@+id/etCustGSTIN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:maxLength="15"
+                android:hint="GSTIN"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/tvSubUdfValue"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:inputType="number"
+                android:text="1"
+                android:textSize="11dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text="Customer Name :" />
+
+            <EditText
+                android:id="@+id/edtCustName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:hint="Name"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text="Phone No : " />
+
+            <EditText
+                android:id="@+id/edtCustPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:hint="Mobile No"
+                android:inputType="number"
+                android:maxLength="10"
+                android:drawableRight="@drawable/searchicon_img"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text="Address : " />
+
+            <EditText
+                android:id="@+id/edtCustAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:hint="Address"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_DineInAddCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_btn"
+                android:minHeight="40dp"
+                android:theme="@style/WepButtonWithMarigin"
+                android:onClick="AddCustomer"
+                android:text="Add" />
+
+            <EditText
+                android:id="@+id/edtCustId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="0"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/boxBtn"
+            android:layout_below="@+id/boxTop">
+
+            <include layout="@layout/order_page_content_homedelivery"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/qwd"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@android:color/background_dark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/qwd"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                >
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_SaveKOT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:onClick="SaveKOT"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Save KOT" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_PrintKOT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:onClick="printKOT"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Print / Save KOT" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_PrintBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:onClick="printBILL"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Print Bill" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_PayBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:onClick="Tender"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Pay Bill" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_Clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:onClick="Clear"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Clear" />
+
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_DeleteBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="DeleteBill"
+                    android:text="Delete Bill"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    />
+
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_Reprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:onClick="ReprintBill"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Reprint Bill" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_DeliveryStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:onClick="KOTStatus"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Delivery Status" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

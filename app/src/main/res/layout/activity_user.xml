@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent">
+    
+    <TableRow
+        android:id="@+id/rowUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+            android:inputType="text" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/rowSearchUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rowUserName"
+        android:layout_alignTop="@+id/rowUserName"
+        android:layout_marginLeft="125dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id :"
+            android:layout_marginRight="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etSearchUserId"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" 
+            android:ems="5"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:layout_marginRight="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etSearchUserName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" 
+            android:ems="5"
+            android:inputType="text" />
+    </TableRow>
+    
+    <TextView 
+        android:id="@+id/tvVerticalLine"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginRight="15dp" />
+    
+    <ScrollView 
+        android:id="@+id/scrlUserTable"
+        android:background="#DDDDDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/rowUserName"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp" >
+	    <TableLayout
+	        android:id="@+id/tblUsers"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:collapseColumns="2,3">
+	
+	        <TableRow
+	            android:id="@+id/rowCaption"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:background="@color/colorPrimaryLight" >
+	
+	            <!-- <TextView
+	                android:id="@+id/tvCaptionSerialNumber"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="#"
+	                android:layout_marginRight="20dp"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#ffffff" /> -->
+	
+	            <TextView
+	                android:id="@+id/tvCaptionUserId"
+	                android:layout_width="75dp"
+	                android:layout_height="wrap_content"
+	                android:text="User Id"
+	                android:layout_marginRight="10dp"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionUserName"
+	                android:layout_width="150dp"
+	                android:layout_height="wrap_content"
+	                android:text="Name"
+	                android:layout_marginRight="10dp"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionUserPassword"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Password"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionAccessLevel"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Access Level"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionShowLevel"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Access Level"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	            	            
+	        </TableRow>
+	    </TableLayout>
+    </ScrollView>
+    
+    <TableRow
+        android:id="@+id/rowUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowUserName"
+        android:layout_alignLeft="@+id/rowUserName"
+        android:layout_marginTop="25dp" >
+
+        <TextView
+            android:id="@+id/tvUserId"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Id :"
+            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etUserId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="5"
+            android:inputType="text" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/rowUserPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowUserId"
+        android:layout_alignLeft="@+id/rowUserId"
+        android:layout_marginTop="25dp" >
+
+        <TextView
+            android:id="@+id/tvUserPassword"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Password :"
+            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etUserPassword"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+            android:inputType="textPassword" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/rowAccessLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowUserPassword"
+        android:layout_alignLeft="@+id/rowUserPassword"
+        android:layout_marginTop="25dp" >
+
+        <TextView
+            android:id="@+id/tvAccessLevel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Access Level:"
+            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id/spnrAccessLevel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+    </TableRow>
+            
+    <TextView 
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"/>
+    
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"  >
+
+        <Button
+	        android:id="@+id/btnAddUser"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginRight="10dp"
+	        android:onClick="AddUser"
+	        android:text="Add" />
+
+        <Button
+	        android:id="@+id/btnEditUser"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginRight="10dp"
+	        android:onClick="EditUser"
+	        android:text="Save" />
+        
+        <Button
+	        android:id="@+id/btnClearUser"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginRight="10dp"
+	        android:onClick="ClearUser"
+	        android:text="Clear" />
+        
+        <Button
+	        android:id="@+id/btnCloseUser"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:onClick="CloseUser"
+	        android:text="Close" />
+    </TableRow>
+    
+</RelativeLayout>

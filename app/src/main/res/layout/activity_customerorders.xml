@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/lnrCustomerOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/boxBtn"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ListView
+                    android:id="@+id/lstCustomerPendingOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tvHeadingPendingOrder"
+                    android:layout_below="@+id/tvHeadingPendingOrder"
+                    android:layout_marginBottom="10dp"
+                    android:background="#DDDDDD"
+                    android:divider="#000000"
+                    android:dividerHeight="1dp">
+
+                </ListView>
+
+                <TextView
+                    android:id="@+id/tvHeadingPendingOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Customer Pending Orders"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="#000000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_toLeftOf="@+id/view2"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tvHeadingPendingOrderDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Pending Order Details"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <ScrollView
+                        android:id="@+id/scrlPendingOrderDetailsTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvHeadingPendingOrderDetails"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="#DDDDDD">
+
+                        <TableLayout
+                            android:id="@+id/tblPendingOrderDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:id="@+id/rowCaption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryLight">
+
+                                <TextView
+                                    android:id="@+id/tvCaptionOrderSno"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:gravity="center"
+                                    android:text="S.No"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionOrderItemName"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:gravity="left"
+                                    android:text="Item Name"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionOrderItemQty"
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Qty"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/txtColorAccent" />
+                            </TableRow>
+                        </TableLayout>
+                    </ScrollView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="#000000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvHeadingOrderCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Customer Details"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <LinearLayout
+                        android:id="@+id/boxx1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvHeadingOrderCustomer"
+                        android:weightSum="6">
+
+                        <TextView
+                            android:id="@+id/tvOrderCustomerId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="Cust. Id:"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/etOrderCustomerId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:inputType="text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/boxx2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx1"
+                        android:weightSum="6">
+
+                        <TextView
+                            android:id="@+id/tvOrderCustomerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="Name:"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/etOrderCustomerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:maxLength="16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/boxx3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx2"
+                        android:weightSum="6">
+
+                        <TextView
+                            android:id="@+id/tvOrderCustomerPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="Phone:"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/etOrderCustomerPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:inputType="phone"
+                            android:maxLength="10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/boxx4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx3"
+                        android:weightSum="6">
+
+                        <TextView
+                            android:id="@+id/tvOrderCustomerAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="Address:"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/etOrderCustomerAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:inputType="textPostalAddress"
+                            android:maxLength="150" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx3"
+                        android:visibility="gone"
+                        android:weightSum="6">
+
+                        <EditText
+                            android:id="@+id/etOrderCustomerTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:inputType="textPostalAddress"
+                            android:maxLength="150" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx3"
+                        android:visibility="gone"
+                        android:weightSum="6">
+
+                        <EditText
+                            android:id="@+id/etOrderCustomerBillNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:text="0"
+                            android:inputType="textPostalAddress"
+                            android:maxLength="150" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/boxx5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx4"
+                        android:weightSum="6">
+
+                        <TextView
+                            android:id="@+id/tvOrderBillAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="Bill Amount:"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/etOrderBillAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:inputType="textPostalAddress"
+                            android:maxLength="150" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/rowCustPaidStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx5"
+                        android:weightSum="6">
+
+                        <TextView
+                            android:id="@+id/tvCustPaidStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="Status : "
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/etCustPaidStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:focusable="false"
+                            android:text=""
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/boxx6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rowCustPaidStatus"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        android:weightSum="6">
+
+                        <Button
+                            android:id="@+id/btn_AssignDriver"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_btn"
+                            android:onClick="AssignDriver"
+                            android:text="Assign Driver"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/boxx7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxx6"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        android:weightSum="6">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="20dp">
+
+                            <LinearLayout
+                                android:id="@+id/rowCustDeliveryRiderSelection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="6">
+
+                                <TextView
+                                    android:id="@+id/tvCustDeliveryRider"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="Rider Name:"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <EditText
+                                    android:id="@+id/etCustDeliveryRiderName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:focusable="false"
+                                    android:inputType="text"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rowCustAmountDue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rowCustDeliveryRiderSelection"
+                                android:weightSum="6">
+
+                                <TextView
+                                    android:id="@+id/tvCustAmountDue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="Amount Due:"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <EditText
+                                    android:id="@+id/etCustAmountDue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:focusable="false"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:id="@+id/rowCustSubmit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rowCustAmountDue"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:weightSum="6">
+
+                                <Button
+                                    android:id="@+id/btn_CustDeliveryOK"
+                                    android:layout_width="100dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/background_btn"
+                                    android:onClick="OK"
+                                    android:text="OK"
+                                    android:textColor="@android:color/white"
+                                    android:theme="@style/WepButtonWithMarigin" />
+
+                                <Button
+                                    android:id="@+id/btn_CustPrintBill"
+                                    android:layout_width="100dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/background_btn"
+                                    android:onClick="PrintBill"
+                                    android:text="Print Bill"
+                                    android:textColor="@android:color/white"
+                                    android:theme="@style/WepButtonWithMarigin" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/tvHorizontalLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000" />
+
+            <TableRow
+                android:id="@+id/rowOrderCustomerButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHorizontalLine"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+
+
+                <Button
+                    android:id="@+id/btn_OrderCustomerAddCustomer"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Add"
+                    android:text="Add"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_OrderCustomerOrder"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Order"
+                    android:text="Modify Order"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <Button
+                    android:id="@+id/btn_OrderCustomerTender"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Tender"
+                    android:text="Tender"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <Button
+                    android:id="@+id/btn_OrderCustomerDelivery"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Delivery"
+                    android:text="Delivery"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <Button
+                    android:id="@+id/btn_DeliveryOrderCancel"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="CancelOrder"
+                    android:layout_marginRight="10dp"
+                    android:text="Cancel Order"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <Button
+                    android:id="@+id/btn_OrderCustomerClear"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Clear"
+                    android:text="Clear"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <Button
+                    android:id="@+id/btn_OrderCustomerClose"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Close"
+                    android:text="Close"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+            </TableRow>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

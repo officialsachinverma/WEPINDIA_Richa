@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/lnrTableActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/boxButton"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="0.9">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvTablesHeading"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="Tables"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <TextView
+                                android:id="@+id/tvTableSelected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="Selected Table #: "
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <GridView
+                                android:id="@+id/grid_Image_Table"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/rowButtons"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_toLeftOf="@+id/tvVerticalLine"
+                                android:listSelector="@drawable/grid_selector"
+                                android:numColumns="auto_fit" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvVerticalLine"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/tvHorizontalLine"
+                        android:layout_alignBottom="@+id/tvHorizontalLine"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="1dp"
+                        android:background="#000000" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/frame_split"
+                        android:layout_weight="1.2">
+
+                        <LinearLayout
+                            android:id="@+id/lnrTableSplit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvTableSplitHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="Table Split"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="54dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tv_tablesplit1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Table _A : " />
+
+                                    <CheckBox
+                                        android:id="@+id/chkSplit1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="CheckboxEvent" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tv_tablesplit2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Table _B : " />
+
+                                    <CheckBox
+                                        android:id="@+id/chkSplit2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="CheckboxEvent" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tv_tablesplit3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Table _C : " />
+
+                                    <CheckBox
+                                        android:id="@+id/chkSplit3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="CheckboxEvent" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tv_tablesplit4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Table _D : " />
+
+                                    <CheckBox
+                                        android:id="@+id/chkSplit4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="CheckboxEvent" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvTableSelectVLine"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/tvHorizontalLine"
+                        android:layout_alignBottom="@+id/tvHorizontalLine"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="1dp"
+                        android:background="#000000" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.9">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvWaitersHeading"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="Waiters"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <TextView
+                                android:id="@+id/tvWaiterSelected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Selected Waiter #: "
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <GridView
+                                android:id="@+id/grid_Image_Waiter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/rowButtons"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_toRightOf="@+id/tvVerticalLine"
+                                android:numColumns="auto_fit" />
+
+
+                            <TextView
+                                android:id="@+id/tvSubUdfHeading"
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text="Sub Udf"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:visibility="gone" />
+
+                            <GridView
+                                android:id="@+id/grid_Image_SubUdf"
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/rowButtons"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginRight="10dp"
+                                android:numColumns="auto_fit"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.95">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvVerticalLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="1dp"
+                        android:background="#000000" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/boxButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_DineInTableBooking"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="DineInTableBooking"
+                    android:text="Table Booking"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_TableCancel"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Cancel"
+                    android:text="Cancel"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_TableDineIn"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="DineIn"
+                    android:text="DineIn"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_TableOK"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="OK"
+                    android:text="OK"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_DineInTableStatus"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/background_btn"
+                    android:onClick="DineInTableStatus"
+                    android:text="Table Status"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

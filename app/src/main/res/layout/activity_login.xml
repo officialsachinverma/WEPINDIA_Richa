@@ -1,0 +1,220 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back_fnb"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTopLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#777777" />
+
+        <TableRow
+            android:id="@+id/rowLoginScreenTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp">
+
+            <ImageButton
+                android:id="@+id/btnAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="WeP Peripherals Ltd."
+                android:onClick="About"
+                android:padding="0dp"
+                android:src="@drawable/img_about" />
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tvTopLine1"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#777777" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.75"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtUserId"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@android:drawable/edit_text"
+            android:ems="10"
+            android:hint="User Id"
+            android:text="admin"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="text">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtUserId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/edit_text"
+            android:ems="10"
+            android:text="admin"
+            android:hint="Password"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textPassword"
+             />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkboxRememberMe"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPassword"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white"
+            android:text="Remember Me " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxRememberMe"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/btn_marigin"
+                android:layout_marginRight="@dimen/btn_marigin"
+                android:background="@drawable/background_btn"
+                android:contentDescription="Click here to go to main screen"
+                android:onClick="onLogin"
+                android:text="Log In"
+                android:textColor="@android:color/white"
+                android:theme="@style/WepButtonWithMarigin" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="@dimen/btn_marigin"
+                android:background="@drawable/background_btn"
+                android:contentDescription="Click here to close the application"
+                android:onClick="Close"
+                android:text="Exit"
+                android:textColor="@android:color/white"
+                android:theme="@style/WepButtonWithMarigin" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.25"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLoginScreenBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/title_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btnMonthDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_margin="0dp"
+                android:background="@drawable/img_monthyear"
+                android:clickable="false"
+                android:contentDescription="Month button"
+                android:focusable="false"
+                android:text="March"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#0000FF" />
+
+            <Button
+                android:id="@+id/btnDateDisplay"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_gravity="right"
+                android:layout_margin="0dp"
+                android:background="@drawable/img_date"
+                android:clickable="false"
+                android:contentDescription="Month button"
+                android:focusable="false"
+                android:text="30"
+                android:textColor="#FFFFFF"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/btnYearDisplay"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_margin="0dp"
+                android:background="@drawable/img_monthyear"
+                android:clickable="false"
+                android:contentDescription="Month button"
+                android:focusable="false"
+                android:text="2013"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#0000FF" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBottomLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#777777" />
+
+        <TextView
+            android:id="@+id/tvCopyRightsLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/greenyellow"
+            android:text="WeP Solutions Limited."
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+</LinearLayout><!--
+</HorizontalScrollView>
+</ScrollView>
+-->

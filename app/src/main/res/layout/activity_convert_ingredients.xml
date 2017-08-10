@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/headerr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin1"
+            android:src="@drawable/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:foregroundGravity="center"
+            android:text="Ingredient List"/>
+
+        <ImageView
+            android:id="@+id/ImageView_Close"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:onClick="Close"
+            android:src="@drawable/ic_close_black_24dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerr"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/tv_linear_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_convert_menucode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Item " />
+
+                <TextView
+                    android:id="@+id/tv_convert_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/et_convert_item_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9"
+                    android:hint="Enter Quantity"
+                    android:inputType="numberDecimal"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_convert_item_uom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:gravity="center_vertical"
+                    android:hint="UOM"
+                    android:paddingLeft="5dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/background_btn"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@+id/tv_linear_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=" Ingredient" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/autocompletetv_convert_ingredient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8" />
+
+                <EditText
+                    android:id="@+id/et_convert_ingredient_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9"
+                    android:hint="Enter Quantity"
+                    android:inputType="numberDecimal"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_convert_ingredient_uom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:gravity="center_vertical"
+                    android:hint="UOM"
+                    android:paddingLeft="5dp" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_convert_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:textAllCaps="false"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                    android:onClick="AddIngredient"
+                    android:textColor="@android:color/white"
+                    android:text="Add"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear_ingredient"
+                android:layout_margin="5dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/black">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.1"
+                        android:text="SNo"
+                        android:textStyle="bold"
+                        android:textColor="@color/txtColorAccent"
+                        android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9"
+                        android:text="Ingredient"
+                        android:textStyle="bold"
+                        android:textColor="@color/txtColorAccent"
+                        android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Quantity"
+                        android:textStyle="bold"
+                        android:textColor="@color/txtColorAccent"
+                        android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.1"
+                        android:text="UoM"
+                        android:textStyle="bold"
+                        android:textColor="@color/txtColorAccent"
+                        android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.1"
+                        android:text="Delete"
+                        android:textStyle="bold"
+                        android:textColor="@color/txtColorAccent"
+                        android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/black">
+
+                </View>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="3dp"-->
+                <!--android:layout_marginBottom="3dp"-->
+                <!--android:layout_marginTop="1dp"-->
+                <!--android:layout_weight="1">-->
+                    <!--<ListView-->
+                        <!--android:id="@+id/lv_convert_ingredients"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginBottom="3dp"-->
+                        <!--android:layout_marginTop="1dp" />-->
+                <!--</LinearLayout>-->
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:id="@+id/tbl_convert_ingredients"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:collapseColumns="1">
+
+                    </TableLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxBtn"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="bottom"
+                android:background="#000000"  />
+
+            <LinearLayout
+                android:id="@+id/linear_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_convert_Submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:minHeight="40dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Submit"
+                    android:text="Submit Changes"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_convert_convertIngredient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:minHeight="40dp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/background_btn"
+                    android:onClick="ConvertIngredients"
+                    android:text="Convert Inward to Outward"
+                    android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_convert_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin1"
+                    android:layout_weight="1"
+                    android:minHeight="40dp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/background_btn"
+                    android:onClick="Close"
+                    android:text="Close"
+                    android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                    android:theme="@style/WepButtonWithMarigin" />
+            </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

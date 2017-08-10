@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="apachehttp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mSwipe/libs/apachehttp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

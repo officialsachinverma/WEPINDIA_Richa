@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_period"
+            >
+            <TextView
+                android:id="@+id/text_Period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="3. Period. "
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/calendar_button"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_toRightOf="@+id/text_Period"
+                android:background="@drawable/calendar_img"
+                android:onClick="dateDialog" />
+
+            <TextView
+                android:id="@+id/text_Month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/calendar_button"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/calendar_button"
+                android:text="Month "
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_MonthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_Month"
+                android:text="..."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_MonthValue"
+                android:text="Year "
+                android:textStyle="bold"
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+                android:id="@+id/text_YearValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_Year"
+                android:text="..."
+                android:textSize="16sp"
+
+                />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/text_inward_regis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_period"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="4. From Registered Taxable Persons including supplies recieved from unregistered person in case of reverse charge. (figures in RS)"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_inward_regis"
+            android:id="@+id/linear_inwardSupply"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_table_b2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="65sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft = "@dimen/activity_horizontal_margin"
+                    android:text="GSTIN/Name of unregistered supplier"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Inv No."
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Inv Date"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="45sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Value"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="25sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="G/S"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="HSN/SAC"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:text="Taxable Value"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Rate"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="33sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="IGST Amt"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="CGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="CGST Amt"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="SGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="SGST Amt"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="POS"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Eligibility of ITC"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="Total available IGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:text="Total available CGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:text="Total available SGST"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="This month available IGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:text="This month available CGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:text="This month available SGST"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below = "@+id/linear_table_b2b"
+                android:fillViewport="true">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tbl_inward_taxed"
+                    android:layout_marginLeft="26sp"  >
+
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_b2bA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_inwardSupply"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="4A. Amendments to details of Inward Supplies recieved in earlier tax periods.  (figures in RS)"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_b2bA"
+            android:id="@+id/linear_b2bA"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linear_table_b2ba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="Ori Inv No."
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:text="Ori Inv Date"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="65sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft = "@dimen/activity_horizontal_margin1"
+                    android:text="GSTIN/Name of unregistered supplier"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft= "5sp"
+                    android:text="Inv No."
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Inv Date"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:text="Value"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="25sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+
+                    android:text="G/S"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="HSN/SAC"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="40sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:text="Taxable Value"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="IGST Rate"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="33sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="IGST Amt"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="CGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="CGST Amt"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="SGST Rate"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="37sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="SGST Amt"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="POS"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:text="Eligibility of ITC"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+
+                    android:text="Total available IGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:text="Total available CGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="35sp"
+                    android:layout_height="wrap_content"
+                    android:text="Total available SGST"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="This month available IGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="wrap_content"
+                    android:text="This month available CGST"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="wrap_content"
+                    android:text="This month available SGST"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_below = "@+id/linear_table_b2ba"
+                android:fillViewport="true">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tbl_inward_taxed_amend"
+                    android:layout_marginLeft="10sp"          >
+
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_inward_unregis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_b2bA"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="8. Supplies received from composition taxable person/unregistered person and other exempt/nil/non GST supplies. (figures in RS)"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_inward_unregis"
+            android:id="@+id/linear_inwardSupply_untaxed"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_table_unregis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft = "@dimen/activity_horizontal_margin"
+                    android:text="Description"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="HSN/SAC"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Compounding Taxable Person"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Unregistered Taxable Person not included in table 4"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_gs"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Exempt Supply"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:text="Nil Rated"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:text="Non GST"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below = "@+id/linear_table_unregis"
+                android:fillViewport="true">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tbl_inward_untaxed"
+                    android:layout_marginLeft="30sp"  >
+
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_Sn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.15"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="SNo"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/tv_ingredientName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="Ingredients"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/tv_qty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|end"
+        android:layout_marginRight="55dp"
+        android:paddingRight="10dp"
+        android:text="Quantity"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.1"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="17dp"
+        android:id="@+id/tv_UOM" />
+
+    <ImageButton
+        android:id="@+id/tv_imgDel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginRight="2dp"
+        />
+
+</LinearLayout>

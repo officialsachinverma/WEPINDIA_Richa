@@ -1,0 +1,101 @@
+<resources>
+    <!-- 600 8 1024 and screen size is Large -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="menu_box_marigin">10dp</dimen>
+    <dimen name="menu_box_marigin_left">30dp</dimen>
+    <dimen name="menu_box_marigin_right">30dp</dimen>
+    <dimen name="menu_box_marigin_top">10dp</dimen>
+    <dimen name="menu_box_marigin_bottom">10dp</dimen>
+    <dimen name="left_margin_220dp">120dp</dimen>
+    <dimen name="right_margin_220dp">120dp</dimen>
+    <dimen name="top_margin_20dp">18dp</dimen>
+    <dimen name="bottom_margin_20dp">18dp</dimen>
+    <dimen name="bar_icon">50dp</dimen>
+    <dimen name="menu_box_font_size">14sp</dimen>
+
+
+    <dimen name="text_size_12sp_720dp_11sp_600dp">11sp</dimen>
+    <dimen name="text_size_12sp_720dp_10sp_600dp">10sp</dimen>
+
+    <dimen name="text_size_12sp_720dp_12sp_600dp">12sp</dimen>
+    <dimen name="text_size_11sp_720dp_9sp_600dp">9sp</dimen>
+    <dimen name="text_size_14sp_720dp_12sp_600dp">12sp</dimen>
+    <dimen name="text_size_14sp_720dp_10sp_600dp">10sp</dimen>
+    <dimen name="text_size_16sp_720dp_14sp_600dp">14sp</dimen>
+    <dimen name="text_size_13sp_720dp_11sp_600dp">11sp</dimen>
+
+
+    <dimen name="text_size_22sp_720dp_20sp_600dp">20sp</dimen>
+    <dimen name="text_size_24sp_720dp_22sp_600dp">22sp</dimen>
+
+
+    <dimen name="button_14sp_720dp_12sp_600dp">12sp</dimen>
+    <dimen name="button_16sp_720dp_14sp_600dp">14sp</dimen>
+    <dimen name="button_20sp_720dp_18sp_600dp">18sp</dimen>
+    <dimen name="button_18sp_720dp_16sp_600dp">16sp</dimen>
+    <dimen name="table_text_heading_16sp_720dp_14sp_600dp">14sp</dimen>
+    <dimen name="main_text_heading_17sp_720dp_15sp_600dp">15sp</dimen>
+
+
+    <dimen name="counter_sale_130dp_720dp_115dp_600dp">115dp</dimen>
+    <dimen name="counter_sale_140dp_720dp_125dp_600dp">125dp</dimen>
+    <dimen name="counter_sale_140dp_720dp_110dp_600dp">110dp</dimen>
+    <dimen name="counter_sale_5dp_720dp_4dp_600dp">4dp</dimen>
+    <dimen name="counter_sale_75dp_720dp_70dp_600dp">60dp</dimen>
+    <dimen name="counter_sale_75dp_720dp_65dp_600dp">65dp</dimen>
+
+    <dimen name="counter_sale_60dp_720dp_55dp_600dp">55dp</dimen>
+    <dimen name="counter_sale_70dp_720dp_60dp_600dp">60dp</dimen>
+
+    <dimen name="counter_sale_85dp_720dp_80dp_600dp">80dp</dimen>
+
+    <dimen name="counter_sale_90dp_720dp_85dp_600dp">85dp</dimen>
+    <dimen name="counter_sale_95dp_720dp_90dp_600dp">90dp</dimen>
+    <dimen name="counter_sale_115dp_720dp_80dp_600dp">80dp</dimen>
+    <dimen name="counter_sale_85dp_720dp_50dp_600dp">50dp</dimen>
+    <dimen name="counter_sale_30dp_720dp_20dp_600dp">20dp</dimen>
+
+
+    <dimen name="counter_sale_70dp_720dp_40dp_600dp">40dp</dimen>
+    <dimen name="counter_sale_45dp_720dp_35dp_600dp">35dp</dimen>
+
+
+    <dimen name="_5dp_720dp_4dp_600dp">4dp</dimen>
+    <dimen name="_10dp_720dp_7dp_600dp">7dp</dimen>
+    <dimen name="_15dp_720dp_10dp_600dp">10dp</dimen>
+    <dimen name="_20dp_720dp_15dp_600dp">15dp</dimen>
+    <dimen name="_25dp_720dp_20dp_600dp">20dp</dimen>
+    <dimen name="_30dp_720dp_25dp_600dp">25dp</dimen>
+    <dimen name="_35dp_720dp_30dp_600dp">30dp</dimen>
+    <dimen name="_40dp_720dp_35dp_600dp">35dp</dimen>
+    <dimen name="_45dp_720dp_40dp_600dp">40dp</dimen>
+    <dimen name="_50dp_720dp_45dp_600dp">45dp</dimen>
+    <dimen name="_55dp_720dp_50dp_600dp">50dp</dimen>
+    <dimen name="_60dp_720dp_55dp_600dp">55dp</dimen>
+    <dimen name="_65dp_720dp_60dp_600dp">60dp</dimen>
+    <dimen name="_70dp_720dp_65dp_600dp">65dp</dimen>
+    <dimen name="_75dp_720dp_70dp_600dp">70dp</dimen>
+    <dimen name="_80dp_720dp_75dp_600dp">75dp</dimen>
+
+    <dimen name="_85dp_720dp_80dp_600dp">80dp</dimen>
+    <dimen name="_90dp_720dp_85dp_600dp">85dp</dimen>
+    <dimen name="_95dp_720dp_90dp_600dp">90dp</dimen>
+    <dimen name="_100dp_720dp_95dp_600dp">95dp</dimen>
+    <dimen name="_105dp_720dp_100dp_600dp">100dp</dimen>
+    <dimen name="_110dp_720dp_105dp_600dp">105dp</dimen>
+    <dimen name="_115dp_720dp_110dp_600dp">110dp</dimen>
+    <dimen name="_120dp_720dp_115dp_600dp">115dp</dimen>
+
+
+
+    <dimen name="_160dp_720dp_140dp_600dp">140dp</dimen>
+    <dimen name="_165dp_720dp_145dp_600dp">145dp</dimen>
+
+    <dimen name="_200dp_720dp_150dp_600dp">150dp</dimen>
+
+
+    <dimen name="_250dp_720dp_210dp_600dp">210dp</dimen>
+
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    	<style name="mSWipeTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+
+         <item name="android:actionBarSize">30dp</item>
+         <item name="android:actionBarStyle">@style/ActionBarBackGround</item>
+         
+        </style>
+	    <style name="ActionBarBackGround" parent="@android:style/Widget.Holo.Light.ActionBar">
+         <item name="android:displayOptions">showTitle</item>
+	     <item name="android:background">#0000FF</item>
+	     <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+		</style>
+	  	<style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance">
+	    	<item name="android:textColor">#ffffff</item>
+	  	</style>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="app_name">WepModuleActivate</string>
+    <string name="brand_logo_url">https://rzp-mobile.s3.amazonaws.com/images/rzp.png</string>
+    <string name="company_name">Wep Solutions Ltd</string>
+    <string name="currency">INR</string>
+    <string name="payment_desc">Module Activation Payment</string>
+    <string name="url_auth_api">http://www.json-generator.com/api/json/get/bWmYAdVLKG?indent=2</string>
+    <string name="url_confirm_api">http://www.json-generator.com/api/json/get/cjAgmnCEpu?indent=2</string>
+    <string name="url_price_api">http://www.json-generator.com/api/json/get/cewBszEppe?indent=2</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

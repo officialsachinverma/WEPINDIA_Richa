@@ -1,0 +1,8 @@
+<resources>
+    <!-- (720x1280 ,768x1280 ,800x1280 ,Nexus7 ,Nexus10) Samsung Tab 10'' -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="menu_box_marigin">33dp</dimen>
+    <dimen name="bar_icon">50dp</dimen>
+    <dimen name="menu_box_font_size">18sp</dimen>
+</resources>

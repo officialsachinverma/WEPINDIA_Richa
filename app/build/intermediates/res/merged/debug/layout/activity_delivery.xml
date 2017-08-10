@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnrDelivery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/boxBn"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/view12">
+
+                <ScrollView
+                    android:id="@+id/scrlRiderTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="#DDDDDD">
+
+                    <TableLayout
+                        android:id="@+id/tblRider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:collapseColumns="1, 3">
+
+                        <TableRow
+                            android:id="@+id/rowCaption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryLight">
+
+                            <TextView
+                                android:id="@+id/tvCaptionRiderSno"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="S.No"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/txtColorAccent" />
+
+                            <TextView
+                                android:id="@+id/tvCaptionRiderCode"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Code"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/txtColorAccent" />
+
+                            <TextView
+                                android:id="@+id/tvCaptionRiderName"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:text="Rider Name"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/txtColorAccent" />
+
+                            <TextView
+                                android:id="@+id/tvCaptionRiderStatus"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/txtColorAccent" />
+                        </TableRow>
+                    </TableLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#000000" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/rowDeliveryRiderSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <TextView
+                    android:id="@+id/tvDeliveryRider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Rider Name:"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/etDeliveryRiderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowAmountDue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rowDeliveryRiderSelection"
+                android:weightSum="6">
+
+                <TextView
+                    android:id="@+id/tvAmountDue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Amount Due:"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/etAmountDue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:focusable="false"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowPaidStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rowAmountDue"
+                android:weightSum="6">
+
+                <TextView
+                    android:id="@+id/tvPaidStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Status : "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/etPaidStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/boxBn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tvHorizontalLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="#000000" />
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHorizontalLine"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_DeliveryCancel"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:background="@drawable/gradient_button"
+                android:onClick="Cancel"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/btn_DeliveryOK"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/gradient_button"
+                android:onClick="OK"
+                android:text="OK" />
+
+            <Button
+                android:id="@+id/btn_PrintBill"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/gradient_button"
+                android:onClick="PrintBill"
+                android:text="Print Bill" />
+        </TableRow>
+    </RelativeLayout>
+</RelativeLayout>

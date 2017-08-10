@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="75dp"
+    tools:context="com.wepindia.pos.fragments.Fragment_Outward_Credit_Debit_Note">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/linear_creditButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentBottom="true">
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnAddCredit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btn"
+            android:onClick="AddCredit"
+            android:text="Add"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnEditCredit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btn"
+            android:onClick="EditCredit"
+            android:text="Update"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnClearCredit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btn"
+            android:onClick="ClearCredit"
+            android:text="Clear"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnPrintCredit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btn"
+            android:onClick="PrintCredit"
+            android:text="Print"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnCloseCredit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btn"
+            android:onClick="CloseCredit"
+            android:text="Close"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_creditDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"/>
+            <LinearLayout
+                android:id="@+id/invc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="43dp"
+                >
+                <TextView
+                    android:id="@+id/tvInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Original Invoice* : "
+                    android:background="@color/colorPrimaryLight"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txtColorAccent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No."/>
+                <TextView
+                    android:id="@+id/tv_InvoiceNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"/>
+                <TextView
+                    android:id="@+id/tv_InvoiceDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/imgButton_cal_Invoice"
+                        android:layout_width="40dp"
+                        android:layout_height="43dp"
+                        android:background="@drawable/btn_calendar"
+                        android:onClick="dateSelection_inward"
+                        android:layout_weight="1"/>
+                </FrameLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/tvCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Credit Note : "
+                    android:background="@color/colorPrimaryLight"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txtColorAccent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No."/>
+                <TextView
+                    android:id="@+id/tv_creditNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"/>
+                <TextView
+                    android:id="@+id/tv_creditDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/imgButton_cal"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_calendar"
+                        android:onClick="dateSelection_inward"
+                        />
+                </FrameLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:text="Reason"
+                    android:background="@color/colorPrimaryLight"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txtColorAccent" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_creditDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear_creditButtons"
+        android:layout_below="@id/linear_creditDetails">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="display"/>
+    </RelativeLayout>
+</RelativeLayout>

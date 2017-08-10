@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_Sn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.05"
+
+        android:gravity="center"
+        android:text="Sno." />
+
+
+
+    <TextView
+        android:id="@+id/tv_hsnCode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.01"
+
+        android:gravity="center"
+        android:text="HSNCode" />
+
+    <TextView
+        android:id="@+id/tv_itemName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+
+        android:gravity="center"
+        android:text="Item Name" />
+
+    <TextView
+        android:id="@+id/tv_rate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:text="Rate" />
+
+    <TextView
+        android:id="@+id/tv_qty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.02"
+
+        android:gravity="center"
+        android:text="Qty" />
+
+    <TextView
+        android:id="@+id/tv_UOM"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.02"
+        android:gravity="center"
+        android:text="UoM" />
+
+    <TextView
+        android:id="@+id/tv_taxVal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.95"
+
+        android:gravity="center"
+        android:text="Taxable Value" />
+
+    <TextView
+        android:id="@+id/tv_igstAmt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:text="IGST Amt" />
+    <TextView
+        android:id="@+id/tv_cgstAmt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:text="CGST Amt" />
+
+    <TextView
+        android:id="@+id/tv_sgstAmt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:text="SGST Amt" />
+
+    <TextView
+        android:id="@+id/tv_cessAmt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:text="cess Amt" />
+
+    <TextView
+        android:id="@+id/tv_amt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.96"
+
+        android:gravity="center"
+        android:text="Amount" />
+
+    <ImageButton
+        android:id="@+id/tv_imgDel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.05"
+
+        android:gravity="center"
+         />
+
+</LinearLayout>

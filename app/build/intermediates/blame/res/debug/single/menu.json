@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\loginview.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\menu\\loginview.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\set_gate_way.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\menu\\set_gate_way.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\wisepad.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\menu\\wisepad.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\lasttxstatusmenu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\menu\\lasttxstatusmenu.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_login.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\menu\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menuview.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\menu\\menuview.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_wep_base.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\menu\\menu_wep_base.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\bundles\\default\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_tabbed_report.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\menu\\menu_tabbed_report.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_with_delete.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\menu\\menu_with_delete.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\batchhistorymenu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\menu\\batchhistorymenu.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\historymenu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\menu\\historymenu.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\menu\\option_menu.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\bundles\\default\\res\\menu\\option_menu.xml"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\res\\merged\\debug\\menu\\menu_wep_base.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\src\\main\\res\\menu\\menu_wep_base.xml"
+    }
+]

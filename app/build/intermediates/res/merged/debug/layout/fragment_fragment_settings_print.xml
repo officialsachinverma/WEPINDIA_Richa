@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_printer_configuration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="PRINT KOT" />
+
+                        <Spinner
+                            android:id="@+id/spnr1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            style="@android:style/Widget.Holo.Light.Spinner"/>
+
+                        <Button
+                            android:id="@+id/saveKotPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Save KOT Printer" />
+
+                        <Button
+                            android:id="@+id/resetKotPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Reset"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="PRINT BILL" />
+
+                        <Spinner
+                            android:id="@+id/spnr2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            style="@android:style/Widget.Holo.Light.Spinner"/>
+
+                        <Button
+                            android:id="@+id/saveBillPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Save Bill Printer" />
+
+                        <Button
+                            android:id="@+id/resetBillPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Reset"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="PRINT REPORT" />
+
+                        <Spinner
+                            android:id="@+id/spnr3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            style="@android:style/Widget.Holo.Light.Spinner"/>
+
+                        <Button
+                            android:id="@+id/saveReportPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Save Report Printer" />
+
+                        <Button
+                            android:id="@+id/resetReportPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Reset"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="PRINT RECEIPT" />
+
+                        <Spinner
+                            android:id="@+id/spnr4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            style="@android:style/Widget.Holo.Light.Spinner"/>
+
+                        <Button
+                            android:id="@+id/saveReceiptPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Save Receipt Printer" />
+
+                        <Button
+                            android:id="@+id/resetReceiptPrint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:minHeight="40dp"
+                            android:text="Reset"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDatabaseHLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/PrinterboxBtn"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/PrinterboxBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <Button
+            android:id="@+id/btnClosePrinter"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Close" />
+    </LinearLayout>
+
+</RelativeLayout>

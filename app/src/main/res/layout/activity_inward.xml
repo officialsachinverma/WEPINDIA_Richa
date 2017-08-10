@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wepindia.pos.InwardActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/home_back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/menu_box_marigin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imgSupplier1"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:contentDescription="SupplierDetails"
+                    android:onClick="LaunchActivity"
+                    android:padding="3dp"
+                    android:src="@drawable/inwardsupplyitem"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/tvSupplier1"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgSupplier1"
+                    android:gravity="center"
+                    android:text="Supplier Details"
+                    android:textSize="@dimen/menu_box_font_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/menu_box_marigin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imgiteminward"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:contentDescription="InwardItemEntry"
+                    android:onClick="LaunchActivity"
+                    android:padding="3dp"
+                    android:src="@drawable/inwardsupplyitem"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/tviteminward"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgiteminward"
+                    android:gravity="center"
+                    android:text="Inward Item Masters"
+                    android:textSize="@dimen/menu_box_font_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/menu_box_marigin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imgSupplier"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:contentDescription="SupplierItemLinkage"
+                    android:onClick="LaunchActivity"
+                    android:padding="3dp"
+                    android:src="@drawable/inwardsupplyitem"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/tvSupplier"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgSupplier"
+                    android:gravity="center"
+                    android:text="Supplier Item Linkage"
+                    android:textSize="@dimen/menu_box_font_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_inward_invoice_entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/menu_box_marigin"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/inward_supply_invoice"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/gradient_button"
+                    android:contentDescription="InwardSupplyInvoicesEntry"
+                    android:onClick="LaunchActivity"
+                    android:padding="3dp"
+                    android:src="@drawable/inwardsupply" />
+
+                <TextView
+                    android:id="@+id/tvPickUpOption"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inward_supply_invoice"
+                    android:gravity="center"
+                    android:text="Inward  Supply "
+                    android:textSize="@dimen/menu_box_font_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/menu_box_marigin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imgPurchaseOrder"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:contentDescription="PurchaseOrder"
+                    android:onClick="LaunchActivity"
+                    android:padding="3dp"
+                    android:src="@drawable/purchaseorder" />
+
+                <TextView
+                    android:id="@+id/tvPurchaseOrderOption"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPurchaseOrder"
+                    android:gravity="center"
+                    android:text="Purchase Order"
+                    android:textSize="@dimen/menu_box_font_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/menu_box_marigin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imgGoodInwardNote"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:contentDescription="GoodInwardNote"
+                    android:onClick="LaunchActivity"
+                    android:padding="3dp"
+                    android:src="@drawable/goodsinwardnote" />
+
+                <TextView
+                    android:id="@+id/tvGoodInwardNoteOption"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgGoodInwardNote"
+                    android:gravity="center"
+                    android:text="Goods Inward Note"
+                    android:textSize="@dimen/menu_box_font_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/menu_box_marigin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imgIngredients"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:contentDescription="Ingredients"
+                    android:onClick="LaunchActivity"
+                    android:padding="3dp"
+                    android:src="@drawable/ingredients"/>
+
+                <TextView
+                    android:id="@+id/tvIngredientsOption"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgIngredients"
+                    android:gravity="center"
+                    android:text="Ingredient Management"
+                    android:textSize="@dimen/menu_box_font_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

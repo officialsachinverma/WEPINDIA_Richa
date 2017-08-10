@@ -1,0 +1,8 @@
+<resources>
+    <!-- (600x1024) Samsung tab 3, size 7' -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="menu_box_marigin">25dp</dimen>
+    <dimen name="bar_icon">50dp</dimen>
+    <dimen name="menu_box_font_size">18sp</dimen>
+</resources>

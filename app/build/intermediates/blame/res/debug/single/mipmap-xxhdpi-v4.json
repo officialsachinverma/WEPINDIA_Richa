@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_num1.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_num1.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_home_white_24dp.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_home_white_24dp.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_rupee.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\upgradeModule\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_rupee.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_delete.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_delete.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_photo_white_24dp.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_photo_white_24dp.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_number2.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_number2.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_reedem.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\upgradeModule\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_reedem.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_logout.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_logout.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_num3.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_num3.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_launcher.png"
+    }
+]

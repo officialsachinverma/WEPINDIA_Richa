@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <TableRow
+            android:id="@+id/rowCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvCash"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Cash:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etTenderCashValue"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tvVerticalLine"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvHorizontalLine"
+            android:layout_alignBottom="@+id/tvHorizontalLine"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="1dp"
+            android:background="#000000" />
+
+        <TableRow
+            android:id="@+id/rowSearchCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/rowCash"
+            android:layout_marginRight="25dp">
+
+            <TextView
+                android:id="@+id/tvBarcode"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Barcode:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etTenderCouponBarcodeValue"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:inputType="text" />
+        </TableRow>
+
+        <ScrollView
+            android:id="@+id/scrlTenderCouponTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvHorizontalLine"
+            android:layout_alignLeft="@+id/rowSearchCoupon"
+            android:layout_below="@+id/rowSearchCoupon"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#DDDDDD">
+
+            <TableLayout
+                android:id="@+id/tblTenderCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:collapseColumns="4">
+
+                <TableRow
+                    android:id="@+id/rowCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight">
+
+                    <TextView
+                        android:id="@+id/tvCaptionCouponId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:text="Id"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionCouponDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:text="Description"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionCouponAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:text="Amount"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionCouponQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:text="Quantity"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionCouponBarcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barcode"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <TableRow
+            android:id="@+id/rowCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rowCash"
+            android:layout_below="@+id/rowCash"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvCard"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Card:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etTenderCardValue"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rowCard"
+            android:layout_below="@+id/rowCard"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvCoupon"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Coupon:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvTenderCouponValue"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <CheckBox
+            android:id="@+id/chkComplimentaryBill"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rowCoupon"
+            android:layout_below="@+id/rowCoupon"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Complimentary Bill"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etComplimentaryReason"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_alignLeft="@+id/rowCoupon"
+            android:layout_below="@+id/chkComplimentaryBill"
+            android:layout_marginTop="5dp"
+            android:ems="5"
+            android:hint="Complimentary bill reason"
+            android:inputType="textMultiLine"
+            android:visibility="invisible" />
+
+        <TableRow
+            android:id="@+id/rowTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etComplimentaryReason"
+            android:layout_below="@+id/etComplimentaryReason"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Total:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTenderTotalValue"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#0000ff" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rowTotal"
+            android:layout_below="@+id/rowTotal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvTender"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Tender:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTenderTenderValue"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rowTender"
+            android:layout_below="@+id/rowTender"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvChange"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Change:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTenderChangeValue"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tvHorizontalLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/rowButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:background="#000000" />
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp">
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnTenderPrint"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="Print"
+                android:text="Print" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnTenderSave"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="Save"
+                android:text="Save" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnTenderDiscount"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="Discount"
+                android:text="Discount" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnTenderClear"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="Clear"
+                android:text="Clear" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnTenderClose"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="Close"
+                android:text="Close" />
+        </TableRow>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_REL_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f5f5f5"
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp" >
+
+    <include
+        android:id="@+id/top_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        layout="@layout/top_bar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginTop="10dp"
+        android:background="#f5f5f5" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#DCDFE0" >
+
+            <ScrollView
+                android:id="@+id/lsttrxstatus_SCL_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadeScrollbars="false" >
+
+                <LinearLayout
+                    android:id="@+id/lsttrxstatus_LNR_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="3dp"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblTxStatus"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Status"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_TxStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblTxDateTime"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Tx Date"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_TxDateTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblCardholderName"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Cardholder"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_CardholderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblAmtRs"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Amount"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/creditsale_LBL_Amtprefix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="2dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="18dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_AmtRs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblCreditCardNum"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Last 4 digits"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_CreditCardNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblTypeofTx"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Type"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_TypeofTx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblAuthNo"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Auth Code"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_AuthNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblRRNo"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="RR No"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_RRNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblStanID"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Stan Id"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_StanID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblVoucher"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Voucher"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_Voucher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblTerminalMessage"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Tx Message"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_TXT_TerminalMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblmid"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="MID"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_TXT_mid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lbltid"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="TID"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_TXT_tid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblbatchno"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="BatchNo."
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_TXT_batchno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+                    
+                     <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblreceiptno"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="ReceiptNo."
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_TXT_receiptno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="22dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblNotes"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Notes"
+                            android:textColor="#777777"
+                            android:textSize="17dp"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:id="@+id/lsttrxstatus_TXT_Notes"
+                            android:layout_width="285dip"
+                            android:layout_height="120dip"
+                            android:layout_below="@+id/lsttrxstatus_LBL_lblNotes"
+                            android:background="@drawable/whiterectborderblack"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:gravity="top"
+                            android:maxLines="5"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp" >
+                        </EditText>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

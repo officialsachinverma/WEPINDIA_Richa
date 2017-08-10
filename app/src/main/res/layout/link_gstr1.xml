@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <RelativeLayout
+        android:id="@+id/boxContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:id="@+id/SaveGSTR1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_upload" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img1"
+                        android:gravity="center"
+                        android:text="Save GSTR1 Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_download" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img2"
+                        android:gravity="center"
+                        android:text="Get GSTR1 B2CS Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_upload" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img3"
+                        android:gravity="center"
+                        android:text="Upload GSTR1"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_download" />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img4"
+                        android:gravity="center"
+                        android:text="Get GSTR1 B2CSA Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_download" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img5"
+                        android:gravity="center"
+                        android:text="Get GSTR1 Summery"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img6"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_upload" />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img6"
+                        android:gravity="center"
+                        android:text="Save GSTR1A Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img7"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_download" />
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img7"
+                        android:gravity="center"
+                        android:text="Get GSTR1A B2B Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img8"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_download" />
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img8"
+                        android:gravity="center"
+                        android:text="Get GSTR1A B2BA Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img9"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_download" />
+
+                    <TextView
+                        android:id="@+id/tv22"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img9"
+                        android:gravity="center"
+                        android:text="Get GSTR1A Summery"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/img12"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_upload" />
+
+                    <TextView
+                        android:id="@+id/tv12"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img12"
+                        android:gravity="center"
+                        android:text="Save GSTR1A Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fileGSTR1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img10"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/icon_file" />
+
+                    <TextView
+                        android:id="@+id/tv10"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img10"
+                        android:gravity="center"
+                        android:text="File GSTR1"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img11"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/icon_file" />
+
+                    <TextView
+                        android:id="@+id/tv11"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img11"
+                        android:gravity="center"
+                        android:text="File GSTR1A"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/menu_box_marigin"
+                    android:layout_weight="1"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/img13"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="DineIn"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_upload" />
+
+                    <TextView
+                        android:id="@+id/tv13"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img13"
+                        android:gravity="center"
+                        android:text="Save GSTR1A Invoices"
+                        android:textSize="@dimen/menu_box_font_size" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

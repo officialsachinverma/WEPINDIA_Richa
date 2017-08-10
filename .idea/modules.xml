@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gstAPI/gstAPI.iml" filepath="$PROJECT_DIR$/gstAPI/gstAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mSwipe/mSwipe.iml" filepath="$PROJECT_DIR$/mSwipe/mSwipe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/printers/printers.iml" filepath="$PROJECT_DIR$/printers/printers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upgradeModule/upgradeModule.iml" filepath="$PROJECT_DIR$/upgradeModule/upgradeModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wepbase/wepbase.iml" filepath="$PROJECT_DIR$/wepbase/wepbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wepfnb_gst.iml" filepath="$PROJECT_DIR$/wepfnb_gst.iml" />
+    </modules>
+  </component>
+</project>

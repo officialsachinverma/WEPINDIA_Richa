@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TableRow
+        android:id="@+id/rowPOSNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="20dp" >
+
+        <TextView
+            android:id="@+id/tvPOSNumber"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="POS Number"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etPOSNumber"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:maxLength="3"
+            android:ems="10"
+            android:inputType="number" />
+        <Spinner
+            android:id="@+id/spnr_pos"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:entries="@array/poscode"
+            android:layout_weight="1" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowTIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rowPOSNumber"
+        android:layout_below="@+id/rowPOSNumber"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/tvTIN"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="GSTIN"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etTIN"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:maxLength="20"
+            android:ems="10"
+            android:inputType="text" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowSubUdftext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rowPOSNumber"
+        android:layout_below="@+id/rowTIN"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvSubUdf"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Sub UDF Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etSubUdfText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:maxLength="20"
+            android:ems="10"
+            android:inputType="text" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowDateSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rowPOSNumber"
+        android:layout_below="@+id/rowTIN"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/tvBusinessDate1"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Business Date"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etBusinessDate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ems="5"
+            android:focusable="false"
+            android:inputType="text"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btn_BusinessDate"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_calendar" />
+
+    </TableRow>
+
+    <DatePicker
+        android:id="@+id/dateBusinessDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rowPOSNumber"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/rowPOSNumber"
+        android:calendarViewShown="false"
+        android:visibility="gone" />
+
+    <!-- <TextView
+        android:id="@+id/tvVerticalLine"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginRight="15dp" /> -->
+
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"/>
+
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"  >
+
+        <Button
+            android:id="@+id/btnApplyMiscSettings"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:text="Apply" />
+
+        <Button
+            android:id="@+id/btnCloseMiscSettings"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:text="Close" />
+
+    </TableRow>
+
+
+
+    <TextView
+        android:id="@+id/tvOtherSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rowPOSNumber"
+        android:layout_alignRight="@+id/rowPOSNumber"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="Settings"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvBusinessDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvOtherSettings"
+        android:layout_alignLeft="@+id/dateBusinessDate"
+        android:layout_marginLeft="50dp"
+        android:text="Business Date"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvServiceTaxSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rgSerivceTax"
+        android:layout_alignRight="@+id/rgSerivceTax"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="Service Tax"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android:id="@+id/rgSerivceTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/rowPOSNumber"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rbItemPriceServiceTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:onClick="ServiceTaxClick"
+            android:text="For Item Price"/>
+
+        <RadioButton
+            android:id="@+id/rbBillAmountServiceTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="ServiceTaxClick"
+            android:text="For Bill Amount"/>
+
+    </RadioGroup>
+
+    <TableRow
+        android:id="@+id/rowServiceTaxPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rgSerivceTax"
+        android:layout_below="@+id/rgSerivceTax"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/tvServiceTaxPercent"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="ServiceTax Percent"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etServiceTaxPercent"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:maxLength="6"
+            android:text="0"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    </TableRow>
+
+    <CheckBox
+        android:id="@+id/chkUseWeighScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/rowServiceTaxPercent"
+        android:layout_alignLeft="@+id/rowServiceTaxPercent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Use Weiging Scale"
+        android:visibility="invisible" />
+
+</RelativeLayout>

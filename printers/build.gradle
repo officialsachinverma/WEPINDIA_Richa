@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        //applicationId "com.wepindia.printers"
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile files('libs/apachestrlib.jar')
+    compile files('libs/commons-lang-2.6.jar')
+    compile files('libs/effica_lib.jar')
+    compile files('libs/gprinter-2.1.2.jar')
+    compile files('libs/jcc-bate-0.7.3.jar')
+    compile 'com.android.support:support-v4:24.0.0'
+    compile 'com.google.guava:guava:19.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile project(':wepbase')
+    //compile project(path: ':common')
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_REL_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2" >
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:gravity="top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/topbar_LBL_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Login"
+            android:textColor="#0000ff"
+            android:textSize="21dp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_bar"
+        android:layout_centerHorizontal="true"
+        android:background="#f2f2f2"
+        android:keepScreenOn="true" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/creditsale_LNR_redceiptdetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="82dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <com.mswipetech.wisepad.sdktest.view.SignatureView
+                    android:id="@+id/creditsale_View_signature"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_below="@+id/creditsale_LNR_redceiptdetails"
+                    android:layout_marginTop="2dp" >
+                </com.mswipetech.wisepad.sdktest.view.SignatureView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/creditsale_View_signature"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center_horizontal" >
+
+                    <Button
+                        android:id="@+id/creditsale_BTN_clear"
+                        android:layout_width="100dp"
+                        android:layout_height="42dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/roundrectblue"
+                        android:gravity="center"
+                        android:text="Clear"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:typeface="sans" />
+
+                    <Button
+                        android:id="@+id/creditsale_BTN_printsignature"
+                        android:layout_width="100dp"
+                        android:layout_height="42dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/roundrectblue"
+                        android:gravity="center"
+                        android:text="Print"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:typeface="sans" />
+
+                    <Button
+                        android:id="@+id/creditsale_BTN_submitsignature"
+                        android:layout_width="100dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/roundrectblue"
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:typeface="sans" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

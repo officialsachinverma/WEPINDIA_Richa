@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TextView
+        android:id="@+id/tvDineInPriceRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rowDineIn1"
+        android:layout_alignRight="@+id/rowDineIn1"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="Price Range "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TableRow
+        android:id="@+id/rowDineInCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin1"
+        android:layout_marginTop="110dp" >
+
+        <TextView
+            android:id="@+id/tvFor"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=" For "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tvFrom"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="From"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tvTo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="To"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/etDineIn"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="Dine In"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/etCounterSales"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="Counter Sales"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/etPickUp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="Pick Up"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/etDelivery"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="Home Delivery"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowDineIn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowDineInCaption"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp" >
+
+        <EditText
+            android:id="@+id/etDineIn1Caption"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="12"
+            android:text="Price Slab1" />
+
+        <EditText
+            android:id="@+id/etDineInPrice1From"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:visibility="gone"
+            android:maxLength="3" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/etDineInPrice1To"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:visibility="gone"
+            android:maxLength="3" />
+
+        <CheckBox
+            android:id="@+id/chkDineIn1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkCounterSales1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkPickUp1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkDelivery1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowDineIn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowDineIn1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp" >
+
+        <EditText
+            android:id="@+id/etDineIn2Caption"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="12"
+            android:text="Price Slab2" />
+
+        <EditText
+            android:id="@+id/etDineInPrice2From"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:visibility="gone"
+            android:maxLength="3" />
+
+        <EditText
+            android:id="@+id/etDineInPrice2To"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:visibility="gone"
+            android:maxLength="3" />
+
+        <CheckBox
+            android:id="@+id/chkDineIn2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkCounterSales2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkPickUp2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkDelivery2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowDineIn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowDineIn2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp" >
+
+        <EditText
+            android:id="@+id/etDineIn3Caption"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="12"
+            android:text="Price Slab3" />
+
+        <EditText
+            android:id="@+id/etDineInPrice3From"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:visibility="gone"
+            android:maxLength="3" />
+
+        <EditText
+            android:id="@+id/etDineInPrice3To"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:visibility="gone"
+            android:maxLength="3" />
+
+        <CheckBox
+            android:id="@+id/chkDineIn3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkCounterSales3"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkPickUp3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/chkDelivery3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowActiveForBilling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowDineIn3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/rowMaxWaiters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rowDineIn2"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvMaxWaiter"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum Waiter"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/etDineInMaxWaiter"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowMaxTables"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/rowMaxWaiters"
+                android:layout_alignTop="@+id/rowDineIn3" >
+
+                <TextView
+                    android:id="@+id/tvMaxTable"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum Table"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/etDineInMaxTable"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </TableRow>
+        </LinearLayout>
+    </TableRow>
+
+
+
+    <!--
+         <TextView
+        android:id="@+id/tvVerticalLine"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="15dp"
+        android:background="#000000" />
+    -->
+
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"
+        android:background="#000000" />
+
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+
+        <Button
+            android:id="@+id/btnApplyDineInSettings"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Apply" />
+
+        <Button
+            android:id="@+id/btnCloseDineInSettings"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Close" />
+    </TableRow>
+
+
+
+</RelativeLayout>

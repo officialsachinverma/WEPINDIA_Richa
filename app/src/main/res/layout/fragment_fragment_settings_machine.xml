@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="120dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Restore Default (only settings are reset)"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/btn_RestoreDefault"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_btn"
+                    android:onClick="RestoreDefault"
+                    android:text="Restore Default"
+                    android:textSize="20sp"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Back Up"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/btn_DbBackup"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_btn"
+                    android:onClick="BackUp"
+                    android:text="Back Up"
+                    android:textSize="20sp"
+                    android:theme="@style/WepButtonWithMarigin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Factory Reset (deletes all the current data and settings)"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/btn_FactoryReset"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_btn"
+                    android:onClick="FactoryReset"
+                    android:text="Factory Reset "
+                    android:textSize="20sp"
+                    android:theme="@style/WepButtonWithMarigin" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDatabaseHLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/DatabaseboxBtn"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/DatabaseboxBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <!--<Button
+            android:id="@+id/btnApplyDatabaseBackup"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/gradient_button"
+            android:onClick="Apply"
+            android:text="Apply" />-->
+
+        <Button
+            android:id="@+id/btnCloseDatabaseBackup"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_btn"
+            android:onClick="Close"
+            android:text="Close"
+            android:theme="@style/WepButtonWithMarigin" />
+    </LinearLayout>
+
+</RelativeLayout>

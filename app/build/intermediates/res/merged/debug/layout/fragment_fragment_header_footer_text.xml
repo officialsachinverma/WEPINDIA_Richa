@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/boxBtn">
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:id="@+id/tv_header"
+                android:text="Header Text"/>
+            <EditText
+                android:id="@+id/addressLine1"
+                android:layout_toEndOf="@id/tv_header"
+                android:layout_alignBaseline="@id/tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="Header"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLength="50"
+                android:minHeight="40dp"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/addressLine2"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addressLine1"
+                android:layout_margin="20dp"
+                android:hint="Address line 2"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLength="38"
+                android:minHeight="40dp"
+                android:maxLines="2" />
+
+            <EditText
+                android:id="@+id/addressLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addressLine2"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                android:hint="Address line 3"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLength="38"
+                android:minHeight="40dp"
+                android:minLines="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Footer Text"
+                android:id="@+id/tv_footer"
+                android:layout_below="@id/tv_header"
+                android:layout_marginTop="40dp"/>
+            <EditText
+                android:id="@+id/addressLineFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_footer"
+                android:layout_alignBaseline="@id/tv_footer"
+                android:layout_margin="20dp"
+                android:hint="Footer"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLength="38"
+                android:minHeight="40dp"
+                android:maxLines="2"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/boxBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/btnApplyHeaderFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:minHeight="40dp"
+            android:minWidth="200dp"
+            android:text="Apply" />
+
+        <Button
+            android:id="@+id/btnCloseHeaderFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnApplyHeaderFooter"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:minHeight="40dp"
+            android:minWidth="200dp"
+            android:text="Close" />
+    </RelativeLayout>
+</RelativeLayout>

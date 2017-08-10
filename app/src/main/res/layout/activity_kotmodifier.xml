@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TableRow
+        android:id="@+id/rowModifierDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" >
+
+        <TextView
+            android:id="@+id/tvModifierDescription"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Other Charges Description"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etModifierDescription"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:maxLength="16"
+            android:ems="5"
+			android:hint="Other Charges Description"
+            android:inputType="text" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/rowModifierAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowModifierDescription"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvModifierAmount"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Other Charges Amount"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etModifierAmount"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="7"
+            android:hint="Other Charges Amount"
+            android:inputType="numberDecimal" />
+        
+        <CheckBox 
+            android:id="@+id/chkIsChargeable"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Chargeable"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:checked="true"/>
+        
+    </TableRow>
+    
+     <TableRow
+        android:id="@+id/rowModes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowModifierAmount"
+        android:layout_centerHorizontal="true" >
+
+		 <TextView
+			 android:id="@+id/tvModifierModes"
+			 android:layout_width="250dp"
+			 android:layout_height="wrap_content"
+			 android:text="Other Charges Modes"
+			 android:layout_marginRight="5dp"
+			 android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		 <Spinner
+			 android:id="@+id/spnrModes"
+			 android:layout_width="250dp"
+			 android:layout_height="wrap_content" />
+
+    </TableRow>
+
+    <ScrollView 
+        android:id="@+id/scrlKOTModifierTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rowModes"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" >
+	    <TableLayout
+	        android:id="@+id/tblKOTModifier"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:collapseColumns="1">
+	
+	        <TableRow
+	            android:id="@+id/rowCaption"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="#000000" >
+
+				<TextView
+					android:id="@+id/tvCaptionModifierSno"
+					android:layout_width="100dp"
+					android:layout_height="wrap_content"
+					android:text="S.No"
+                    android:gravity="center"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#ffffff" />
+	
+	            <TextView
+	                android:id="@+id/tvCaptionModifierId"
+	                android:layout_width="100dp"
+	                android:layout_height="wrap_content"
+	                android:text="Id"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#ffffff" />
+	
+	            <TextView
+	                android:id="@+id/tvCaptionModifierDescription"
+	                android:layout_width="200dp"
+	                android:layout_height="wrap_content"
+	                android:text="Description"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#ffffff" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionModifierAmount"
+	                android:layout_width="120dp"
+	                android:layout_height="wrap_content"
+	                android:text="Amount"
+                    android:gravity="center"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#ffffff" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionChargeable"
+	                android:layout_width="150dp"
+	                android:layout_height="wrap_content"
+	                android:text="Chargeable"
+                    android:gravity="center"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionModes"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Modes"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+				<TextView
+					android:layout_width="5dp"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#ffffff" />
+				<TextView
+					android:id="@+id/tvCaptionDelete"
+					android:layout_width="100dp"
+					android:layout_height="wrap_content"
+					android:text="Delete"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#ffffff" />
+				<TextView
+					android:layout_width="5dp"
+					android:layout_height="wrap_content"
+					android:text="Modes"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#ffffff" />
+	            
+	        </TableRow>
+	    </TableLayout>
+    </ScrollView>
+    
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:background="#000000" />
+    
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+    
+        <Button
+	        android:id="@+id/btnAddModifier"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:onClick="AddKOTModifier"
+	        android:text="Add" />
+	
+	    <Button
+	        android:id="@+id/btnEditModifier"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="EditKOTModifier"
+	        android:text="Save" />
+	    
+	    <Button
+	        android:id="@+id/btnClearModifier"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="ClearKOTModifier"
+	        android:text="Clear" />
+	    
+	    <Button
+	        android:id="@+id/btnCloseModifier"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="CloseKOTModifier"
+	        android:text="Close" />
+    
+    </TableRow>
+    
+</RelativeLayout>

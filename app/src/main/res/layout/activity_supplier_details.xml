@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.wepindia.pos.SupplierDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <LinearLayout
+        android:id="@+id/lnrItemMaster"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:background="@color/colorPrimaryLight">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.8">
+
+                    <LinearLayout
+                        android:id="@+id/rowCaption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tvCaptionSNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="S. No."
+                            android:layout_weight="0.9"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionplierName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Supplier Name"
+                            android:layout_weight="0.8"
+                            android:paddingStart="@dimen/activity_horizontal_margin1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionLongName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Supplier Phone"
+                            android:layout_weight=".9"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/Inw_Rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".9"
+                            android:text="Supplier GSTIN"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/Inw_Quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Supplier Address"
+                            android:layout_weight="0.75"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"
+                            android:textColor="@color/txtColorAccent" />
+
+
+                        <TextView
+                            android:id="@+id/tvCaptionDelete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Delete"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="0.9"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"
+                            android:textColor="@color/txtColorAccent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lstSupplierDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorGreyBackground"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2">
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000" />
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginBottom="67dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000" />
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="2dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_marginBottom="75dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:background="#000000" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_suppliercode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="SupplierCode"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Supplier Name*"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <AutoCompleteTextView
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/autocompletetv_suppliername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.65"
+                            android:drawableRight="@drawable/searchicon_img" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Supplier GSTIN"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <EditText
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:id="@+id/edt_supplierGSTIN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.65"
+                            android:maxLength="15"
+                            android:textSize="13dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Supplier Phone"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <EditText
+                            android:id="@+id/autocompletetv_supplierPhn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.65"
+                            android:completionThreshold="1"
+                            android:hint="+91"
+                            android:maxLines="1"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Supplier Address "
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <EditText
+                            android:id="@+id/et_inw_supplierAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.65"
+                            android:hint="eg. M.G Road"
+                            android:inputType="text"
+                            android:maxLength="100"
+                            android:textSize="13dp"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/boxBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:layout_gravity="bottom"
+                    android:layout_alignParentBottom="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="bottom"
+                    android:background="#000000"  />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnAddSupplier"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                        android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                        android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                        android:minHeight="40dp"
+                        android:background="@drawable/background_btn"
+                        android:textAllCaps="false"
+                        android:text="Add Supplier"
+                        android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnUpdateSupplier"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:minHeight="40dp"
+                        android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                        android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                        android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/background_btn"
+                        android:text="Update Supplier"
+                        android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnClear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:minHeight="40dp"
+                        android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                        android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                        android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/background_btn"
+                        android:text="Clear"
+                        android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnClose"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:minHeight="40dp"
+                        android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                        android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                        android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                        android:layout_marginRight="10dp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/background_btn"
+                        android:text="Close"
+                        android:textSize="@dimen/button_14sp_720dp_12sp_600dp"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+                </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#000000" />
+
+            <!-- Invissible -->
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

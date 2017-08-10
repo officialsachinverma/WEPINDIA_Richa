@@ -1,0 +1,13 @@
+SIZE 40 mm, 30 mm
+GAP 2 mm, 0 mm
+DIRECTION 0
+SHIFT 0
+SET PEEL OFF
+CLS
+TEXT 10,20,"TSS24.BF2",0,2,2,"Print Test!"
+TEXT 30,80,"TSS24.BF2",0,1,1,"Congratulations!"
+TEXT 30,110,"TSS24.BF2",0,1,1,"Printer Connected OK"
+TEXT 30,140,"TSS24.BF2",0,1,1,"You can use printer now"
+TEXT 30,170,"TSS24.BF2",0,1,1,"Thank you"
+PRINT 1
+EOF

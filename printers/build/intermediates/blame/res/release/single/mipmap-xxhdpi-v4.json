@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\ic_home_white_24dp.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_home_white_24dp.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\ic_photo_white_24dp.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_photo_white_24dp.png"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi-v4\\ic_logout.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\wepbase\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_logout.png"
+    }
+]

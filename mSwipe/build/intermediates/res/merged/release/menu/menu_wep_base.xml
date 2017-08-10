@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_screen_shot"
+        android:icon="@mipmap/ic_photo_white_24dp"
+        android:orderInCategory="100"
+        android:title="ScreenShot"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@mipmap/ic_logout"
+        android:orderInCategory="200"
+        android:title="Logout"
+        app:showAsAction="always" />
+</menu>

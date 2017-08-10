@@ -1,0 +1,620 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wepindia.pos.GST.fragments.Fragment_GSTR1_B2CS_Amend">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+
+            android:layout_weight="1.2"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:visibility="gone"
+                android:id="@+id/linear_1"
+                android:layout_weight="0.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:background="@drawable/pinkborder"
+                        android:textColor="@color/txtColorAccent"
+                        android:text=" Original Details"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="HSN"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:maxLength="8"
+                        android:id="@+id/et_hsn_ori"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="G/S"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/spnr_g_s_ori"
+                        android:entries="@array/g_s"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="State Code"/>
+                    <Spinner
+                        android:id="@+id/spnr_pos_ori"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:entries="@array/poscode"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/linear_2"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:layout_weight="0.9">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/pinkborder"
+                        android:textColor="@color/txtColorAccent"
+                        android:text=" Revised Details"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="HSN"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:maxLength="8"
+                        android:id="@+id/et_hsn_rev"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="G/S"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/spnr_g_s_rev"
+                        android:entries="@array/g_s"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Cust StateCode"/>
+                    <Spinner
+                        android:id="@+id/spnr_CustStateCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:entries="@array/poscode"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Tax Period"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="14dp"
+                            android:focusable="false"
+                            android:hint="MMyyyy"
+                            android:focusableInTouchMode="false"
+                            android:id="@+id/et_taxMonth"
+                            android:layout_weight="1"/>
+                        <ImageButton
+                            android:id="@+id/btnMonthPicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_calendar"
+                            android:layout_weight="3"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linear_4"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="IGST Rate(%)"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/et_igstrate"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="CGST Rate(%)"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="14dp"
+                        android:id="@+id/et_cgstrate"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="SGST Rate(%)"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/et_sgstrate"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Aggregate Taxable Value"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/et_taxval"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="IGST Amount"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/et_igstamt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="CGST Amount"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/et_cgstamt"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="SGST Amount"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/et_sgstamt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="cess Amount"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/et_cessamt"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linear_3"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.6">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#000000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:gravity="center"
+                    android:text="Sno"
+                    android:layout_weight="1.05"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:text="Tax Month"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:text="HSN(Ori)"
+                    android:visibility="gone"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.05"
+                    android:gravity="center"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:text="G/S (Ori)"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.04"
+                    android:gravity="center"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:text="StateCode (Ori)"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:text="HSN(Rev)"
+                    android:visibility="gone"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.05"
+                    android:gravity="center"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:text="G/S (Rev)"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.04"
+                    android:gravity="center"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:text="State Code (Rev)"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:text="Taxable Value"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="IGST Amt"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="CGST Amt"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="SGST Amt"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="cess Amt"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.05"
+                    android:gravity="center"
+                    android:background="@drawable/pinkborder"
+                    android:textColor="@color/txtColorAccent"
+                    android:layout_height="match_parent"
+                    android:text="Delete"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/listview_gstr2_amend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="5dp">
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/background_btn"
+                android:minHeight="40dp"
+                android:minWidth="200dp"
+                android:onClick="Load"
+                android:text=" Load " />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/background_btn"
+                android:layout_toRightOf="@id/btnLoad"
+                android:minHeight="40dp"
+                android:minWidth="200dp"
+                android:onClick="Add"
+                android:text=" Add " />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/background_btn"
+                android:minHeight="40dp"
+                android:layout_toRightOf="@id/btnAdd"
+                android:minWidth="200dp"
+                android:onClick="Save"
+                android:visibility="gone"
+                android:text="Save" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/btnSave"
+                android:background="@drawable/background_btn"
+                android:minHeight="40dp"
+                android:minWidth="200dp"
+                android:onClick="Clear"
+                android:text="Clear" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/btnClear"
+                android:background="@drawable/background_btn"
+                android:minHeight="40dp"
+                android:minWidth="200dp"
+                android:onClick="Close"
+                android:text="Close" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

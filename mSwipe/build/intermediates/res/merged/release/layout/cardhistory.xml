@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_REL_content"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingBottom="12dp"
+    android:background="#f5f5f5">
+    <include android:id="@+id/top_bar"
+            android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+            layout="@layout/top_bar_layout" />
+    <RelativeLayout 
+        android:layout_width="400dp" android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" android:layout_below="@+id/top_bar"
+        android:background="#f2f2f2">
+        <RelativeLayout android:id ="@+id/cardhistory_REL_cardhistory"
+		    android:layout_width ="fill_parent" android:layout_height = "wrap_content">
+		    <TextView android:id ="@+id/cardhistory_LBL_recordcount"
+	    		android:layout_width ="wrap_content" android:layout_height ="wrap_content"
+	    		android:layout_marginRight="2dip" android:gravity = "center_vertical"
+	    		android:textSize="20dp" android:textColor="#000000" android:typeface="sans"
+	    		android:textStyle="bold"
+	    		android:text ="1 of  20">
+			</TextView>
+            
+			<ScrollView android:id="@+id/cardhistory_SCL_cardhistory"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+	    		android:layout_marginTop="6dp"	
+				android:layout_marginBottom="60dp" android:layout_below="@+id/cardhistory_LBL_recordcount"
+				android:scrollbars="vertical">
+        	<LinearLayout
+			    android:layout_width ="fill_parent" android:layout_height = "wrap_content"
+			    android:orientation="vertical">       	    
+        	  	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF" android:layout_marginBottom="3dp">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblTxStatus"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	            	android:typeface="sans"  
+	                android:text="Status"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_TxStatus"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:typeface="sans"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+        	    
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF" >
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblTxDateTime"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	            	android:typeface="sans" 
+	                android:text="Tx Date"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_TxDateTime"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:typeface="sans"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+		        <!--  
+		        <LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF" android:orientation="vertical">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblCardholderName"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	                android:text="Cardholder"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_CardholderName"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:typeface="sans"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+      	    	-->
+      	    	
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF" >
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblAmtRs"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Amount"/>
+               	<TextView android:id="@+id/creditsale_LBL_Amtprefix"
+			            android:layout_width="wrap_content" android:layout_height="wrap_content"
+			            android:textColor="#000000" android:layout_marginRight="2dp"
+			            android:typeface="sans"
+			            android:textSize="18dp"
+			            android:text=""/>
+               	
+		        <TextView android:id="@+id/lsttrxstatus_LBL_AmtRs"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+      	    	
+      	    	
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblCreditCardNum"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Last 4 digits"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_CreditCardNum"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+      	    			 		
+       	    				    			    
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblTypeofTx"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Type"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_TypeofTx"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+
+       	    		    	
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblAuthNo"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Auth Code"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_AuthNo"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+      	    		    	
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblRRNo"
+               	    android:typeface="sans" 
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="RR No"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_RRNo"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+     
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblStanID"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Stan Id"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_StanID"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+      	    		    	
+      	    		    		   
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblVoucher"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Voucher"/>
+		        <TextView android:id="@+id/lsttrxstatus_LBL_Voucher"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+      	    			    			 		
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblTerminalMessage"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Tx Message"/>
+		        <TextView android:id="@+id/lsttrxstatus_TXT_TerminalMessage"
+		            android:layout_width="wrap_content" android:layout_height="wrap_content"
+		            android:textColor="#000000"
+		            android:textSize="22dp"
+		            android:text=""/>
+		        </LinearLayout>
+      	    				    
+      	    	<LinearLayout android:layout_width ="fill_parent" android:layout_height = "fill_parent"
+               	    android:background="#FFFFFF" android:orientation="vertical">
+               	<TextView android:id="@+id/lsttrxstatus_LBL_lblNotes"
+	            	android:textSize="17dp" android:textColor="#777777"
+	            	android:typeface="sans" 
+	            	android:layout_width="100dp" android:layout_height="wrap_content"
+	                android:text="Notes"/>
+		        <EditText android:id="@+id/lsttrxstatus_TXT_Notes"
+				    android:layout_width="285dip" android:layout_height="120dip"
+					android:layout_below="@+id/lsttrxstatus_LBL_lblNotes"
+					android:background="@drawable/whiterectborderblack"
+					android:gravity="top|left"
+				    android:maxLines="5" android:editable="false" android:focusable="false"
+				    android:paddingLeft="6dp" android:paddingRight="6dp">		   
+				</EditText>
+		        
+		        </LinearLayout>
+    		</LinearLayout>
+		    
+			    				    
+        	</ScrollView>
+           	<LinearLayout android:id="@+id/cardhistory_LNR_buttons"
+			    android:orientation="horizontal"
+			    android:layout_width="fill_parent" android:layout_height="wrap_content"
+			    android:gravity="center_horizontal" android:layout_marginTop="-60dp"
+			    android:layout_below="@+id/cardhistory_SCL_cardhistory">
+     			<Button android:id="@+id/cardhistory_BTN_previous"
+				    android:layout_width="100dp" android:layout_height="44dp"
+				    android:textColor="#ffffff"
+					android:background="@drawable/roundrectblue" android:text="&lt;"  android:gravity="center"
+					android:typeface="sans" android:layout_marginRight="5dp" android:layout_marginTop="5dp"
+					android:textSize="22dp"/>
+     			<Button android:id="@+id/cardhistory_BTN_next"
+				    android:layout_width="100dp" android:layout_height="44dp"
+				    android:textColor="#ffffff" android:layout_marginTop="5dp"
+					android:background="@drawable/roundrectblue" android:text="&gt;"  android:gravity="center"
+					android:typeface="sans"
+					android:textSize="22dp"/>
+     				    
+			</LinearLayout>
+		</RelativeLayout>	        	
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1.25"
+                android:background="#CCCCCC" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvLoadedKOTheading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="KOT&apos;s"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ScrollView
+                        android:id="@+id/scrlLoadedKOTTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:background="#DDDDDD" >
+
+                        <TableLayout
+                            android:id="@+id/tblLoadedKOTTable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:collapseColumns="1" >
+
+                            <TableRow
+                                android:id="@+id/rowLoadedKOTTableCaption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryLight" >
+
+                                <TextView
+                                    android:id="@+id/tvCaptionLoadedKOTTableNo"
+                                    android:layout_width="125dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="25dp"
+                                    android:text="Table #"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/txtColorAccent" />
+                            </TableRow>
+                        </TableLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1.15"
+                android:background="#e1e1e1" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvLoadedKOTItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="KOT ITEMS"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ScrollView
+                        android:id="@+id/scrlLoadedKOTItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:background="#DDDDDD" >
+
+                        <TableLayout
+                            android:id="@+id/tblLoadedKOTItems"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TableRow
+                                android:id="@+id/rowLoadedKOTItemsTableCaption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryLight" >
+
+                                <TextView
+                                    android:id="@+id/tvCaptionLoadedKOTItems"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=" # "
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionLoadedKOTItemsName"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Item Name"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/txtColorAccent" />
+                            </TableRow>
+                        </TableLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.6"
+                android:background="#cccccc" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <ListView
+                        android:id="@+id/lstModifyKOTDepartmentNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:divider="#000000"
+                        android:dividerHeight="1dp" >
+                    </ListView>
+
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <ListView
+                        android:id="@+id/lstModifyKOTCategoryNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:divider="#000000"
+                        android:dividerHeight="1dp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <GridView
+                        android:id="@+id/gridModifyKOTItems"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:numColumns="auto_fit"
+                        android:visibility="invisible" >
+                    </GridView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.85" >
+
+        <TextView
+            android:id="@+id/tvHorizontalLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/rowButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_ModifyKOTDelete"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="DeleteItem"
+                android:text="Delete" />
+
+            <Button
+                android:id="@+id/btn_ModifyKOTModify"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="ModifyItem"
+                android:text="Modify" />
+
+            <Button
+                android:id="@+id/btn_ModifyKOTLoadKOT"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="LoadKOT"
+                android:text="Load KOT" />
+
+            <Button
+                android:id="@+id/btn_ModifyKOTCancel"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white"
+                android:onClick="Close"
+                android:text="Cancel" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TableRow
+        android:id="@+id/rowKitchenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" >
+
+        <TextView
+            android:id="@+id/tvKitchenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kitchen Name"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etKitchenName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+			android:hint="Kitchen Name"
+            android:inputType="text" />
+    </TableRow>
+
+    <ScrollView 
+        android:id="@+id/scrlKitchenTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rowKitchenName"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" >
+	    <TableLayout
+	        android:id="@+id/tblKitchen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:collapseColumns="1">
+	
+	        <TableRow
+	            android:id="@+id/rowCaption"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="#000000">
+
+				<TextView
+					android:id="@+id/tvCaptionKitchenSno"
+					android:layout_width="100dp"
+					android:layout_height="wrap_content"
+					android:text="S.No"
+					android:gravity="center"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#ffffff" />
+
+	            <TextView
+	                android:id="@+id/tvCaptionKitchenCode"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Code"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#ffffff" />
+	
+	            <TextView
+	                android:id="@+id/tvCaptionKitchenName"
+	                android:layout_width="300dp"
+	                android:layout_height="wrap_content"
+	                android:text="Description"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="#ffffff" />
+	        </TableRow>
+	    </TableLayout>
+    </ScrollView>
+    
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:background="#000000" />
+    
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+	 
+        <Button
+	        android:id="@+id/btnAddKitchen"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:onClick="AddKitchen"
+	        android:text="Add" />
+	
+	    <Button
+	        android:id="@+id/btnEditKitchen"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="EditCateg"
+	        android:text="Save" />
+	    
+	    <Button
+	        android:id="@+id/btnClearKitchen"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="ClearKitchen"
+	        android:text="Clear" />
+	    
+	    <Button
+	        android:id="@+id/btnCloseKitchen"
+	        android:background="@drawable/gradient_button"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="CloseKitchen"
+	        android:text="Close" />
+        
+	</TableRow>
+    
+</RelativeLayout>

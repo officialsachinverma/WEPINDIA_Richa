@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:support-v4:24.1.1'
+    compile files('libs/MswipeWisepadDRDSDKAPIVer2.5.4.jar')
+    compile files('libs/simplyprintapi-android-1.3.0.jar')
+    compile files('libs/apachehttp.jar')
+    compile project(':printers')
+    compile 'com.android.support:multidex:1.0.1'
+    compile project(path: ':wepbase')
+}

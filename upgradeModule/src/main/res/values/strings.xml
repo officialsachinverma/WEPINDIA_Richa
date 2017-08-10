@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WepModuleActivate</string>
+    <string name="url_auth_api">http://www.json-generator.com/api/json/get/bWmYAdVLKG?indent=2</string>
+    <string name="url_price_api">http://www.json-generator.com/api/json/get/cewBszEppe?indent=2</string>
+    <string name="company_name">Wep Solutions Ltd</string>
+    <string name="payment_desc">Module Activation Payment</string>
+    <string name="brand_logo_url">https://rzp-mobile.s3.amazonaws.com/images/rzp.png</string>
+    <string name="currency">INR</string>
+    <string name="url_confirm_api">http://www.json-generator.com/api/json/get/cjAgmnCEpu?indent=2</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp">
+
+    <LinearLayout
+        android:id="@+id/boxLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvMenuCode"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="ItemCode" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+            android:layout_gravity="center_vertical"
+            android:text="Name" />
+        <TextView
+            android:id="@+id/tvDineIn1"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="0" />
+        <TextView
+            android:id="@+id/tvDineIn2"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="0" />
+        <TextView
+            android:id="@+id/tvDineIn3"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="0" />
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Image" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/btnItemDelete"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Delete" />
+
+
+
+        <!--
+                      <TextView
+                          android:id="@+id/tvItemId"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:visibility="gone"
+                          android:text="tvItemId" />
+                      <TextView
+                          android:id="@+id/tvSalesTaxPercent"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:visibility="gone"
+                          android:text="tvSalesTaxPercent" />
+                      <TextView
+                          android:id="@+id/tvServiceTaxPercent"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:visibility="gone"
+                          android:text="tvServiceTaxPercent" />
+                      <TextView
+                          android:id="@+id/tvMOU"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:visibility="gone"
+                          android:text="tvMOU" />
+                          <!-->
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_REL_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="12dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp" >
+
+    <include
+        android:id="@+id/top_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        layout="@layout/top_bar_layout" />
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_bar" >
+
+        <RelativeLayout
+            android:id="@+id/cardhistory_REL_cardhistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/cardhistory_LBL_recordcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dip"
+                android:gravity="center_vertical"
+                android:text="1 of  20"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:typeface="sans" >
+            </TextView>
+
+            <ScrollView
+                android:id="@+id/cardhistory_SCL_cardhistory"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardhistory_LBL_recordcount"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="6dp"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="7dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_TxStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="25sp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblTxStatus"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="status"
+                            android:textSize="17sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="7dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_TxDateTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="25sp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblTxDateTime"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="date"
+                            android:textSize="17sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="7dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/creditsale_LBL_Amtprefix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:text=""
+                                android:textSize="25sp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/lsttrxstatus_LBL_AmtRs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="25sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblAmtRs"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="amount"
+                            android:textSize="17sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="7dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_TypeofTx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblTypeofTx"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="type"
+                            android:textSize="17sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="7dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_StanID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblStanID"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="stan id"
+                            android:textSize="17sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="7dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_BatchNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/lsttrxstatus_LBL_lblBatchNo"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="batch no"
+                            android:textSize="17sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/cardhistory_LNR_buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardhistory_SCL_cardhistory"
+                android:layout_marginTop="-60dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/cardhistory_BTN_previous"
+                    android:layout_width="100dp"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="previous"
+                    android:textSize="20dp"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/cardhistory_BTN_next"
+                    android:layout_width="100dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="next"
+                    android:textSize="20dp"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

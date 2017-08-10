@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Mobile No :" />
+
+        <EditText
+            android:id="@+id/editTextMobile"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/label1"
+            android:maxLength="10"
+            android:hint="Mobile"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel2"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel1"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Name :" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/label2"
+            android:enabled="false"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel3"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel2"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/label3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Balance :" />
+
+        <EditText
+            android:id="@+id/editTextBalance"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/label3"
+            android:enabled="false"
+            android:hint="Balance"
+            android:inputType="numberSigned" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewBalanceUpdate"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel3"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Balance After Payment: 100-46=54"
+        android:textColor="@android:color/holo_green_dark"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewBalanceUpdate"
+        android:layout_below="@+id/textViewBalanceUpdate"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/text_message_payment_default"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMessage"
+        android:layout_centerHorizontal="true"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnNutral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:text="Nutral" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OK" />
+    </LinearLayout>
+</RelativeLayout>

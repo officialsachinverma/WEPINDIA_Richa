@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TableRow
+        android:id="@+id/rowDeptName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" >
+
+        <TextView
+            android:id="@+id/tvDeptName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Department Name"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etDeptName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+            android:hint="Department Name"
+            android:inputType="text" />
+    </TableRow>
+    <ScrollView
+        android:id="@+id/scrlDepartmentTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rowDeptName"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" >
+        <TableLayout
+            android:id="@+id/tblDepartments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:collapseColumns="1">
+
+            <TableRow
+                android:id="@+id/rowCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryLight" >
+
+                <TextView
+                    android:id="@+id/tvCaptionDeptSno"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="S.No"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionDeptCode"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Code"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionDeptName"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dept Name"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:background="#000000" />
+
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnAddDept"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="AddDept"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Add" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnEditDept"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="EditDept"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Update" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnClearDept"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="ClearDept"
+            android:text="Clear" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnCloseDept"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="CloseDept"
+            android:text="Close" />
+
+    </TableRow>
+
+</RelativeLayout>

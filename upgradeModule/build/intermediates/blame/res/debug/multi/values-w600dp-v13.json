@@ -1,0 +1,47 @@
+[
+    {
+        "outputFile": "D:\\EasyBill_New\\wepfnb_gst\\upgradeModule\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w600dp-v13\\values-w600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 37,
+                    "endOffset": 88
+                },
+                "from": {
+                    "file": "C:\\Users\\sachinv\\.android\\build-cache\\6addddc71a390e9311a5f2a4361300e6aca138c0\\output\\res\\values-w600dp-v13\\values-w600dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 37,
+                        "endOffset": 88
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 93,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 745
+                },
+                "from": {
+                    "file": "C:\\Users\\sachinv\\.android\\build-cache\\6addddc71a390e9311a5f2a4361300e6aca138c0\\output\\res\\values-w600dp-v13\\values-w600dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 93,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 745
+                    }
+                }
+            }
+        ]
+    }
+]

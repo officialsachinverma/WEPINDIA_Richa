@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvOtherSettingHLine">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.15"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_weight="1.3">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Inward_head"
+                            android:text=" Inward Supply Configuration"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="500dp"
+                            android:layout_height="3dp"
+                            android:visibility="invisible"
+                            android:background="#000"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvGstin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="GSTIN  (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgGstin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbGstinEnable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbGstinDisable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tvPos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="POS (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgPos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbPosEnable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbPosDisable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tvHsnCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="HSN Code (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgHsnCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbHsnCodeEnable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbHsnCodeDisable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tvReverseCharge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Reverse Charge (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgReverseCharge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbReverseChargeEnable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbReverseChargeDisable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_weight="0.7">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Outward_head"
+                            android:text=" Outward Supply Configuration"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="3dp"
+                            android:visibility="invisible"
+                            android:layout_below="@id/Outward_head"
+                            android:layout_marginTop="10dp"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="50dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvGstin_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="GSTIN  (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgGstin_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbGstinEnable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbGstinDisable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tvPos_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="POS (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgPos_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbPosEnable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbPosDisable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tvHsnCode_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="HSN Code (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgHsnCode_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbHsnCodeEnable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbHsnCodeDisable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tvReverseCharge_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Reverse Charge (Choose One)" />
+
+                        <RadioGroup
+                            android:id="@+id/rgReverseCharge_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbReverseChargeEnable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/rbReverseChargeDisable_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_weight="1.3">
+
+
+             </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvOtherSettingHLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/boxBtn"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/boxBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnApplyOtherSettings"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/gradient_button"
+            android:onClick="Apply"
+            android:text="Apply" />
+
+        <Button
+            android:id="@+id/btnCloseOtherSettings"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/gradient_button"
+            android:onClick="Close"
+            android:text="Close" />
+    </LinearLayout>
+
+</RelativeLayout>

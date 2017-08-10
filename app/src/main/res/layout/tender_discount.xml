@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <RadioGroup
+        android:id="@+id/rgDiscountType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbDiscountInPercent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Percent" />
+
+        <RadioButton
+            android:id="@+id/rbDiscountInAmount"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Amount" />
+    </RadioGroup>
+
+    <TableRow
+        android:id="@+id/rowDiscountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" >
+        
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Value"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/etDiscountValue"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:textSize="13dp" />
+        
+    </TableRow>
+
+</LinearLayout>

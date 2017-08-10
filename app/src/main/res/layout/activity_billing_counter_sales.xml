@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/lnrBillingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/home_back">
+
+        <LinearLayout
+            android:id="@+id/boxTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="5">
+
+            <EditText
+                android:id="@+id/etCustGSTIN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Customer GSTIN"
+                android:inputType="text"
+                android:minHeight="40dp"
+                android:maxLength="15"
+                android:selectAllOnFocus="true"
+                android:textSize="10sp"
+                />
+
+            <EditText
+                android:id="@+id/edtCustName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:hint="Name"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/edtCustPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:hint="Mobile No"
+                android:inputType="number"
+                android:maxLength="10"
+                android:drawableRight="@drawable/searchicon_img"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/edtCustAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:hint="Address"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_DineInAddCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:onClick="AddCustomer"
+                android:text="Add"
+                android:theme="@style/WepButtonWithMarigin" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/boxBtn"
+            android:layout_below="@+id/boxTop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:id="@+id/bx1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:padding="4dp"
+                    android:weightSum="7">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true">
+
+                        <LinearLayout
+                            android:id="@+id/search_boxes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/aCTVSearchItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:completionThreshold="1"
+                                android:gravity="center"
+                                android:drawableRight="@drawable/searchicon_img"
+                                android:hint="Search Item Name"
+                                android:imeOptions="flagNoExtractUi"
+                                android:minHeight="40dp"
+                                android:textSize="10sp" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/aCTVSearchMenuCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:completionThreshold="1"
+                                android:drawableRight="@drawable/searchicon_img"
+                                android:gravity="center"
+                                android:hint="Search Item Code"
+                                android:imeOptions="flagNoExtractUi"
+                                android:inputType="numberSigned"
+                                android:minHeight="40dp"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/boxFields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/search_boxes"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/relative_interstate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="40dp"
+                                android:layout_weight="1"
+                                >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_interstate"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.4"
+                                    android:layout_height="match_parent"
+                                    android:text="InterState"
+                                    android:textColor="@color/gray"
+                                    android:gravity="center"
+                                    android:textSize="15sp" />
+
+                                <Spinner
+                                    android:id="@+id/spnr_pos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    style="@android:style/Widget.Holo.Light.Spinner"
+                                    android:layout_marginLeft="5dp"
+                                    />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textViewLabelOrderNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Order No" />
+
+                                <EditText
+                                    android:id="@+id/tvBillNumberValue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="10dp"
+                                    android:minWidth="90dp"
+                                    android:textAlignment="center"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/boxTaxInfo"
+                            android:layout_below="@+id/boxFields">
+
+                            <TableRow
+                                android:id="@+id/rowBillColumnCaption"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@color/colorPrimaryLight">
+
+                                <TextView
+                                    android:id="@+id/tvColItemName"
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Name"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvColHSN"
+                                    android:layout_width="80dp"
+                                    android:text="HSN"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvColItemQty"
+                                    android:layout_width="55dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Qty"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvColRate"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rate"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvColAmount"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Amount"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvColDelete"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delete"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/txtColorAccent" />
+                            </TableRow>
+
+                            <ScrollView
+                                android:id="@+id/scrlVertOrderItems"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rowBillColumnCaption"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="#DDDDDD">
+
+                                <!--<HorizontalScrollView
+                                    android:id="@+id/scrlHrzntlOrderItems"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">-->
+
+                                <TableLayout
+                                    android:id="@+id/tblOrderItems"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:collapseColumns="0,6,7,8,9,10,11,12,13,14,15,16,17,21,22,23,24,25,26" />
+                                <!--</HorizontalScrollView>-->
+                            </ScrollView>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/boxTaxInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/azure"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/idd0"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/idd1"
+                                        android:layout_marginBottom="2.5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvIGSTTax"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:textColor="@color/txtColorAccent"
+                                            android:text="IGST-Tax :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                                        <TextView
+                                            android:id="@+id/tvIGSTValue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:textColor="@color/txtColorAccent"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/idd2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/idd1"
+                                        android:layout_marginBottom="2.5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvTaxTotal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:text="CGST-Tax :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@color/txtColorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/tvTaxTotalValue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:textColor="@color/txtColorAccent" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/idd3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/idd2"
+                                        android:layout_marginBottom="2.5dp"
+                                        android:layout_marginTop="2.5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvServiceTax"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:text="SGST-Tax :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@color/txtColorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/tvServiceTaxValue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:textColor="@color/txtColorAccent" />
+                                        <TextView
+                                            android:id="@+id/tvDiscountPercentage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="#ffffff"
+                                            android:gravity="right"
+                                            android:text="0"
+                                            android:visibility="gone"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#000000" />
+                                        <TextView
+                                            android:id="@+id/tvDiscountAmount"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="#ffffff"
+                                            android:gravity="right"
+                                            android:text="0"
+                                            android:visibility="gone"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#000000" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/idd3"
+                                        android:id="@+id/idd_date"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="2.5dp"
+                                        android:layout_weight="1"
+                                        android:visibility="invisible"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvDateHeading"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:text="Date :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@color/txtColorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/tvBillDateValue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="right"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:textColor="@color/txtColorAccent" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/idd1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="2.5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvSubTotal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:text="Taxable Value :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@color/txtColorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/tvSubTotalValue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:textColor="@color/txtColorAccent" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/idd11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="2.5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvcessrate"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:text="cess Tax :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@color/txtColorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/tvcessValue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:textColor="@color/txtColorAccent" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/idd5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/idd1"
+                                        android:layout_marginBottom="2.5dp"
+                                        android:layout_marginTop="2.5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvOtherchanrges"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.9"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:text="Other Charges :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@color/txtColorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/txtOthercharges"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1.1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:textColor="@color/txtColorAccent" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/idd4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/idd3"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="2.5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvBillTotal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:text="TOTAL :"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@color/txtColorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/tvBillTotalValue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@color/colorPrimaryLight"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:textColor="@color/txtColorAccent" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bx2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/boxDept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorCard">
+
+                        <Button
+                            android:id="@+id/btnLabel1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryLight"
+                            android:text="Department"
+                            android:textColor="@color/white" />
+
+                        <ListView
+                            android:id="@+id/listViewFilter1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/btnLabel1" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/boxCat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorCard">
+
+                        <Button
+                            android:id="@+id/btnLabel2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryLight"
+                            android:text="Category"
+                            android:textColor="@color/white" />
+
+                        <ListView
+                            android:id="@+id/listViewFilter2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/btnLabel2" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/boxItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorCard">
+
+                        <Button
+                            android:id="@+id/btnLabel3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryLight"
+                            android:text="Items"
+                            android:textColor="@color/white" />
+
+                        <GridView
+                            android:id="@+id/listViewFilter3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/btnLabel3"
+                            android:numColumns="2" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/boxBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_PrintBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/btn_marigin"
+                android:layout_marginRight="@dimen/btn_marigin"
+                android:layout_weight="1"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:onClick="printBILL"
+                android:text="Print Bill"
+                android:theme="@style/WepButtonWithMarigin" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_PayBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/btn_marigin"
+                android:layout_marginRight="@dimen/btn_marigin"
+                android:layout_weight="1"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:onClick="Tender"
+                android:text="Pay Bill"
+                android:theme="@style/WepButtonWithMarigin" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_Clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/btn_marigin"
+                android:layout_marginRight="@dimen/btn_marigin"
+                android:layout_weight="1"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:onClick="Clear"
+                android:text="Clear"
+                android:theme="@style/WepButtonWithMarigin" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_DeleteBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/btn_marigin"
+                android:layout_marginRight="@dimen/btn_marigin"
+                android:layout_weight="1"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:onClick="DeleteBill"
+                android:text="Delete Bill"
+                android:theme="@style/WepButtonWithMarigin" />
+
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_Reprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/btn_marigin"
+                android:layout_marginRight="@dimen/btn_marigin"
+                android:layout_weight="1"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:onClick="ReprintBill"
+                android:text="Reprint Bill"
+                android:theme="@style/WepButtonWithMarigin" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

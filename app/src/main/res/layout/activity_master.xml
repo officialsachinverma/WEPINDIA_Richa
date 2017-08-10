@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MasterParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/home_back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/boxTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/imageViewUser"
+                android:layout_width="@dimen/bar_icon"
+                android:layout_height="@dimen/bar_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/user"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtMasterUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/imageViewUser"
+                android:text="Welcome User" />
+
+            <ImageView
+                android:id="@+id/imageViewBell"
+                android:layout_width="@dimen/bar_icon"
+                android:layout_height="@dimen/bar_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="7dp"
+                android:onClick="takeScreenshot"
+                android:src="@drawable/bell"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imgMasterScreenshot"
+                android:layout_width="@dimen/bar_icon"
+                android:layout_height="@dimen/bar_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:onClick="Screenshot"
+                android:src="@drawable/screenshot" />
+
+            <TextView
+                android:id="@+id/textViewUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imgMasterScreenshot"
+                android:gravity="bottom"
+                android:text="Welcome User"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/boxButton"
+            android:layout_below="@+id/boxTop">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/menu_box_marigin"
+                    android:layout_marginLeft="@dimen/menu_box_marigin"
+                   >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgConfigurations"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Configurations"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_configurations" />
+
+                        <TextView
+                            android:id="@+id/tvConfigurationOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgConfigurations"
+                            android:gravity="center"
+                            android:text="Configurations"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgItems"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Item"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_item" />
+
+                        <TextView
+                            android:id="@+id/tvItemOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgItems"
+                            android:gravity="center"
+                            android:text="Outward Supply Items"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgPriceStock"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="PriceStock"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_stock" />
+
+                        <TextView
+                            android:id="@+id/tvPriceStockOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgPriceStock"
+                            android:gravity="center"
+                            android:text="Price and Stock"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgStock"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Inward"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/inwardsupplyitem" />
+
+                        <TextView
+                            android:id="@+id/tvStockOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgStock"
+                            android:gravity="center"
+                            android:text="Inward Management "
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1">
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgUser"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Users"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_users" />
+
+                        <TextView
+                            android:id="@+id/tvUserOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgUser"
+                            android:gravity="center"
+                            android:text="Add Role"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgEmployee"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Employee"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_employee" />
+
+                        <TextView
+                            android:id="@+id/tvEmployeeOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgEmployee"
+                            android:gravity="center"
+                            android:text="Waiter / Rider"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgCustomer"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Customers"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_customer" />
+
+                        <TextView
+                            android:id="@+id/tvCustomerOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgCustomer"
+                            android:gravity="center"
+                            android:text="Customers"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgSettings"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Settings"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_settings" />
+
+                        <TextView
+                            android:id="@+id/tvSettingsOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgSettings"
+                            android:gravity="center"
+                            android:text="Settings"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgBack"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Back"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_back" />
+
+                        <TextView
+                            android:id="@+id/tvBackOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgBack"
+                            android:gravity="center"
+                            android:text="Home"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:visibility="invisible">
+
+            <Button
+                android:id="@+id/imgLogOut"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/background_btn"
+                android:contentDescription="LogOut"
+                android:minHeight="40dp"
+                android:onClick="LaunchActivity"
+                android:text="Log Out" />
+
+            <Button
+                android:id="@+id/imgExit"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/background_btn"
+                android:contentDescription="Exit"
+                android:minHeight="40dp"
+                android:onClick="LaunchActivity"
+                android:text="Exit" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

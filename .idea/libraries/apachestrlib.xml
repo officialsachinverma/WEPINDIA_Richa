@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="apachestrlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/printers/libs/apachestrlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

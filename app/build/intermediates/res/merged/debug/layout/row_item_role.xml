@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeParent"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:padding="20dp"
+    android:background="@drawable/background_btn"
+    android:layout_marginLeft="@dimen/btn_marigin"
+    android:layout_marginRight="@dimen/btn_marigin">
+
+    <TextView
+        android:id="@+id/textViewRoleName"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Role Name"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</RelativeLayout>

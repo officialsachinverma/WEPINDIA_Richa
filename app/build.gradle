@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+
+
+
+    defaultConfig {
+        applicationId "com.wepindia.pos201711"
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+        multiDexEnabled true
+
+        /*ndk {
+            moduleName "serial_port"
+        }*/
+
+        aaptOptions {
+            cruncherEnabled = false
+        }
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+dependencies {
+    compile project(':mSwipe')
+    compile project(':gstAPI')
+    compile project(':upgradeModule')
+    //compile project(':navigationtabbar')
+    repositories {
+        mavenCentral()
+    }
+    compile files('libs/poi-3.8.jar')
+    compile files('libs/imageLib.jar')
+    //compile project(':printerSohamsa')
+    //compile project(':printers')
+    compile('com.weiwangcn.betterspinner:library:1.1.0') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.sothree.slidinguppanel:library:3.3.1'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:support-v13:24.2.1'
+    compile 'com.razorpay:checkout:1.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jaredrummler:material-spinner:1.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}

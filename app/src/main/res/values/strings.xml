@@ -1,0 +1,200 @@
+<resources>
+
+    <string name="app_name">EasyBill</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_login">WeP_FnB_GST</string>
+    <string name="error_configuration">Please configure serial port first</string>
+    <string name="error_security">You do not have read/write permission to the serial port.</string>
+    <string name="error_unknown">The serial port can not be opened for an unknown reason.</string>
+    <string name="title_activity_sales_report">SalesReportActivity</string>
+    <string name="title_activity_reports_tab">ReportsTabActivity</string>
+    <string name="title_activity_fast_selling_report">FastSellingReportActivity</string>
+    <string name="title_activity_upload_file_picker">UploadFilePickerActivity</string>
+    <string name="title_activity_tax_config_sub">TaxConfigSubActivity</string>
+
+    <string name="InwardSupplyEntry"><u>Inward Supply Entry</u></string>
+
+    <string-array name="supplier_types">
+        <item>Supplier Type</item>
+        <item>Registered</item>
+        <item>Compounding</item>
+        <item>UnRegistered</item>
+    </string-array>
+
+    <string-array name="reports">
+        <item>Choose Report</item>
+        <item>GSTR1</item>
+        <item>GSTR2</item>
+    </string-array>
+
+    <string-array name="g_s">
+        <item>G</item>
+        <item>S</item>
+    </string-array>
+
+    <string-array name="y_n">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="taxationtype">
+        <item>GST</item>
+        <item>AdditionalTax</item>
+        <item>Exempt</item>
+        <item>NilRate</item>
+        <item>nonGST</item>
+    </string-array>
+    <string-array name="suppliertypes">
+        <item> </item>
+        <item>Registered</item>
+        <item>UnRegistered</item>
+    </string-array>
+
+    <string-array name="poscode">
+        <item> </item>
+        <item>Andaman and Nicobar Islands 35</item>
+        <item>Andhra Pradesh 28</item>
+        <item>Andhra Pradesh(New) 37</item>
+        <item>Arunachal Pradesh 12</item>
+        <item>Assam 18</item>
+        <item>Bihar 10</item>
+        <item>Chandigarh 04</item>
+        <item>Chattisgarh 22</item>
+        <item>Dadra and Nagar havelli 26</item>
+        <item>Daman And Diu 25</item>
+        <item>Delhi 07</item>
+        <item>Goa 30</item>
+        <item>Gujrat 24</item>
+        <item>Haryana 06</item>
+        <item>Himachal Pradesh 02</item>
+        <item>Jammu and Kashmir 01</item>
+        <item>Jharkhand 20</item>
+        <item>Karnataka 29</item>
+        <item>Kerala 32</item>
+        <item>Lakshadweep Islands 31</item>
+        <item>Madhya Pradesh 23</item>
+        <item>Maharastra 27</item>
+        <item>Manipur 14</item>
+        <item>Meghalaya 17</item>
+        <item>Mizoram 15</item>
+        <item>Nagaland 13</item>
+        <item>Odisha 21</item>
+        <item>Pondicherry 34</item>
+        <item>Punjab 03</item>
+        <item>Rajastahan 08</item>
+        <item>Sikkim 11</item>
+        <item>Tamil Nadu 33</item>
+        <item>Telangana 36</item>
+        <item>Tripura 16</item>
+        <item>Uttar Pradesh 09</item>
+        <item>Uttarakhand 05</item>
+        <item>West Bengal 19</item>
+    </string-array>
+
+    <string-array name="UOM1">
+        <item>Unit</item>
+        <item>K.g.</item>
+        <item>Plate</item>
+        <item>Nos.</item>
+        <item>Pcs.</item>
+        <item>Pckt</item>
+        <item>Litr</item>
+    </string-array>
+    <string-array name="UOM">
+        <item>Select</item>
+        <item>Packet (Pk)</item>
+        <item>Litre (Lt)</item>
+        <item>MilliLitre (Ml)</item>
+        <item>Gram (Gm)</item>
+        <item>KiloGram (Kg)</item>
+        <item>Bag (Bg)</item>
+        <item>Box (Bx)</item>
+        <item>Number (No)</item>
+        <item>Metre (Mt)</item>
+        <item>Dozen (Dz)</item>
+        <item>Sachet (Sa)</item>
+        <item>Sheet (St)</item>
+        <item>Bottle (Bt)</item>
+        <item>Plate (Pl)</item>
+        <item>Piece (Pc)</item>
+    </string-array>
+
+    <string name="title_activity_tabbed_report">TabbedReportActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="savenprint"><![CDATA[Save & Print]]></string>
+    <string name="text_message_payment_default">Your Credit Balance Amount is less than Payable Amount. Do you want to continue with Partial Payment?</string>
+    <string name="text_message_payment_zero_negative">Your Credit Balance Amount is less than Payable Amount. You can Pay by  Credit or Other Mode.</string>
+    <string name="text_message_payment_zero">Your Credit Balance Amount is less than Payable Amount. You can Pay by  Credit or Partial Payment.</string>
+    <string name="title_activity_inward">InwardActivity</string>
+    <string name="title_activity_supplier_details">SupplierDetails</string>
+    <string name="title_activity_inward_item">InwardItemActivity</string>
+    <string name="title_activity_item_supplier_linkage">ItemSupplierLinkageActivity</string>
+
+
+    <string name="no_found_file">No File Found</string>
+    <string name="replace_item">Replace Item</string>
+    <string name="are_you_sure_you_want_replace_all_exiting_item">Are you sure you want to Replace all the existing Items, if any.\nPlease note,Supplier Item Linkage will also be deleted.</string>
+
+    <string name="ok">OK</string>
+    <string name="item_import_successfully">Items Imported Successfully</string>
+    <string name="select_filename">Select FileName</string>
+    <string name="content_type">contentType</string>
+    <string name="csv">csv</string>
+
+    <string name="menu_code">Menu Code</string>
+    <string name="item_name">Item Name</string>
+    <string name="rate">Rate</string>
+    <string name="quantity">Quantity</string>
+    <string name="uom">UOM</string>
+    <string name="delete">Delete</string>
+    <string name="supply_type">Supply Type</string>
+
+    <string name="content_description">null</string>
+
+    <string name="loading">Loading...</string>
+
+    <string name="menu_code_empty">Menu Code can not be empty for Item Name  </string>
+    <string name="menu_code_invalid">Please Enter Menu Code as integer for Item Name  </string>
+    <string name="item_name_empty">Item Name can not be empty for Menu Code  </string>
+    <string name="item_name_invalid">Please Enter Item Name as character for Menu Code  </string>
+    <string name="supply_type_empty">Supply Type can not be empty for Item Name  </string>
+    <string name="supply_type_invalid">Please Enter Supply Type as character for Item Name  </string>
+    <string name="rate_empty">Rate can not be empty for Item Name  </string>
+    <string name="rate_invalid">Please Enter Rate as decimal for Item Name  </string>
+    <string name="rate_1_empty">Rate 1 can not be empty for Item Name  </string>
+    <string name="rate_1_invalid">Please Enter Rate 1 as decimal for Item Name  </string>
+    <string name="rate_2_empty">Rate 2 can not be empty for Item Name  </string>
+    <string name="rate_2_invalid">Please Enter Rate 2 as decimal for Item Name  </string>
+    <string name="rate_3_empty">Rate 3 can not be empty for Item Name  </string>
+    <string name="rate_3_invalid">Please Enter Rate 3 as decimal for Item Name  </string>
+    <string name="quantity_empty">Quantity can not be empty for Item Name  </string>
+    <string name="quantity_invalid">Please Enter Quantity as decimal for Item Name  </string>
+    <string name="uom_empty">UOM can not be empty for Item Name  </string>
+    <string name="uom_invalid">Please Enter UOM as character for Item Name  </string>
+    <string name="header_value_empty">Please Enter Header Value  </string>
+    <string name="cgst_rate_empty">CGST Rate can not be empty for Item Name  </string>
+    <string name="cgst_rate_invalid">Please Enter CGST Rate as decimal for Item Name  </string>
+    <string name="sgst_rate_empty">SGST Rate can not be empty for Item Name  </string>
+    <string name="sgst_rate_invalid">Please Enter SGST Rate as decimal for Item Name  </string>
+    <string name="igst_rate_empty">IGST Rate can not be empty for Item Name  </string>
+    <string name="igst_rate_invalid">Please Enter IGST Rate as decimal for Item Name  </string>
+    <string name="cess_rate_empty">CESS Rate can not be empty for Item Name  </string>
+    <string name="cess_rate_invalid">Please Enter CESS Rate as decimal for Item Name  </string>
+    <string name="discount_empty">Discount can not be empty for Item Name  </string>
+    <string name="discount_invalid">Please Enter Discount as decimal for Item Name  </string>
+
+    <string name="please_enter_item_name">Please Enter Item Name</string>
+
+
+    //login screen
+    <string name="login">Log In</string>
+    <string name="exit">Exit</string>
+
+
+</resources>

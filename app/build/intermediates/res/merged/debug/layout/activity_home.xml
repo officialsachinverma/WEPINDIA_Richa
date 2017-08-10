@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/homeParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/home_back">
+
+
+        <RelativeLayout
+            android:id="@+id/boxContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/boxButton">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dinein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgDineIn"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="DineIn"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_dinein" />
+
+                        <TextView
+                            android:id="@+id/tvDineInOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgDineIn"
+                            android:gravity="center"
+                            android:text="Dine In"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_CounterSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgTakeAway"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="CounterSales"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_takeaway" />
+
+                        <TextView
+                            android:id="@+id/tvCounterSalesOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgTakeAway"
+                            android:gravity="center"
+                            android:text="Counter Sales"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgPickUp"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="PickUp"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_pickup" />
+
+                        <TextView
+                            android:id="@+id/tvPickUpOption1"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgPickUp"
+                            android:gravity="center"
+                            android:text="Pick Up"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgDelivery"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Delivery"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_delivery" />
+
+                        <TextView
+                            android:id="@+id/tvDeliveryOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgDelivery"
+                            android:gravity="center"
+                            android:text="Home Delivery"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgPaymentReceipt"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="PaymentReceipt"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_payreceive" />
+
+                        <TextView
+                            android:id="@+id/tvPayemntReceiptOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgPaymentReceipt"
+                            android:gravity="center"
+                            android:text="Payment / Receipt"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1">
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgMasters"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Masters"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_master" />
+
+                        <TextView
+                            android:id="@+id/tvMasterOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgMasters"
+                            android:gravity="center"
+                            android:text="Masters"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgReports"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Reports"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_report" />
+
+                        <TextView
+                            android:id="@+id/tvReportOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgReports"
+                            android:gravity="center"
+                            android:text="Report"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_amend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/img_ammend"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="Ammend"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/ammend" />
+
+                        <TextView
+                            android:id="@+id/tvammend"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_ammend"
+                            android:gravity="center"
+                            android:text="Amend Module "
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_cdn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/img_cdn"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="cdnr"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/cdn" />
+
+                        <TextView
+                            android:id="@+id/tv_cdn"
+                            android:layout_width="142dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_cdn"
+                            android:gravity="center"
+                            android:text="Credit Debit Note "
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/menu_box_marigin"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgDayEnd"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_button"
+                            android:contentDescription="DayEnd"
+                            android:onClick="LaunchActivity"
+                            android:padding="3dp"
+                            android:src="@drawable/img_dayend" />
+
+                        <TextView
+                            android:id="@+id/tvDayEndOption"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imgDayEnd"
+                            android:gravity="center"
+                            android:text="Day End"
+                            android:textSize="@dimen/menu_box_font_size"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

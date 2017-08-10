@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TableRow
+        android:id="@+id/rowDescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" >
+
+        <TextView
+            android:id="@+id/tvDescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expenditure Name"
+            android:layout_marginRight="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etDescriptionText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+			android:hint="Description Name"
+            android:inputType="text" />
+    </TableRow>
+
+    <ScrollView 
+        android:id="@+id/scrlDescriptionTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rowDescriptionText"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" > 
+	    <TableLayout
+	        android:id="@+id/tblDescription"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:collapseColumns="1">
+	
+	        <TableRow
+	            android:id="@+id/rowCaption"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@color/colorPrimaryLight"
+				android:textColor="@color/txtColorAccent">
+
+                <TextView
+                    android:id="@+id/tvCaptionDescriptionSno"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="S.No"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/txtColorAccent" />
+
+	            <TextView
+	                android:id="@+id/tvCaptionDescriptionId"
+	                android:layout_width="100dp"
+	                android:layout_height="wrap_content"
+	                android:text="Id"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="@color/txtColorAccent" />
+	
+	            <TextView
+	                android:id="@+id/tvCaptionDescriptionText"
+	                android:layout_width="250dp"
+	                android:layout_height="wrap_content"
+	                android:text="Description"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="@color/txtColorAccent" />
+	        </TableRow>
+	    </TableLayout>
+    </ScrollView>
+    
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:background="#000000" />
+    
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+    
+        <Button
+	        android:id="@+id/btnAddDescription"
+	        android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:onClick="AddDescription"
+	        android:text="Add" />
+	
+	    <Button
+	        android:id="@+id/btnEditDescription"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="EditDescription"
+	        android:text="Save" />
+	    
+	    <Button
+	        android:id="@+id/btnClearDescription"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="ClearDescription"
+	        android:text="Clear" />
+	    
+	    <Button
+	        android:id="@+id/btnCloseDescription"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+	        android:layout_width="100dp"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="CloseDescription"
+	        android:text="Close" />
+        
+    </TableRow>
+    
+</RelativeLayout>

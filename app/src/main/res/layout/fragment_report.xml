@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/boxTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText,UselessParent">
+
+            <TextView
+                android:id="@+id/tvHeadingReportNameSelection"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="2sp" />
+
+            <TableRow
+                android:id="@+id/rowReportNameSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvHeadingReportNameSelection"
+                android:layout_below="@+id/tvHeadingReportNameSelection">
+
+                <Spinner
+                    android:id="@+id/spnrReportNameSelection"
+                    android:layout_width="400dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tvHeadingReportDateSelection"
+                android:layout_width="420dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="2sp" />
+
+            <TableRow
+                android:id="@+id/rowReportDateSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvHeadingReportDateSelection"
+                android:layout_below="@+id/tvHeadingReportDateSelection"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvDateFrom"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="2sp" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_ReportDateFrom"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/btn_calendar"
+                    android:onClick="From" />
+
+                <EditText
+                    android:id="@+id/etReportDateStart"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="5"
+                    android:focusable="false"
+                    android:hint="From Date"
+                    android:inputType="text"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tvDateTo"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="2sp" />
+
+                <EditText
+                    android:id="@+id/etReportDateEnd"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ems="5"
+                    android:focusable="false"
+                    android:hint="To Date"
+                    android:inputType="text"
+                    android:textSize="15dp" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_ReportDateTo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/btn_calendar"
+                    android:onClick="To" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/lblName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rowReportPersonId"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/rowReportButtons"
+                android:layout_toRightOf="@+id/rowReportPersonId"
+                android:visibility="invisible"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TableRow
+                android:id="@+id/rowReportButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/rowReportDateSelection"
+                android:layout_below="@+id/rowReportDateSelection"
+                android:layout_marginTop="20dp">
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_ReportPrint"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:onClick="PrintReport"
+                    android:text="Print" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_ReportExport"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:onClick="ExportReport"
+                    android:text="Export" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_ReportView"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:onClick="ViewReport"
+                    android:text="View" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btn_ReportClose"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:onClick="Close"
+                    android:text="Close" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowReportColumnCaptions"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_alignLeft="@+id/rowReportNameSelection"
+                android:layout_alignRight="@+id/rowReportDateSelection"
+                android:layout_below="@+id/rowReportPersonId"
+                android:layout_marginTop="25dp"
+                android:background="#000000"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvHorizontalLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rowReportButtons"
+                android:layout_marginTop="5dp"
+                android:background="#000000" />
+
+            <TableRow
+                android:id="@+id/rowReportPersonId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_alignBottom="@+id/tvHorizontalLine">
+
+                <TextView
+                    android:id="@+id/tvReportPersonId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Id : "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/spnrUsers"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <Spinner
+                    android:id="@+id/spnrCustomers"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/etReportPersonId"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:visibility="gone"
+                    android:inputType="text" />
+            </TableRow>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/boxTop">
+
+        <ScrollView
+            android:id="@+id/vscrlReportTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#DDDDDD">
+
+            <HorizontalScrollView
+                android:id="@+id/hscrlReportTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:id="@+id/tblReportView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

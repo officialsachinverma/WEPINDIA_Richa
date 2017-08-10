@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Emi tenure"
+                android:textSize="18sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/emi_list_txt_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="bank intrest rate"
+                android:textSize="18sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/emi_list_txt_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Total payable amount"
+                android:textSize="18sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/emi_list_txt_monthly_installment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="cash back rate"
+                android:textSize="18sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/emi_list_txt_cashbackrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Cash back amount"
+                android:textSize="18sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/emi_list_txt_cashbackamt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <com.mswipetech.wisepad.sdktest.customviews.CustomCheckBox 
+        android:id="@+id/emi_list_checkbox"
+        android:layout_width="wrap_content"
+        android:enabled="false"
+        android:focusable="false"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

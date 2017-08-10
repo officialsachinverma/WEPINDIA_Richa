@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep"
+        />
+
+    <RelativeLayout
+        android:id="@+id/activity_ingredient_management"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentEnd="true">
+
+        <View
+            android:id="@+id/view_left"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#000000"></View>
+
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentTop="true"
+            android:background="#000000"></View>
+
+        <View
+            android:id="@+id/view_right"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#000000"></View>
+
+        <View
+            android:id="@+id/view_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000000"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view_bottom"
+            android:layout_below="@+id/view_top"
+            android:layout_toLeftOf="@+id/view_right"
+            android:layout_toRightOf="@+id/view_left">
+
+            <LinearLayout
+                android:id="@+id/first_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ingredient_additem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_menucode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.8"
+                            android:gravity="bottom"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="15dp"
+                            android:paddingBottom="10dp"
+                            android:textStyle="bold"
+                            android:text="Select Item" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autocompletetv_itemslist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/searchicon_img"
+                            android:hint="Type Item Here" />
+
+                        <EditText
+                            android:id="@+id/et_item_quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.6"
+                            android:maxLength="6"
+                            android:hint="Enter Quantity"
+                            android:inputType="numberDecimal" />
+
+                        <TextView
+                            android:id="@+id/tv_item_uom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.9"
+                            android:gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:hint="UOM"
+                            android:paddingLeft="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ingredient_addingredients"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ingredient_additem"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:gravity="bottom"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:paddingBottom="10dp"
+                            android:text="Select Ingredient" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autocompletetv_ingredientlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:drawableRight="@drawable/searchicon_img"
+                            android:hint="Type Ingredient Here" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Select Ingredient"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/et_ingredient_quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:maxLength="6"
+                            android:hint="Enter Quantity"
+                            android:inputType="numberDecimal" />
+
+                        <TextView
+                            android:id="@+id/tv_ingredient_uom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:gravity="bottom"
+                            android:layout_marginLeft="15dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:hint="UOM"
+                            android:paddingLeft="3dp" />
+
+                        <com.wep.common.app.views.WepButton
+                            android:id="@+id/btn_add_new_item"
+                            android:layout_width="120dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="@dimen/_5dp_720dp_4dp_600dp"
+                            android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                            android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                            android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                            android:background="@drawable/background_btn"
+                            android:textColor="@android:color/white"
+                            android:theme="@style/WepButtonWithMarigin"
+                            android:text="Add Item"
+                            android:textSize="@dimen/button_14sp_720dp_12sp_600dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_below="@+id/ingredient_addingredients"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/ingredient_display"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/ingredients_buttons"
+                        android:layout_below="@+id/view1"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/heading_border"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:text="SNo"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:background="@drawable/heading_border"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Ingredients"
+
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/heading_border"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Quantity"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.05"
+                                android:background="@drawable/heading_border"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="UoM "
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"
+                                android:id="@+id/textView6" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/heading_border"
+                                android:gravity="center"
+                                android:text="Delete"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginRight="2dp"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp"/>
+                        </LinearLayout>
+
+                        <ListView
+                            android:id="@+id/lstvw_displayingredient"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="0.1"
+                            />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ingredients_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:layout_gravity="bottom"
+                        android:layout_alignParentBottom="true">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="bottom"
+                            android:background="#000000"  />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <com.wep.common.app.views.WepButton
+                                android:id="@+id/btnPrint"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:background="@drawable/background_btn"
+                                android:theme="@style/WepButtonWithMarigin"
+                                android:textAllCaps="false"
+                                android:layout_marginRight="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                                android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                                android:minHeight="40dp"
+                                android:onClick="PrintIngredients"
+                                android:text="Print Ingred. List"
+                                android:textSize="@dimen/button_14sp_720dp_12sp_600dp"/>
+
+                            <com.wep.common.app.views.WepButton
+                                android:id="@+id/btnSave"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:background="@drawable/background_btn"
+                                android:theme="@style/WepButtonWithMarigin"
+                                android:textAllCaps="false"
+                                android:layout_marginRight="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                                android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                                android:minHeight="40dp"
+                                android:onClick="Save"
+                                android:text="Save"
+                                android:textSize="@dimen/button_14sp_720dp_12sp_600dp"/>
+
+
+                            <com.wep.common.app.views.WepButton
+                                android:id="@+id/btnSubmit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:textAllCaps="false"
+                                android:theme="@style/WepButtonWithMarigin"
+                                android:layout_marginRight="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                                android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                                android:minHeight="40dp"
+                                android:background="@drawable/background_btn"
+                                android:onClick="Submit"
+                                android:text="Submit"
+                                android:textSize="@dimen/button_14sp_720dp_12sp_600dp"/>
+
+
+                            <com.wep.common.app.views.WepButton
+                                android:id="@+id/btnClearItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:layout_gravity="center"
+                                android:theme="@style/WepButtonWithMarigin"
+                                android:layout_marginRight="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                                android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                                android:minHeight="40dp"
+                                android:background="@drawable/background_btn"
+                                android:onClick="Clear"
+                                android:text="Clear"
+                                android:textSize="@dimen/button_14sp_720dp_12sp_600dp"/>
+
+                            <com.wep.common.app.views.WepButton
+                                android:id="@+id/btnCloseItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:layout_gravity="center"
+                                android:theme="@style/WepButtonWithMarigin"
+                                android:layout_marginRight="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginBottom="@dimen/_5dp_720dp_4dp_600dp"
+                                android:layout_marginLeft="@dimen/_10dp_720dp_7dp_600dp"
+                                android:layout_marginTop="@dimen/_5dp_720dp_4dp_600dp"
+                                android:minHeight="40dp"
+                                android:background="@drawable/background_btn"
+                                android:onClick="Close"
+                                android:text="Close"
+                                android:textSize="@dimen/button_14sp_720dp_12sp_600dp"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"></View>
+
+            <LinearLayout
+                android:id="@+id/second_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000000">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/heading_border"
+                            android:gravity="center"
+                            android:text="SNo"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@drawable/heading_border"
+                            android:gravity="center"
+                            android:text="Items"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/heading_border"
+                            android:gravity="center"
+                            android:text="Delete"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/table_text_heading_16sp_720dp_14sp_600dp" />
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin1"
+                        android:layout_weight="0.1">
+
+                        <TableLayout
+                            android:id="@+id/tbl_displaysubmitteditems"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </TableLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ingredient_block2_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@color/black">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin1"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autocompletetv_submitteditemsearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/searchicon_img"
+                            android:hint="Search Item" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="5"
+                            android:visibility="invisible"
+                            android:src="@drawable/img_search" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                        android:layout_weight="1"
+                        android:text="* Please click on Item to convert ingredients into item "
+                        android:textColor="@color/red" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

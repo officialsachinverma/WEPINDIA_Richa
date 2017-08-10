@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+        android:id="@+id/topbar_LBL_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:typeface="sans" />
+
+    <ScrollView
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/emi_CHK_i_agree"
+        android:layout_below="@id/topbar_LBL_heading"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomBoldTextView
+                android:id="@+id/sponsorbankname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="AXIS"
+                android:textSize="25sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomBoldTextView
+                android:id="@+id/mearchant_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="17sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/mearchant_other_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="SALE"
+                android:textSize="25sp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/transaction_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/emi_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/terms_conditions"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:text="@string/emi_term_condition"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp" />
+
+            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                android:id="@+id/final_transction_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:paddingTop="6dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.mswipetech.wisepad.sdktest.customviews.CustomCheckBox
+        android:id="@+id/emi_CHK_i_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emi_BTN_next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:drawableRight="@null"
+        android:gravity="center_vertical"
+        android:text="@string/i_agree"
+        android:textSize="20sp" />
+
+    <com.mswipetech.wisepad.sdktest.customviews.customBtn
+        android:id="@+id/emi_BTN_next"
+        android:layout_width="400dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundrectblue"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@android:color/white"
+        android:textSize="23sp" />
+
+</RelativeLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_below="@+id/toolbar"
+        tools:ignore="HardcodedText,UselessParent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25">
+
+            <LinearLayout
+                android:id="@+id/lnrSubTaxConfig"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:id="@+id/rowServiceTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvServiceTaxName"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Tax Desc"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/etTaxId"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:focusable="false"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/etTaxDescription1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:focusable="false"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowServiceTaxPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvServiceTaxPercent"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Base Tax Percent"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/etTaxPercent1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:focusable="false"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowServiceSubDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvServiceSubDesc"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="SubTax Description"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/etSubTaxDescription"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:hint="SubTax Description"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowServiceSubPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvServiceSubPercent"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="SubTax Percent"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/etTotalPercent1"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:focusable="false"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/etSubTaxPercent"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="SubTax Percent"
+                        android:layout_marginRight="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <ScrollView
+                    android:id="@+id/scrlSubTaxTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#DDDDDD">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:id="@+id/tblSubTaxConfig"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:collapseColumns="1,6,7,8">
+
+                            <TableRow
+                                android:id="@+id/rowSubCaption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryLight">
+
+                                <TextView
+                                    android:id="@+id/tvCaptionSubTaxSno"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="S.No"
+                                    android:gravity="center"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionSubTaxId"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Id"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionSubTaxDescription"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sub Desc"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionSubTaxPercent"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Percent"
+                                    android:gravity="center"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/txtColorAccent" />
+
+                                <TextView
+                                    android:id="@+id/tvCaptionTaxName"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tax Desc"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/txtColorAccent" />
+
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.75">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="*Please note % entered is taken upto 2 digits after decimal"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:id="@+id/tvHorizontalLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="#000000" />
+
+                <TableRow
+                    android:id="@+id/rowSubButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp">
+
+                    <Button
+                        android:id="@+id/btnAddSubTax"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/background_btn"
+                        android:textColor="@color/white"
+                        android:onClick="AddSubTaxConfig"
+                        android:text="Add" />
+
+                    <Button
+                        android:id="@+id/btnEditSubTax"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background_btn"
+                        android:textColor="@color/white"
+                        android:onClick="EditSubTaxConfig"
+                        android:text="Update" />
+
+                    <Button
+                        android:id="@+id/btnClearSubTax"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background_btn"
+                        android:textColor="@color/white"
+                        android:onClick="ClearSubTaxConfig"
+                        android:text="Clear" />
+
+                    <Button
+                        android:id="@+id/btnCloseSubTax"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background_btn"
+                        android:textColor="@color/white"
+                        android:onClick="CloseSubTaxConfig"
+                        android:text="Close" />
+
+                </TableRow>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

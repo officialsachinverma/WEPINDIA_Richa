@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2f2f2"
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#f2f2f2"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/topbar_LBL_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Login"
+            android:textColor="#000000"
+            android:textSize="35dp"
+            android:typeface="sans" />
+
+        <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+            android:id="@+id/topbar_LBL_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/host_offline"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topbar_LBL_heading"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/creditsale_LNL_page1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/circleblack">
+
+                <TextView
+                    android:id="@+id/creditsale_IMG_page1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/creditsale_LNL_page2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/circleyellow">
+
+                <TextView
+                    android:id="@+id/creditsale_IMG_page2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/creditsale_LNL_page3"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/circleyellow">
+
+                <TextView
+                    android:id="@+id/creditsale_IMG_page3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_bar"
+        android:layout_centerHorizontal="true"
+        android:background="#f2f2f2">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp">
+
+            <ViewFlipper
+                android:id="@+id/creditsale_VFL_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- the widgets for the Amount -->
+
+                <ScrollView
+                    android:layout_width="350dp"
+                    android:layout_height="match_parent"
+                    android:fadeScrollbars="false">
+
+                    <LinearLayout
+                        android:id="@+id/creditsale_REL_saledetails"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <com.mswipetech.wisepad.sdktest.customviews.DecAmtEditText
+                                android:id="@+id/creditsale_TXT_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="Amount"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/creditsale_LNR_tipamount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                                android:id="@+id/creditsale_LBL_tipamount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="22dp" />
+
+                            <com.mswipetech.wisepad.sdktest.customviews.DecAmtEditText
+                                android:id="@+id/creditsale_TXT_tipamount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="Tip Amount"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/creditsale_LNR_convienceFee"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <com.mswipetech.wisepad.sdktest.customviews.CustomTextView
+                                android:id="@+id/creditsale_LBL_conveniencepercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="22dp" />
+
+                            <com.mswipetech.wisepad.sdktest.customviews.CustomEditText
+                                android:id="@+id/creditsale_TXT_conveniencepercentage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@android:drawable/edit_text"
+                                android:editable="false"
+                                android:ellipsize="start"
+                                android:focusable="false"
+                                android:gravity="right|center_vertical"
+                                android:hint="0.00"
+                                android:imeOptions="actionNext"
+                                android:inputType="none"
+                                android:maxLength="12"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@null"
+                                android:textSize="28sp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/creditsale_LNR_salecash"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.mswipetech.wisepad.sdktest.customviews.DecAmtEditText
+                                android:id="@+id/creditsale_TXT_salecash"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@android:drawable/edit_text"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="Sale cash"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/creditsale_LNR_salecash_total"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/creditsale_TXT_total_amount"
+                                android:layout_width="200dp"
+                                android:layout_height="40dp"
+                                android:background="@android:drawable/edit_text"
+                                android:ellipsize="start"
+                                android:gravity="right|center_vertical"
+                                android:hint="total amount"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:background="@android:drawable/edit_text">
+
+                            <TextView
+                                android:id="@+id/creditsale_LBL_countrycodeprefix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="(+91)"
+                                android:textColor="#777777"
+                                android:textSize="22dp"
+                                android:typeface="sans"></TextView>
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_mobileno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/creditsale_LBL_countrycodeprefix"
+                                android:background="@android:drawable/edit_text"
+                                android:ellipsize="start"
+                                android:hint="Mobile No."
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:ellipsize="start"
+                                android:hint="Email(optional)"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="30"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_receipt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:ellipsize="start"
+                                android:hint="Receipt(optional)"
+                                android:imeOptions="actionNext"
+                                android:maxLength="30"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_notes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:gravity="left|center_vertical"
+                                android:hint="Notes(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_extra_one"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra1(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_extra_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra2(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_extra_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra3(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_extra_four"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra4(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/creditsale_TXT_extra_five"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:drawable/edit_text"
+                                android:gravity="left|center_vertical"
+                                android:hint="Extra5(optional)"
+                                android:imeOptions="actionDone"
+                                android:maxLength="2000"
+                                android:minLines="4"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:textSize="22dp"
+                                android:typeface="sans"></EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/creditsale_BTN_amt_next"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/roundrectblue"
+                                android:gravity="center"
+                                android:text="Next"
+                                android:textColor="#ffffff"
+                                android:textSize="25dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+                <!-- the widgets for the the swiper -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:keepScreenOn="true">
+
+                    <TextView
+                        android:id="@+id/creditsale_LBL_swipe_amtmsg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:singleLine="false"
+                        android:text="Total amount of this transaction \nis Rs. 99999.99"
+                        android:textColor="#000000"
+                        android:textSize="22dp"
+                        android:typeface="sans" />
+                    <!--
+						 <LinearLayout android:id="@+id/creditsale_LNR_cardtype"
+		                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+		                    android:gravity="center_horizontal" android:layout_below="@+id/creditsale_LBL_swipe_amtmsg"
+		                    android:orientation="horizontal" >
+
+		                    <RadioGroup
+		                        android:id="@+id/creditsale_RDG_cardtype"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:orientation="horizontal" >
+
+		                        <RadioButton
+		                            android:id="@+id/creditsale_RBTN_icccard"
+		                            android:layout_width="wrap_content"
+		                            android:layout_height="wrap_content"
+		                            android:text="Chip card"
+		                            android:textColor="#000000"
+		                            android:textSize="18dp"
+		                            android:typeface="sans" />
+
+		                        <RadioButton
+		                            android:id="@+id/creditsale_RBTN_magnetic"
+		                            android:layout_width="wrap_content"
+		                            android:layout_height="wrap_content"
+		                            android:text="Magnetic card"
+		                            android:textColor="#000000"
+		                            android:textSize="18dp"
+		                            android:typeface="sans" />
+		                    </RadioGroup>
+		                </LinearLayout>
+                    -->
+
+                    <RelativeLayout
+                        android:id="@+id/creditsale_LBL_swipe_steps"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/creditsale_LBL_swipe_amtmsg"
+                        android:layout_marginBottom="10dp"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/creditsale_LBL_swipe_steps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/creditsale_LBL_swipe_step1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:singleLine="false"
+                                android:text="Press start"
+                                android:textColor="#000000"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/creditsale_LBL_swipe_step2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:singleLine="false"
+                                android:text="Press start"
+                                android:textColor="#B0ACAE"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/creditsale_LBL_swipe_step3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:singleLine="false"
+                                android:text="Initializing the swiper"
+                                android:textColor="#B0ACAE"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/creditsale_LBL_swipe_step4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:singleLine="false"
+                                android:text="Please swipe/insert Chip card"
+                                android:textColor="#B0ACAE"
+                                android:textSize="22dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/creditsale_EDT_swipe_progmsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/creditsale_LBL_swipe_steps"
+                            android:layout_below="@+id/creditsale_LBL_swipe_steps"
+                            android:layout_marginTop="10dp"
+                            android:gravity="left|center_vertical"
+                            android:lines="3"
+                            android:singleLine="false"
+                            android:text="Priyabrat"
+                            android:textColor="#000000"
+                            android:textSize="20dp"
+                            android:typeface="sans"></TextView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/creditsale_LNR_swipebuttons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/creditsale_LBL_swipe_steps"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/creditsale_BTN_swipe"
+                                android:layout_width="100dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/background_btn"
+                                android:minHeight="40dp"
+                                android:gravity="center"
+                                android:text="Start"
+                                android:textColor="#ffffff"
+                                android:textSize="25dp"
+                                android:typeface="sans" />
+
+                            <Button
+                                android:id="@+id/creditsale_BTN_swipe_mcr"
+                                android:layout_width="100dp"
+                                android:layout_height="44dp"
+                                android:layout_marginLeft="3dp"
+                                android:background="@drawable/background_btn"
+                                android:minHeight="40dp"
+                                android:gravity="center"
+                                android:text="Start-Mag"
+                                android:textColor="#ffffff"
+                                android:textSize="25dp"
+                                android:typeface="sans"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/creditsale_BTN_swipe_ok"
+                            android:layout_width="100dp"
+                            android:layout_height="44dp"
+                            android:layout_below="@+id/creditsale_LBL_swipe_steps"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/background_btn"
+                            android:minHeight="40dp"
+                            android:gravity="center"
+                            android:text="Stop"
+                            android:textColor="#ffffff"
+                            android:textSize="25dp"
+                            android:typeface="sans"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!-- the widgets for the the card detatils -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:keepScreenOn="true">
+
+                    <ScrollView
+                        android:id="@+id/creditsale_SCL_carddetails"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="55dp"
+                        android:scrollbars="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/creditsale_LBL_lblCardHolderName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cardholder"
+                                    android:textColor="#777777"
+                                    android:textSize="17dp"
+                                    android:typeface="sans" />
+
+                                <TextView
+                                    android:id="@+id/creditsale_LBL_CardHolderName"
+                                    android:layout_width="270dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="#FFFFFF"
+                                    android:text=""
+                                    android:textColor="#000000"
+                                    android:textSize="22dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/creditsale_LBL_lblAmtRs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Amount"
+                                    android:textColor="#777777"
+                                    android:textSize="17dp"
+                                    android:typeface="sans" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:background="#FFFFFF">
+
+                                    <TextView
+                                        android:id="@+id/creditsale_LBL_Amtprefix"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="2dp"
+                                        android:text=""
+                                        android:textColor="#000000"
+                                        android:textSize="18dp"
+                                        android:typeface="sans" />
+
+                                    <TextView
+                                        android:id="@+id/creditsale_LBL_AmtRs"
+                                        android:layout_width="270dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FFFFFF"
+                                        android:textColor="#000000"
+                                        android:textSize="24dp"
+                                        android:textStyle="bold"></TextView>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/creditsale_LBL_lblCardNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Last 4 digits"
+                                    android:textColor="#777777"
+                                    android:textSize="17dp"
+                                    android:typeface="sans" />
+
+                                <TextView
+                                    android:id="@+id/creditsale_LBL_CardNo"
+                                    android:layout_width="270dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="#FFFFFF"
+                                    android:text=""
+                                    android:textColor="#000000"
+                                    android:textSize="22dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/creditsale_LBL_lblExpiryDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Expiry Date"
+                                    android:textColor="#777777"
+                                    android:textSize="17dp"
+                                    android:typeface="sans" />
+
+                                <TextView
+                                    android:id="@+id/creditsale_LBL_ExpiryDate"
+                                    android:layout_width="270dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="#FFFFFF"
+                                    android:textColor="#000000"
+                                    android:textSize="24dp"
+                                    android:textStyle="bold"></TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/creditsale_LNR_carddetails"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/creditsale_SCL_carddetails"
+                        android:layout_marginTop="-55dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/creditsale_CHK_notes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Continue without posting additional data for the card sale"
+                            android:textColor="#000000"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/creditsale_BTN_carddetails_submit"
+                            android:layout_width="100dp"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/roundrectblue"
+                            android:gravity="center"
+                            android:text="Submit"
+                            android:textColor="#ffffff"
+                            android:textSize="25dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!-- the widgets for the receipt -->
+
+            </ViewFlipper>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

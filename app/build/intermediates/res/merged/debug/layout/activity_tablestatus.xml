@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/relativeParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ScrollView
+            android:id="@+id/scrlTableStatusTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="#DDDDDD" >
+
+            <TableLayout
+                android:id="@+id/tblTableStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:id="@+id/rowCaptionTableStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight" >
+
+                    <TextView
+                        android:id="@+id/tvCaptionTableSNo"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="S.No"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionTableTableNo"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Table No"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionTableInTime"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="In Time"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <!--<TextView
+                        android:id="@+id/tvCaptionTableTimeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="200dp"
+                        android:text="Time Count"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffffff" />-->
+
+                    <TextView
+                        android:id="@+id/tvCaptionTableStatus"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/txtColorAccent" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvTableStatusHorizontalLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/rowButtonsTableStatus"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:background="#000000" />
+
+        <TableRow
+            android:id="@+id/rowButtonsTableStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp" >
+
+            <EditText
+                android:id="@+id/etTableSearchTable"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:hint="Search Table"
+                android:inputType="number" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnSearchTableStatus"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="SearchTableStatus"
+                android:text="Search"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnClearTableStatus"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:text="Clear"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btnCloseTableStatus"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="CloseTableStatus"
+                android:text="Close"
+                android:background="@drawable/background_btn"
+                android:textColor="@color/white" />
+        </TableRow>
+
+    </RelativeLayout>
+
+</RelativeLayout>

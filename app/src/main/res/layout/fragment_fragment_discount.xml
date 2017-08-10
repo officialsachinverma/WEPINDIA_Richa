@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TableRow
+        android:id="@+id/rowDiscDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" >
+
+        <TextView
+            android:id="@+id/tvDiscDescription"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Discount Description"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etDiscDescription"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+            android:hint="Discount Name"
+            android:inputType="text" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowDiscPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowDiscDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/tvDiscPercent"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Discount Percent"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etDiscPercent"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="6"
+            android:hint="Discount Percent"
+            android:inputType="numberDecimal" />
+    </TableRow>
+        <TableRow
+        android:id="@+id/rowDiscAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowDiscPercent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/tvDiscAmount"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Discount Amount"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etDiscAmount"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="6"
+            android:hint="Discount Amount"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <ScrollView
+        android:id="@+id/scrlDiscountTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rowDiscAmount"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp" >
+        <TableLayout
+            android:id="@+id/tblDiscConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:collapseColumns="1">
+
+            <TableRow
+                android:id="@+id/rowCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryLight" >
+
+                <TextView
+                    android:id="@+id/tvCaptionDiscSno"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="S.No"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionDiscId"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Id"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionDiscDescription"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionDiscPercent"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Percent"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionDiscAmt"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvHorizontalLine"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="*Please note % entered is taken upto 2 digits after decimal"
+        android:textColor="@color/red"/>
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:background="#000000" />
+
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnAddDiscount"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="AddDiscConfig"
+            android:text="Add" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnEditDiscount"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="EditDiscConfig"
+            android:text="Update" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnClearDiscount"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="ClearDiscConfig"
+            android:text="Clear" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnCloseDiscount"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="CloseDiscConfig"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Close" />
+
+    </TableRow>
+
+</RelativeLayout>

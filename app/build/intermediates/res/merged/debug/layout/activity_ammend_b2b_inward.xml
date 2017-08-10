@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/boxBtn"
+        android:orientation="vertical"
+        android:layout_marginTop="72dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1.2"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:id="@+id/linear_1"
+                android:layout_weight="0.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/border"
+                        android:text=" Original Details"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="GSTIN"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/et_gstin_ori"
+                        android:textSize="14dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="InvoiceNo"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/et_invno_ori"
+                        android:textSize="14dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Invoice Date   "/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/et_invdate_ori"
+                        android:textSize="14dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/linear_2"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:layout_weight="0.9">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/border"
+                        android:text=" Revised Details"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="GSTIN"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="14dp"
+                        android:id="@+id/et_gstin_rev"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Invoice No"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/et_invno_rev"
+                        android:textSize="14dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Invoice Date"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="14dp"
+                        android:id="@+id/et_invdate_rev"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linear_3"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="HSN"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:id="@+id/et_hsn"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Value"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:id="@+id/et_value"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Taxable Value"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:id="@+id/et_taxval"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="G/S"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/spnr_g_s"
+                        android:entries="@array/g_s"></Spinner>
+                </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linear_4"
+                    android:layout_margin="@dimen/activity_horizontal_margin1"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="IGST Rate"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:id="@+id/et_igstrate"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="CGST Rate"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:id="@+id/et_cgstrate"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="SGST Rate"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:id="@+id/et_sgstrate"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="POS"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:id="@+id/et_pos"/>
+                    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin1"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="IGST Amount"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:id="@+id/et_igstamt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="CGST Amount"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:id="@+id/et_cgstamt"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SGST Amount"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:id="@+id/et_sgstamt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.6">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#000000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Sno."/>
+
+                <TextView
+                    android:layout_width="348dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border"
+                    android:text="Original Details"/>
+
+                <TextView
+                    android:layout_width="545dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="Revised Details"/>
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Taxable "/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="IGST"/>
+                <TextView
+                    android:layout_width="80dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="CGST"/>
+                <TextView
+                    android:layout_width="65dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="SGST"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="Delete"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="GSTIN"/>
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Inv No"/>
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Inv Date"/>
+
+                <TextView
+                    android:layout_width="183dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="GSTIN"/>
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Inv No"/>
+                <TextView
+                    android:layout_width="107dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Inv Date"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="HSN"/>
+                <TextView
+                    android:layout_width="51dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="G/S"/>
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Value"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Value"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Amt"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Amt"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:text="Amt"/>
+
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btndel"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/listview_gstr2_amend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/boxBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingTop="5dp">
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_btn"
+            android:minHeight="40dp"
+            android:minWidth="200dp"
+            android:onClick="Load"
+            android:text=" Load " />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_btn"
+            android:minHeight="40dp"
+            android:minWidth="200dp"
+            android:onClick="Add"
+            android:text=" Add " />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_btn"
+            android:minHeight="40dp"
+            android:layout_toRightOf="@id/btnAdd"
+            android:minWidth="200dp"
+            android:onClick="Save"
+            android:text="Save" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnSave"
+            android:background="@drawable/background_btn"
+            android:minHeight="40dp"
+            android:minWidth="200dp"
+            android:onClick="Clear"
+            android:text="Clear" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnClear"
+            android:background="@drawable/background_btn"
+            android:minHeight="40dp"
+            android:minWidth="200dp"
+            android:onClick="Close"
+            android:text="Close" />
+
+    </RelativeLayout>
+</RelativeLayout>

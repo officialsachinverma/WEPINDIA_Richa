@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\EasyBill_New\wepfnb_gst\printers\src\main\assets"><file name="Shruti.ttf" path="D:\EasyBill_New\wepfnb_gst\printers\src\main\assets\Shruti.ttf"/></source><source path="D:\EasyBill_New\wepfnb_gst\printers\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\EasyBill_New\wepfnb_gst\printers\src\debug\assets"/></dataSet></merger>

@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffed">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:weightSum="4"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear_Inward_entry_heading"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:text="             * please enter inward entry details"
+                android:textSize="15dp"
+                android:textColor="#cc0000"
+                android:textStyle="italic"
+                android:id="@+id/tx_inward_entry_heading"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear_inward_entry_supplier_details"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/supplier_block1"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginRight="@dimen/activity_horizontal_margin1"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Supplier Name "
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:id="@+id/et_supplier_name"
+                          />
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/autocompletetv_suppliername"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Supplier Address "
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/et_supplier_address"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Supplier Phone "
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/et_supplier_phone"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:id="@+id/supplier_block2"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Supplier Type "
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spnr_supplier_type"
+                        android:entries="@array/supplier_types"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Supplier GSTIN "
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/et_inward_supplier_gstin"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="2"
+                        android:weightSum="2">
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/chk_inward_pos"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:text="InterState Transaction "
+                            android:checked="false"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/tx_inward_pos"
+                            android:text="Supplier POS "
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textStyle="bold|italic"/>
+
+                    </LinearLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/et_inward_pos"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- date and time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/linear_invoice_details"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:id="@+id/linear_invoice_number"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginRight="@dimen/activity_horizontal_margin1"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Invoice No."
+                    android:layout_weight="2"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tx_inward_supply_invoice_number"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:id="@+id/linear_invoice_date"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Invoice Date "
+                    android:layout_weight="2"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="43dp"
+                    android:onClick="dateSelection_inward"
+                    android:background="@drawable/btn_calendar"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:id="@+id/tx_inward_invoice_date"
+                    android:hint="date"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/linear_item_list"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:layout_marginRight="@dimen/activity_horizontal_margin1"
+                android:layout_weight="1.02"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Item Name "/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/spnr_inwalrd_item_list">
+
+                </Spinner>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:weightSum="2">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/et_inward_item_quantity"
+                    android:hint="Enter the quantity"
+                    android:layout_weight="1"
+                    android:textStyle="italic"/>
+
+                <ImageButton
+                    android:layout_width="40sp"
+                    android:layout_height="30sp"
+                    android:id="@+id/btnimage_new_item"
+                    android:layout_weight="1"
+                    android:onClick="add_inward"
+                    android:background="@drawable/add_sign"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- end of invoice detail layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+            android:layout_marginRight="@dimen/activity_horizontal_margin1"
+            android:id="@+id/linear_table_content"
+            android:weightSum="3"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="#000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/linear_table_heading"
+                android:layout_weight="1"
+                android:weightSum="13">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:layout_weight="1.015"
+                    android:gravity="center"
+                    android:text="G/S"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:layout_weight="0.97"
+                    android:gravity="center"
+                    android:text="Item Name"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1.02"
+                    android:text="HSN Code"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Value"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1.02"
+                    android:text="Qty"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="UoM"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="0.95"
+                    android:text="Taxable Value"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1.02"
+                    android:text="GST Rate"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="IGST Amt"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="CGST Amt"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="SGST Amt"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="0.96"
+                    android:text="Sub Total"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/heading_border"
+                    android:gravity="center"
+                    android:layout_weight="1.05"
+                    android:text=""/>
+
+
+            </LinearLayout>
+            <!-- end of child 1 : table_heading layout -->
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tbl_inward_item_details"
+                    android:collapseColumns="14,15,16,17"
+                    android:layout_weight="0.7">
+
+                </TableLayout>
+
+            <!-- end of child 2 : table_values layout -->
+        </LinearLayout>
+        <!-- end of table_content layout-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linear_inward_buttons"
+            android:layout_weight="1"
+            android:id="@+id/linear_inward_additional_charge"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/activity_horizontal_margin1"
+                android:weightSum="2"
+                android:layout_weight="0.7">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Delivery Charge"
+                    android:checked="false"
+                    android:textSize = "15dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/chk_inward_additional_charge"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Additional Charge Name"
+                    android:layout_weight="1.5"
+                    android:id="@+id/et_inward_additionalchargename"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:enabled="false"
+                    android:textStyle="italic"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/et_inward_additionalchargeamount"
+                    android:hint="Delivery Charge Amt"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+
+                android:layout_weight="1.3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Grand Total "
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/et_inward_grand_total"
+                    android:background = "#ffffff"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- end of additional charge layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear_inward_buttons"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:weightSum="2"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#000000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_inward_button"
+                android:gravity="center_horizontal|center_vertical"
+
+                >
+                <Button
+                    android:id="@+id/btnLoadItem"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="Load_inward"
+                    android:visibility="invisible"
+                    android:background="@drawable/background_btn"
+                    android:text="Load" />
+
+                <Button
+                    android:id="@+id/btnSaveItem"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="Save_inward"
+                    android:background="@drawable/background_btn"
+                    android:text="Save" />
+
+                <Button
+                    android:id="@+id/btnEditItem"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="Edit_inward"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/background_btn"
+                    android:text="Edit" />
+
+                <Button
+                    android:id="@+id/btnClearItem"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="Clear_inward"
+                    android:background="@drawable/background_btn"
+                    android:text="Clear" />
+
+                <Button
+                    android:id="@+id/btnCloseItem"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="Close_inward"
+                    android:background="@drawable/background_btn"
+                    android:text="Close" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    <!-- end of main layout-->
+</RelativeLayout>

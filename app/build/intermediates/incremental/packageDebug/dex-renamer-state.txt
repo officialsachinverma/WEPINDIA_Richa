@@ -1,0 +1,7 @@
+#Wed Aug 09 15:47:02 IST 2017
+base.0=D\:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+base.1=D\:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+file.0=D\:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes2.dex

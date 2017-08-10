@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_above="@+id/boxBtn"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/addBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Name *:"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Enter Name"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Mobile *:"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Enter Mobile"
+                        android:inputType="number"
+                        android:maxLength="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelDesignation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Designation :"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextDesignation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Enter Designation"
+                        android:inputType="textPersonName"
+                        android:maxLength="30" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Role *:"
+                        android:textSize="22sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Select Role" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Login *:"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Enter Login"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Password *:"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Password"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelAadhar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Aadhar :"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextAadhar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Enter Aadhar"
+                        android:inputType="number"
+                        android:maxLength="12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Email :"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Enter Email (ex: xyz@gmail.com)"
+                        android:inputType="textEmailAddress" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/labelAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="Address :"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/editTextAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/edit_text"
+                        android:hint="Enter Address"
+                        android:inputType="textMultiLine"
+                        android:minLines="2" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewAttachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Attach Address Proof"
+                        android:textColor="@android:color/black"
+                         />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/black"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2">
+
+                <TableLayout
+                    android:id="@+id/tblUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:collapseColumns="3">
+
+                    <TableRow
+                        android:id="@+id/rowCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryLight">
+
+                        <TextView
+                            android:id="@+id/tvCaptionUserId"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="S.No"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionUserName"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="0dp"
+                            android:text="Name"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionAccessLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="60dp"
+                            android:text="Role"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/txtColorAccent" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <ListView
+                            android:id="@+id/listViewUsers"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_span="3" />
+                    </TableRow>
+                </TableLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/boxBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal">
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnSubmitUser"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/view1"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/background_btn"
+                    android:gravity="center"
+                    android:minHeight="40dp"
+                    android:onClick="SubmitFormData"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Submit" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnDeleteUser"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/background_btn"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:minHeight="40dp"
+                    android:onClick="DeleteItem"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="Delete" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnClearUser"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/btn1"
+                    android:background="@drawable/background_btn"
+                    android:minHeight="40dp"
+                    android:onClick="clearFormData"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Clear" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnCloseUser"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/btn1"
+                    android:background="@drawable/background_btn"
+                    android:minHeight="40dp"
+                    android:onClick="Close"
+                    android:theme="@style/WepButtonWithMarigin"
+                    android:layout_marginLeft="@dimen/btn_marigin"
+                    android:layout_marginRight="@dimen/btn_marigin"
+                    android:text="Close" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvOtherSettingHLine">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="75dp"
+                        android:layout_weight="1.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvDateTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Date and Time (Choose One)" />
+
+                            <RadioGroup
+                                android:id="@+id/rgDateTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbDateTimeAuto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Auto" />
+
+                                <RadioButton
+                                    android:id="@+id/rbDateTimeManual"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Manual" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvPriceChange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Price Change (Choose One)" />
+
+                            <RadioGroup
+                                android:id="@+id/rgPriceChange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbPriceChangeEnable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rbPriceChangeDisable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvBillwithStock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Bill with Stock (Choose One)" />
+
+                            <RadioGroup
+                                android:id="@+id/rgBillwithStock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbBillwithStockEnable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rbBillwithStockDisable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvItemNoReset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Item No Reset (Choose One)" />
+
+                            <RadioGroup
+                                android:id="@+id/rgItemNoReset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbItemNoResetAuto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Auto" />
+
+                                <RadioButton
+                                    android:id="@+id/rbItemNoResetManual"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Manual" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvBillNoReset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Bill No Daily Reset (Choose One)" />
+
+                            <RadioGroup
+                                android:id="@+id/rgBillNoReset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbBillNoResetEnable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rbBillNoResetDisable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="75dp"
+                        android:layout_weight="0.8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvTax"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Tax (Choose One)" />
+
+                            <RadioGroup
+                                android:id="@+id/rgTax"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbTaxForward"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Forward" />
+
+                                <RadioButton
+                                    android:id="@+id/rbTaxReverse"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Reverse" />
+                            </RadioGroup>
+                            <TextView
+                                android:id="@+id/tvDiscountType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Discount Type (Choose One)" />
+
+                            <RadioGroup
+                                android:id="@+id/rgDiscountType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbDiscountItemwise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Itemwise" />
+
+                                <RadioButton
+                                    android:id="@+id/rbDiscountBillwise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Billwise" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvFastBillingMode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Fast Billing Mode " />
+
+                            <RadioGroup
+                                android:id="@+id/rgFastBilingMode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbFastBillingItems"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Items" />
+
+                                <RadioButton
+                                    android:id="@+id/rbFastBillingDeptItems"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dept / Items" />
+
+                                <RadioButton
+                                    android:id="@+id/rbFastBillingDeptCategItems"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dept / Categ / Items" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvCummulativeHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Cummulative Report Heading" />
+
+                            <RadioGroup
+                                android:id="@+id/rgCummulativeHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbCummulativeHeadingEnable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rbCummulativeHeadingDisable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvTableSpliting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Table Spliting" />
+
+                            <RadioGroup
+                                android:id="@+id/rgTableSpliting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbTableSplitingEnable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rbTableSplitingDisable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvPrintPreview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Print Preview (Choose One)"
+                                android:visibility="invisible"/>
+
+                            <RadioGroup
+                                android:id="@+id/rgPrintPreview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+
+                                <RadioButton
+                                    android:id="@+id/rbPrintPreviewEnable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enable" />
+
+                                <RadioButton
+                                    android:id="@+id/rbPrintPreviewDisable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Disable" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tvTaxType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Tax Type"
+                                android:visibility="invisible" />
+
+                            <RadioGroup
+                                android:id="@+id/rgTaxType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="invisible" >
+
+                                <RadioButton
+                                    android:id="@+id/rbTaxTypeItemwise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Item wise" />
+
+                                <RadioButton
+                                    android:id="@+id/rbTaxTypeBillwise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bill wise" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvOtherSettingHLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/boxBtn"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/boxBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnApplyOtherSettings"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Apply" />
+
+        <Button
+            android:id="@+id/btnCloseOtherSettings"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:text="Close" />
+    </LinearLayout>
+
+</RelativeLayout>

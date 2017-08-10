@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,UselessParent" >
+
+    <TableRow
+        android:id="@+id/rowCouponDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" >
+
+        <TextView
+            android:id="@+id/tvCouponDescription"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Coupon Description"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etCouponDescription"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+            android:hint="Coupon Description"
+            android:inputType="text" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowCouponBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowCouponDescription"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/tvCouponBarcode"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Coupon Barcode"
+            android:enabled="false"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etCouponBarcode"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:enabled="false"
+
+            android:inputType="text" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/rowCouponAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowCouponBarcode"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/tvCouponAmount"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Coupon Amount"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etCouponAmount"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="6"
+            android:hint="Coupon Amount"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <ScrollView
+        android:id="@+id/scrlCouponTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rowCouponAmount"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <TableLayout
+            android:id="@+id/tblCouponConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:collapseColumns="1,4">
+
+            <TableRow
+                android:id="@+id/rowCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryLight" >
+
+                <TextView
+                    android:id="@+id/tvCaptionCouponSno"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="S.No"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionCouponId"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Id"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionCouponDescription"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionCouponAmount"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvCaptionCouponBarcode"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Barcode"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:background="#000000" />
+
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnAddCoupon"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="AddCoupon"
+            android:text="Add" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnEditCoupon"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="EditCoupon"
+            android:text="Update" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnClearCoupon"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="ClearCoupon"
+            android:text="Clear" />
+
+        <com.wep.common.app.views.WepButton
+            android:id="@+id/btnCloseCoupon"
+            android:background="@drawable/background_btn"
+            android:textColor="@android:color/white"
+            android:theme="@style/WepButtonWithMarigin"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="CloseCoupon"
+            android:text="Close" />
+
+    </TableRow>
+
+</RelativeLayout>

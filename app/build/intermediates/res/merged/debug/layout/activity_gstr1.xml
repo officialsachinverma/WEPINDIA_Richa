@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+
+        <TextView
+            android:id="@+id/title_GSTR1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="GSTR-1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/relative_GSTIN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_GSTR1"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/text_GSTIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="1. GSTIN"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/edittext_gstin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/text_GSTIN"
+                android:hint="12ABCNDL1234432"
+                android:background="@android:drawable/edit_text"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_taxee_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_GSTIN"
+            >
+
+            <TextView
+                android:id="@+id/text_TaxPayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_centerVertical="true"
+                android:textSize = "16sp"
+                android:textStyle="bold"
+                android:text="2. Name of TaxPayer" />
+
+            <TextView
+                android:id="@+id/edittext_TaxPayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/text_TaxPayerName"
+                android:hint="AJAY VIJAY"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id = "@+id/relative_turnover"
+            android:layout_below="@+id/relative_taxee_name">
+            <TextView
+                android:id="@+id/text_TurnOver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textStyle="bold"
+                android:text="3. Gross Turnover(Rs) of the taxpayer in the previous FY " />
+
+            <EditText
+                android:id="@+id/edittext_TurnOver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginLeft="14sp"
+                android:layout_toRightOf="@+id/text_TurnOver"
+                android:hint="20000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_period"
+            android:layout_below="@+id/relative_turnover">
+            <TextView
+                android:id="@+id/text_Period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="4. Period. "
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/calendar_button"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_toRightOf="@+id/text_Period"
+                android:background="@drawable/calendar_img"
+                android:onClick="dateDialog" />
+
+            <TextView
+                android:id="@+id/text_Month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/calendar_button"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/calendar_button"
+                android:text="Month "
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_MonthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_Month"
+                android:text="..."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_MonthValue"
+                android:text="Year "
+                android:textStyle="bold"
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+                android:id="@+id/text_YearValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_Period"
+                android:layout_alignTop="@+id/text_Period"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/text_Year"
+                android:text="..."
+                android:textSize="16sp"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_supplies"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_below="@id/relative_period">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B2B tables"
+                    android:id="@+id/button_b2btable"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:onClick="GSTR1_b2b"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B2C tables"
+                    android:layout_toRightOf="@+id/button_b2btable"
+                    android:id="@+id/button_b2ctable"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:onClick="GSTR1_b2c"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

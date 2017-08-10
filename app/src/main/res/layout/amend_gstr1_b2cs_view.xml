@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvSNo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:text="Sno"
+        android:layout_weight="1.05"
+        />
+
+    <TextView
+        android:id="@+id/tvTaxMonth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvhsn_ori"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="HSN(Ori)"
+        android:visibility="gone"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tvtype_ori"
+        android:layout_width="match_parent"
+        android:layout_weight="1.05"
+        android:layout_height="match_parent"
+        android:text="G/S(Ori)"/>
+    <TextView
+        android:id="@+id/tvpos_ori"
+        android:layout_width="match_parent"
+        android:layout_weight="1.04"
+        android:layout_height="match_parent"
+        android:text="StateCode (Ori)"/>
+
+    <TextView
+        android:id="@+id/tvhsn_rev"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="HSN(Rev)"
+        android:visibility="gone"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tvtype_rev"
+        android:layout_width="match_parent"
+        android:layout_weight="1.05"
+        android:layout_height="match_parent"
+        android:text="G/S(Rev)"/>
+    <TextView
+        android:id="@+id/tvpos_rev"
+        android:layout_width="match_parent"
+        android:layout_weight="1.04"
+        android:layout_height="match_parent"
+        android:text="State Code (Rev)"/>
+    <TextView
+        android:id="@+id/tvtaxableValue"
+        android:layout_width="match_parent"
+        android:layout_weight="0.9"
+        android:layout_height="match_parent"
+        android:text="Taxable Value"/>
+
+    <TextView
+        android:id="@+id/tvIGSTAmount"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="IGST Amt"/>
+
+    <TextView
+        android:id="@+id/tvCGSTAmount"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+
+        android:text="CGST Amt"/>
+
+    <TextView
+        android:id="@+id/tvSGSTAmount"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+
+        android:text="SGST Amt"/>
+    <TextView
+        android:id="@+id/tvcessAmount"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+
+        android:text="SGST Amt"/>
+
+
+    <ImageView
+        android:id="@+id/btnItemDelete"
+        android:layout_width="match_parent"
+        android:layout_weight="1.05"
+        android:layout_height="match_parent"
+        android:text="Delete"
+        />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TableRow
+        android:id="@+id/rowCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/Sno"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="S.No"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+
+        <TextView
+            android:id="@+id/ItemName"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <TextView
+            android:id="@+id/AverageRate"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Average Rate"
+            android:paddingEnd="15dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+
+
+      <!--  <TextView
+            android:id="@+id/Inw_Quantity"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Quantity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />-->
+
+
+
+        <TextView
+            android:id="@+id/Stock"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingEnd="15dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+             />
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <TextView
+            android:id="@+id/UOM"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="UoM"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <TextView
+            android:id="@+id/tvCaptionImage"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Image"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/txtColorAccent"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/btndel"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+    </TableRow>
+</LinearLayout>

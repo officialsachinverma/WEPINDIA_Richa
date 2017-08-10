@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <LinearLayout
+        android:id="@+id/lnrTableBooking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_below="@+id/toolbar">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.30"
+            android:background="#cccccc" >
+
+            <ScrollView
+                android:id="@+id/scrlTableBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#DDDDDD" >
+
+                <TableLayout
+                    android:id="@+id/tblTableBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:collapseColumns="1">
+
+                    <TableRow
+                        android:id="@+id/rowCaptionTableBooking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryLight" >
+
+                        <TextView
+                            android:id="@+id/tvCaptionTBSNo"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="S.No"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionTBSNo1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Id"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionTBCustomerName"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Name"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionTBTimeBooking"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Time For Booking"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionTBAllocateTable"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Table No"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/txtColorAccent" />
+
+                        <TextView
+                            android:id="@+id/tvCaptionTBMobileNo"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile No"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/txtColorAccent" />
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.35" >
+
+            <TextView
+                android:id="@+id/tvTBHorizontalLine1"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/etTBCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:hint="Customer Name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1">
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btn_TimeSelect"
+                        android:layout_width="50dp"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/clock"
+                        android:onClick="TimeSelection" />
+
+                    <EditText
+                        android:id="@+id/etTBTimeBooking"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:layout_weight="1"
+                        android:hint="Click clock icon"
+                        android:focusable="false" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/linear_table"
+                    android:layout_weight="1">
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btn_TableSelect"
+                        android:layout_width="50dp"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/btn_table"
+                        android:onClick="TableSelection" />
+                    <EditText
+                        android:id="@+id/etTBTableNo"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:hint="Click table icon" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etTBMobileNo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:layout_marginLeft="15dp"
+                    android:hint="Mobile No"
+                    android:layout_marginRight="5dp"
+                    android:maxLength="10"
+                    android:inputType="number" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnTBAdd"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="AddTableBooking"
+                    android:text="Book"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@color/white" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnTBSave"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="SaveTableBooking"
+                    android:text="Update"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.35" >
+
+            <TextView
+                android:id="@+id/tvTBHorizontalLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/etTBSearchMobileNo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:hint="Search Mobile No"
+                    android:inputType="number" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnSearchTableBooking"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="SearchTableBooking"
+                    android:text="Search"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@color/white" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnClearTableBooking"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="ClearTableBooking"
+                    android:text="Clear"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@color/white" />
+
+                <com.wep.common.app.views.WepButton
+                    android:id="@+id/btnCloseTableBooking"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="CloseTableBooking"
+                    android:text="Close"
+                    android:background="@drawable/background_btn"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

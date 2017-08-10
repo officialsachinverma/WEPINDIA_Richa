@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\raw\\itemdb.csv",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\raw\\itemdb.csv"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\raw\\mswipe.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\raw\\mswipe.png"
+    }
+]

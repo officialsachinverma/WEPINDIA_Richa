@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_heading"
+        android:layout_below="@+id/relative_period"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linear_reconcile_row"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:id="@+id/gstr2a_item_sno"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=" "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_gstin"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_invoice_no"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_invoice_date"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_value"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_hsn"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=""/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_taxable_value"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:id="@+id/gstr2a_item_igst_amt"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:text=""/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_cgst_amt"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_sgst_amt"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/gstr2a_item_pos"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:text=""/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

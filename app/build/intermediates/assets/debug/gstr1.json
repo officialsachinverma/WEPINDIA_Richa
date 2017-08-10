@@ -1,0 +1,40 @@
+{
+  "gstvalue": {
+    "b2cs": [
+      {
+        "ty": "G",
+        "crt": 22,
+        "txval": 9595.33,
+        "hsn_sc": "S1173",
+        "state_cd": "7",
+        "chksum": "AflJufPlFStqKBZ",
+        "flag": "D",
+        "irt": 0,
+        "camt": 28.54,
+        "iamt": 0,
+        "pro_ass": "Y",
+        "srt": 39.26,
+        "samt": 978922198.61
+      },
+      {
+        "ty": "G",
+        "crt": 22,
+        "txval": 9595.33,
+        "hsn_sc": "S1173",
+        "state_cd": "7",
+        "chksum": "AflJufPlFStqKBZ",
+        "flag": "D",
+        "irt": 0,
+        "camt": 28.54,
+        "iamt": 0,
+        "pro_ass": "Y",
+        "srt": 39.26,
+        "samt": 978922198.61
+      }
+    ],
+    "gt": 3782969.01,
+    "gstin": "25ABCDE1028F6Z4",
+    "fp": "062016"
+  },
+  "userName": "priyabrat123"
+}

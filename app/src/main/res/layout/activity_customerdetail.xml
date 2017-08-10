@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:id="@+id/lnrCustomerDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TableRow
+                android:id="@+id/rowSearchCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="Mobile No"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/etSearchCustomerPhone"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:ems="5"
+                    android:drawableRight="@drawable/searchicon_img"
+                    android:hint="Search Mobile No"
+                    android:inputType="number"
+                    android:maxLength="10" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Customer Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/etSearchCustomerName"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:completionThreshold="1"
+                    android:gravity="left"
+                    android:drawableRight="@drawable/searchicon_img"
+                    android:hint="Search Customer Name"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+                <!--<EditText-->
+                <!--android:id="@+id/etSearchCustomerName"-->
+                <!--android:layout_width="250dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="Search Customer Name"-->
+                <!--android:ems="5"-->
+                <!--android:inputType="text" />-->
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tvHorizontalLine1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TableRow
+                                android:id="@+id/rowCustomerGSTIN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:id="@+id/tvCustomerGSTIN"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Customer GSTIN"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <EditText
+                                    android:id="@+id/etCustomerGSTIN"
+                                    android:layout_width="225dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="5"
+                                    android:hint="Customer GSTIN"
+                                    android:maxLength="15" />
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/rowCustomerName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tvCustomerName"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Customer Name *"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <EditText
+                                    android:id="@+id/etCustomerName"
+                                    android:layout_width="225dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="5"
+                                    android:hint="Customer Name"
+                                    android:inputType="text"
+                                    android:maxLength="16" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/rowCustomerPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tvCustomerPhone"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mobile No *"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <EditText
+                                    android:id="@+id/etCustomerPhone"
+                                    android:layout_width="225dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="5"
+                                    android:hint="Mobile No"
+                                    android:inputType="phone"
+                                    android:maxLength="10" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tvCustomerAddress"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <EditText
+                                    android:id="@+id/etCustomerAddress"
+                                    android:layout_width="225dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="5"
+                                    android:hint="Address"
+                                    android:maxLength="150" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tvCustomerAmount"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Credit Amount"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <EditText
+                                    android:id="@+id/etCreditAmount"
+                                    android:layout_width="225dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="5"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="6"
+                                    android:text="0" />
+                            </TableRow>
+
+
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvVerticalLine"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#000000" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.8">
+
+                        <ScrollView
+                            android:id="@+id/scrlCustomerTable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#DDDDDD">
+
+                            <TableLayout
+                                android:id="@+id/tblCustomer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:collapseColumns="1,5,6,9">
+
+                                <TableRow
+                                    android:id="@+id/rowCaption"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimaryLight">
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionSno"
+                                        android:layout_width="60dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="S.No"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionSerialNumber"
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="#"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionCustomerName"
+                                        android:layout_width="130dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Name"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionLastTransaction"
+                                        android:layout_width="110dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Last Transn."
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionTotalTransaction"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Total Transn."
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionCustomerPhone"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Phone"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionCustomerAddress"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Address"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/tvCaptionCreditAmount"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Credit Amt"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/txtColorAccent" />
+
+                                </TableRow>
+                            </TableLayout>
+                        </ScrollView>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvHorizontalLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.65">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnAddCustomer"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/background_btn"
+                        android:onClick="AddCustomer"
+                        android:text="Add"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnEditCustomer"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background_btn"
+                        android:onClick="EditCustomer"
+                        android:text="Update"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnClearCustomer"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background_btn"
+                        android:onClick="ClearCustomer"
+                        android:text="Clear"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+
+                    <com.wep.common.app.views.WepButton
+                        android:id="@+id/btnCloseCustomer"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background_btn"
+                        android:onClick="CloseCustomer"
+                        android:text="Close"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/WepButtonWithMarigin" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

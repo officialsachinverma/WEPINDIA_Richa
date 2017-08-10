@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnrTableShitMerge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_wep" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/tvShiftMergeOccupiedTableHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/scrlOccupiedTable"
+            android:layout_alignLeft="@+id/scrlOccupiedTable"
+            android:layout_alignRight="@+id/scrlOccupiedTable"
+            android:layout_alignTop="@+id/tvShiftMergeTableHeading"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Occupied Tables"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ScrollView
+            android:id="@+id/scrlOccupiedTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvHorizontalLine"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:background="#DDDDDD">
+
+            <TableLayout
+                android:id="@+id/tblOccupied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:collapseColumns="1">
+
+                <TableRow
+                    android:id="@+id/rowOccupiedTableCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight">
+
+                    <TextView
+                        android:id="@+id/tvCaptionOccupiedTableNumber"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="Table No"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionOccupiedSubUdfNumber"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:text="SubUdf Number"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionOccupiedTableSplitNo"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:text="Table Split No"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvTableSplitHeading"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/grid_Image_TableOccupied"
+            android:layout_alignLeft="@+id/grid_Image_TableOccupied"
+            android:layout_alignRight="@+id/grid_Image_TableOccupied"
+            android:gravity="center"
+            android:text="Split Into : "
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:id="@+id/lnrCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/grid_Image_TableOccupied"
+            android:layout_alignRight="@+id/grid_Image_TableOccupied"
+            android:layout_below="@+id/tvTableSplitHeading"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chkShiftSplit2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+
+            <CheckBox
+                android:id="@+id/chkShiftSplit3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <CheckBox
+                android:id="@+id/chkShiftSplit4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvShiftMergeTableHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/grid_Image_TableOccupied"
+            android:layout_alignRight="@+id/grid_Image_TableOccupied"
+            android:layout_below="@+id/lnrCheckbox"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Tables"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <GridView
+            android:id="@+id/grid_Image_TableOccupied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvHorizontalLine"
+            android:layout_alignTop="@+id/scrlOccupiedTable"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_toLeftOf="@+id/scrlMergeTable"
+            android:layout_toRightOf="@+id/scrlOccupiedTable"
+            android:numColumns="auto_fit"></GridView>
+
+        <TextView
+            android:id="@+id/tvShiftMergeMergeTableHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/scrlMergeTable"
+            android:layout_alignLeft="@+id/scrlMergeTable"
+            android:layout_alignRight="@+id/scrlMergeTable"
+            android:layout_alignTop="@+id/tvShiftMergeTableHeading"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Merge Tables"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ScrollView
+            android:id="@+id/scrlMergeTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvHorizontalLine"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="30dp"
+            android:background="#DDDDDD">
+
+            <TableLayout
+                android:id="@+id/tblMergeKOT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:collapseColumns="1">
+
+                <TableRow
+                    android:id="@+id/rowMergeTableCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight">
+
+                    <TextView
+                        android:id="@+id/tvCaptionMergeTableNumber"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="Table No"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionMergeSubUdfNumber"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:text="SubUdf Number"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvHorizontalLine"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/rowButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:background="#000000" />
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp">
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_ShiftMergeCancel"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:background="@drawable/background_btn"
+                android:onClick="Close"
+                android:text="Cancel"
+                android:textColor="@color/white" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_ShiftMergeKOTShift"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:onClick="Shift"
+                android:text="Shift"
+                android:textColor="@color/white" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_ShiftMergeTableMerge"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:onClick="Merge"
+                android:text="Merge"
+                android:textColor="@color/white" />
+
+            <com.wep.common.app.views.WepButton
+                android:id="@+id/btn_ShiftMergeLoadKOT"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_btn"
+                android:onClick="LoadKOT"
+                android:text="Load KOT"
+                android:textColor="@color/white" />
+
+        </TableRow>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableRow
+        android:id="@+id/rowCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_Sn"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="S.No"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <TextView
+            android:id="@+id/tv_supplierName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Supplier Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <TextView
+            android:id="@+id/tv_itemName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <TextView
+            android:id="@+id/tv_averageRate"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingEnd="15dp"
+            android:text="Average Rate"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <TextView
+            android:id="@+id/Inw_Quantity"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <TextView
+            android:id="@+id/tv_UOM"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="UoM"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+
+
+        <TextView
+            android:id="@+id/tvCaptionImage"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Image"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            
+            android:visibility="invisible" />
+
+    </TableRow>
+</LinearLayout>

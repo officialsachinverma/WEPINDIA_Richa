@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp">
+
+        <ScrollView
+            android:id="@+id/scrlCustRiderTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#DDDDDD">
+
+            <TableLayout
+                android:id="@+id/tblCustRider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:collapseColumns="1, 3">
+
+                <TableRow
+                    android:id="@+id/rowCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimaryLight">
+
+                    <TextView
+                        android:id="@+id/tvCaptionRiderSno"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="S.No"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionRiderCode"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Code"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionRiderName"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Rider Name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+
+                    <TextView
+                        android:id="@+id/tvCaptionRiderStatus"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txtColorAccent" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

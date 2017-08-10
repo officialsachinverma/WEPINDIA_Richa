@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        android:title="Home"
+        android:icon="@mipmap/ic_home_white_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_screen_shot"
+        android:orderInCategory="200"
+        android:title="ScreenShot"
+        android:icon="@mipmap/ic_photo_white_24dp"
+        app:showAsAction="always"
+        />
+</menu>

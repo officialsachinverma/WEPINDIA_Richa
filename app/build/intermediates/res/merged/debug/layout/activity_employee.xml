@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" 
+    tools:ignore="HardcodedText,UselessParent" >
+    
+    <TableRow
+        android:id="@+id/rowEmployeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/tvEmployeeName"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etEmployeeName"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="16"
+            android:inputType="text" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/rowSearchEmployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rowEmployeeName"
+        android:layout_alignTop="@+id/rowEmployeeName"
+        android:layout_marginLeft="150dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id:"
+            android:layout_marginRight="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etSearchEmployeeId"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" 
+            android:ems="5"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:layout_marginRight="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etSearchEmployeeName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" 
+            android:ems="5"
+            android:inputType="text" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/rowEmployeePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowEmployeeName"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp" >
+
+        <TextView
+            android:id="@+id/tvEmployeePhone"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Phone :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etEmployeePhone"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:maxLength="20"
+            android:inputType="phone" />
+    </TableRow>
+    
+    <TextView 
+        android:id="@+id/tvVerticalLine"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginRight="15dp" />
+    
+    <ScrollView 
+        android:id="@+id/scrlEmployeeTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/rowEmployeeName"
+        android:layout_alignBottom="@+id/tvHorizontalLine"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp" >
+        
+	    <TableLayout
+	        android:id="@+id/tblEmployee"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:collapseColumns="3">
+	
+	        <TableRow
+	            android:id="@+id/rowCaption"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:background="@color/colorPrimaryLight" >
+	
+	            <TextView
+	                android:id="@+id/tvCaptionSerialNumber"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="#"
+	                android:layout_marginRight="20dp"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	
+	            <TextView
+	                android:id="@+id/tvCaptionEmployeeName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Name"
+	                android:layout_marginRight="175dp"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionEmployeeRole"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Role"
+	                android:layout_marginRight="75dp"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+					android:textColor="@color/txtColorAccent" />
+	            
+	            <TextView
+	                android:id="@+id/tvCaptionEmployeePhone"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Phone"
+					android:textColor="@color/txtColorAccent" />
+	            
+	        </TableRow>
+	    </TableLayout>
+    </ScrollView>
+    
+    <TableRow
+        android:id="@+id/rowEmployeeRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rowEmployeePhone"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp" >
+        
+        <TextView
+	        android:id="@+id/tvEmployeeRole"
+	        android:layout_width="75dp"
+	        android:layout_height="wrap_content"
+	        android:text="Role:"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <Spinner
+	        android:id="@+id/spnrEmployeeRole"
+	        android:layout_width="225dp"
+	        android:layout_height="wrap_content" />
+        
+    </TableRow>
+    
+    <TextView 
+        android:id="@+id/tvHorizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_above="@+id/rowButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"/>
+    
+    <TableRow
+        android:id="@+id/rowButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"  >
+        
+        <Button
+		    android:id="@+id/btnAddEmployee"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+		    android:layout_width="100dp"
+		    android:layout_height="45dp"
+		    android:onClick="AddEmployee"
+		    android:text="Add" />
+
+	    <Button
+		    android:id="@+id/btnEditEmployee"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+		    android:layout_width="100dp"
+		    android:layout_height="45dp"
+		    android:layout_marginLeft="10dp"
+		    android:onClick="EditEmployee"
+		    android:text="Save" />
+        
+	    <Button
+		    android:id="@+id/btnClearEmployee"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+		    android:layout_width="100dp"
+		    android:layout_height="45dp"
+		    android:layout_marginLeft="10dp"
+		    android:onClick="ClearEmployee"
+		    android:text="Clear" />
+        
+	    <Button
+		    android:id="@+id/btnCloseEmployee"
+			android:background="@drawable/background_btn"
+			android:textColor="@color/white"
+		    android:layout_width="100dp"
+		    android:layout_height="45dp"
+		    android:layout_marginLeft="10dp"
+		    android:onClick="CloseEmployee"
+		    android:text="Close" />
+        
+	</TableRow>
+    
+    
+
+</RelativeLayout>

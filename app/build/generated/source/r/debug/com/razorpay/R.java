@@ -11,27 +11,27 @@ public final class R {
         public static final int isTablet = 0x7f0a0002;
     }
     public static final class drawable {
-        public static final int rzp_border = 0x7f0200eb;
-        public static final int rzp_border_bottom = 0x7f0200ec;
-        public static final int rzp_check = 0x7f0200ed;
-        public static final int rzp_green_button = 0x7f0200ee;
-        public static final int rzp_loader_circle = 0x7f0200ef;
-        public static final int rzp_logo = 0x7f0200f0;
-        public static final int rzp_poweredby = 0x7f0200f1;
-        public static final int rzp_secured_by_bg = 0x7f0200f2;
-        public static final int rzp_uncheck = 0x7f0200f3;
-        public static final int rzp_white_badge = 0x7f0200f4;
-        public static final int rzp_white_border_black_bg = 0x7f0200f5;
+        public static final int rzp_border = 0x7f0200ec;
+        public static final int rzp_border_bottom = 0x7f0200ed;
+        public static final int rzp_check = 0x7f0200ee;
+        public static final int rzp_green_button = 0x7f0200ef;
+        public static final int rzp_loader_circle = 0x7f0200f0;
+        public static final int rzp_logo = 0x7f0200f1;
+        public static final int rzp_poweredby = 0x7f0200f2;
+        public static final int rzp_secured_by_bg = 0x7f0200f3;
+        public static final int rzp_uncheck = 0x7f0200f4;
+        public static final int rzp_white_badge = 0x7f0200f5;
+        public static final int rzp_white_border_black_bg = 0x7f0200f6;
     }
     public static final class id {
         public static final int checkbox = 0x7f0e0066;
-        public static final int ll_loader = 0x7f0e0940;
-        public static final int progressBar = 0x7f0e0941;
-        public static final int rememberCusIdRL = 0x7f0e08b5;
-        public static final int rzp_innerbox = 0x7f0e0944;
-        public static final int rzp_outerbox = 0x7f0e0943;
-        public static final int rzp_securedpayments = 0x7f0e0945;
-        public static final int rzp_theMainMagicView = 0x7f0e0942;
+        public static final int ll_loader = 0x7f0e0947;
+        public static final int progressBar = 0x7f0e0948;
+        public static final int rememberCusIdRL = 0x7f0e08bb;
+        public static final int rzp_innerbox = 0x7f0e094b;
+        public static final int rzp_outerbox = 0x7f0e094a;
+        public static final int rzp_securedpayments = 0x7f0e094c;
+        public static final int rzp_theMainMagicView = 0x7f0e0949;
     }
     public static final class layout {
         public static final int netbanking_remember_id = 0x7f0400db;

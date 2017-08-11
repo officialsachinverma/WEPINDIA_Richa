@@ -429,11 +429,11 @@ ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:193:9-197
 	android:name
 		ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:194:13-52
 activity#com.wepindia.pos.AddRolesActivity
-ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:198:9-201:57
+ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:198:9-201:73
 	android:screenOrientation
 		ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:200:13-56
 	android:windowSoftInputMode
-		ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:201:13-54
+		ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:201:13-70
 	android:name
 		ADDED from D:\EasyBill_New\wepfnb_gst\app\src\main\AndroidManifest.xml:199:13-45
 activity#com.wepindia.pos.UserManagementActivity

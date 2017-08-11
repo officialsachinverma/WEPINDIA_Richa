@@ -529,9 +529,9 @@ public class ConvertIngredientActivity extends Activity {
         btn_convert_Submit = (Button)findViewById(R.id.btn_convert_Submit);
         btn_convert_convertIngredient = (Button)findViewById(R.id.btn_convert_convertIngredient);
         btn_convert_close = (Button)findViewById(R.id.btn_convert_close);
-//        tbl_convert_ingredients = (TableLayout) findViewById(R.id.tbl_convert_ingredients);
+        tbl_convert_ingredients = (TableLayout) findViewById(R.id.tbl_convert_ingredients);
 
-        lv_convert_ingredients = (ListView) findViewById(R.id.lv_convert_ingredients);
+//        lv_convert_ingredients = (ListView) findViewById(R.id.lv_convert_ingredients);
         ingredientlist = new ArrayList<>();
         ingredientListAdapter = new IngredientListAdapter(this, ingredientlist);
 

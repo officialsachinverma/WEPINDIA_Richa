@@ -2,21 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeParent"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:padding="20dp"
-    android:background="@drawable/background_btn"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_margin="5dp"
     android:layout_marginLeft="@dimen/btn_marigin"
     android:layout_marginRight="@dimen/btn_marigin">
 
     <TextView
-        android:id="@+id/textViewRoleName"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Role Name"
+        android:id="@+id/textViewRoleSn"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="S.No."
+        android:textColor="@color/black"
         android:gravity="center"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewRoleName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Role Name"
+        android:textColor="@color/black"
+        android:layout_marginLeft="60dp"
+        android:gravity="left|center_vertical"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="bottom"
+        android:background="#000000"
+        android:layout_alignParentBottom="true"/>
+
 </RelativeLayout>

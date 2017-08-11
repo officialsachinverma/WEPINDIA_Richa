@@ -8,6 +8,10 @@
         "source": "C:\\Users\\sachinv\\.android\\build-cache\\51494c43a36c6b30813060f9d178be8f733c1bba\\output\\res\\drawable-ldpi-v4\\ms__menu_down.png"
     },
     {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\inward_item_masters.jpg",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\drawable-ldpi\\inward_item_masters.jpg"
+    },
+    {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_close_black_24dp.png",
         "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_close_black_24dp.png"
     },

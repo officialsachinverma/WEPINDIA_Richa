@@ -21,17 +21,17 @@ public final class R {
         public static final int ms__padding_top = 0x7f0800d1;
     }
     public static final class drawable {
-        public static final int ms__arrow = 0x7f0200d3;
-        public static final int ms__drawable = 0x7f0200d4;
-        public static final int ms__drop_down_shadow = 0x7f0200d5;
-        public static final int ms__menu_down = 0x7f0200d6;
-        public static final int ms__selector = 0x7f0200d7;
-        public static final int ms__shadow_background = 0x7f0200d8;
+        public static final int ms__arrow = 0x7f0200d4;
+        public static final int ms__drawable = 0x7f0200d5;
+        public static final int ms__drop_down_shadow = 0x7f0200d6;
+        public static final int ms__menu_down = 0x7f0200d7;
+        public static final int ms__selector = 0x7f0200d8;
+        public static final int ms__shadow_background = 0x7f0200d9;
     }
     public static final class id {
         public static final int fill_parent = 0x7f0e003f;
         public static final int match_parent = 0x7f0e0040;
-        public static final int tv_tinted_spinner = 0x7f0e08b4;
+        public static final int tv_tinted_spinner = 0x7f0e08ba;
         public static final int wrap_content = 0x7f0e002a;
     }
     public static final class layout {

@@ -203,7 +203,7 @@
         <activity
             android:name="com.wepindia.pos.AddRolesActivity"
             android:screenOrientation="sensorLandscape"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
         <activity
             android:name="com.wepindia.pos.UserManagementActivity"
             android:screenOrientation="sensorLandscape"

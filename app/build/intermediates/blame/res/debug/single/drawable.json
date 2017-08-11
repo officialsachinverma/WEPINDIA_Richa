@@ -36,12 +36,12 @@
         "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\drawable\\ammend.jpg"
     },
     {
-        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluetoothoff.png",
-        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\drawable\\bluetoothoff.png"
-    },
-    {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\sachinv\\.android\\build-cache\\b47ee9772fe4d0fd5e839d8afca8a626576f6b93\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluetoothoff.png",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\drawable\\bluetoothoff.png"
     },
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_ic_visibility.xml",
@@ -442,6 +442,10 @@
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "C:\\Users\\sachinv\\.android\\build-cache\\b47ee9772fe4d0fd5e839d8afca8a626576f6b93\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\inward_item_masters.jpg",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\drawable\\inward_item_masters.jpg"
     },
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_file.png",

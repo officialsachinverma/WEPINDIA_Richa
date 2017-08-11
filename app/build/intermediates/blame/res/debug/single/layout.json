@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_title.xml",
-        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\bundles\\default\\res\\layout\\custom_title.xml"
-    },
-    {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tablebooking.xml",
         "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\activity_tablebooking.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_title.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\printers\\build\\intermediates\\bundles\\default\\res\\layout\\custom_title.xml"
     },
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_port_configuration.xml",
@@ -28,12 +28,12 @@
         "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\activity_billing_dinein.xml"
     },
     {
-        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\amend_gstr1_b2cs_view.xml",
-        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\amend_gstr1_b2cs_view.xml"
-    },
-    {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preauthvoidtransaction.xml",
         "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\layout\\preauthvoidtransaction.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\amend_gstr1_b2cs_view.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\amend_gstr1_b2cs_view.xml"
     },
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
@@ -92,20 +92,20 @@
         "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\layout\\cardhistory.xml"
     },
     {
-        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "C:\\Users\\sachinv\\.android\\build-cache\\c961b16b46a1ceb12d475a23c7055cfb0b1e9d12\\output\\res\\layout\\design_navigation_item.xml"
-    },
-    {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\deviceinfo.xml",
         "source": "D:\\EasyBill_New\\wepfnb_gst\\mSwipe\\build\\intermediates\\bundles\\default\\res\\layout\\deviceinfo.xml"
     },
     {
-        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_master.xml",
-        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\activity_master.xml"
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\sachinv\\.android\\build-cache\\c961b16b46a1ceb12d475a23c7055cfb0b1e9d12\\output\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_purchase_order.xml",
         "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\activity_purchase_order.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_master.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\activity_master.xml"
     },
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_customerdetail.xml",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\sachinv\\.android\\build-cache\\b47ee9772fe4d0fd5e839d8afca8a626576f6b93\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
-        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\activity_settings.xml"
-    },
-    {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\Users\\sachinv\\.android\\build-cache\\b47ee9772fe4d0fd5e839d8afca8a626576f6b93\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "D:\\EasyBill_New\\wepfnb_gst\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
         "merged": "D:\\EasyBill_New\\wepfnb_gst\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_home_delivery_billing.xml",

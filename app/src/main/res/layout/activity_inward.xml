@@ -68,7 +68,7 @@
                     android:contentDescription="InwardItemEntry"
                     android:onClick="LaunchActivity"
                     android:padding="3dp"
-                    android:src="@drawable/inwardsupplyitem"
+                    android:src="@drawable/inward_item_masters"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true" />
 
